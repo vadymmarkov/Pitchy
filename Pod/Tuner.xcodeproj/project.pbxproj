@@ -11,6 +11,8 @@
 		2FC944984445975819ED9BF8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FB18BDE286530B64DFC690 /* Pods.framework */; };
 		D5BD85CD1BEFE32B003792E1 /* gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = D5BD85CC1BEFE32B003792E1 /* gitkeep */; };
 		D5BD85D31BEFE373003792E1 /* FrequencyDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BD85D21BEFE373003792E1 /* FrequencyDetector.swift */; };
+		D5DB6A101BEFE61600DA652E /* AudioInputProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB6A0E1BEFE61600DA652E /* AudioInputProcessor.swift */; settings = {ASSET_TAGS = (); }; };
+		D5DB6A111BEFE61600DA652E /* PitchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB6A0F1BEFE61600DA652E /* PitchEngine.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		69FB18BDE286530B64DFC690 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BD85CC1BEFE32B003792E1 /* gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gitkeep; sourceTree = "<group>"; };
 		D5BD85D21BEFE373003792E1 /* FrequencyDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyDetector.swift; sourceTree = "<group>"; };
+		D5DB6A0E1BEFE61600DA652E /* AudioInputProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioInputProcessor.swift; sourceTree = "<group>"; };
+		D5DB6A0F1BEFE61600DA652E /* PitchEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 		14C1365B1AB784BC00B7B07A /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D5DB6A0E1BEFE61600DA652E /* AudioInputProcessor.swift */,
+				D5DB6A0F1BEFE61600DA652E /* PitchEngine.swift */,
 				D5BD85D21BEFE373003792E1 /* FrequencyDetector.swift */,
 				D5BD85CC1BEFE32B003792E1 /* gitkeep */,
 			);
@@ -240,6 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BD85D31BEFE373003792E1 /* FrequencyDetector.swift in Sources */,
+				D5DB6A101BEFE61600DA652E /* AudioInputProcessor.swift in Sources */,
+				D5DB6A111BEFE61600DA652E /* PitchEngine.swift in Sources */,
 				14A139B41AEFC72B00AD732F /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
