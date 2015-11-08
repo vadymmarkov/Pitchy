@@ -20,7 +20,6 @@
 		14C136521AB784B200B7B07A /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTING.md; path = ../CONTRIBUTING.md; sourceTree = "<group>"; };
 		14C136541AB784B200B7B07A /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 		14C136551AB784B200B7B07A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		14C1365C1AB784BC00B7B07A /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		D5BD85CA1BEFE29D003792E1 /* FrequencyDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrequencyDetector.swift; path = ../../Pitchy/Source/FrequencyDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				D5BD85CA1BEFE29D003792E1 /* FrequencyDetector.swift */,
-				14C1365C1AB784BC00B7B07A /* .gitkeep */,
 			);
 			name = Source;
 			path = ../Source;
