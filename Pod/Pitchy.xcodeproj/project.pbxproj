@@ -11,8 +11,8 @@
 		2FC944984445975819ED9BF8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FB18BDE286530B64DFC690 /* Pods.framework */; };
 		D5BD85CD1BEFE32B003792E1 /* gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = D5BD85CC1BEFE32B003792E1 /* gitkeep */; };
 		D5BD85D31BEFE373003792E1 /* FrequencyDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BD85D21BEFE373003792E1 /* FrequencyDetector.swift */; };
-		D5DB6A101BEFE61600DA652E /* AudioInputProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB6A0E1BEFE61600DA652E /* AudioInputProcessor.swift */; settings = {ASSET_TAGS = (); }; };
-		D5DB6A111BEFE61600DA652E /* PitchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB6A0F1BEFE61600DA652E /* PitchEngine.swift */; settings = {ASSET_TAGS = (); }; };
+		D5DB6A101BEFE61600DA652E /* AudioInputProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB6A0E1BEFE61600DA652E /* AudioInputProcessor.swift */; };
+		D5DB6A111BEFE61600DA652E /* PitchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB6A0F1BEFE61600DA652E /* PitchEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,7 +163,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 146D728E1AB782920058798C /* Build configuration list for PBXProject "Tuner" */;
+			buildConfigurationList = 146D728E1AB782920058798C /* Build configuration list for PBXProject "Pitchy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -374,7 +374,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		146D728E1AB782920058798C /* Build configuration list for PBXProject "Tuner" */ = {
+		146D728E1AB782920058798C /* Build configuration list for PBXProject "Pitchy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				146D72B41AB782920058798C /* Debug */,
