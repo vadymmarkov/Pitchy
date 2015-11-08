@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "65F3C55E096BB30E5BF38C3E6832A46D3B65AFD3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "65F3C55E096BB30E5BF38C3E6832A46D3B65AFD3" : 0,
+    "4F31848AACF056B0EC55E59F824FF0E28AA0439C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "19009318-00C9-44AD-8B51-57EFF44BE6EE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "65F3C55E096BB30E5BF38C3E6832A46D3B65AFD3" : "Tuner\/",
+    "4F31848AACF056B0EC55E59F824FF0E28AA0439C" : "Pitchy\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Tuner",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Pod\/Tuner.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vadymmarkov\/Pitchy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4F31848AACF056B0EC55E59F824FF0E28AA0439C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vadymmarkov\/Tuner.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "65F3C55E096BB30E5BF38C3E6832A46D3B65AFD3"
+    }
+  ]
+}
