@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		14A139B41AEFC72B00AD732F /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A139B31AEFC72B00AD732F /* Tests.swift */; };
-		D5BD85CB1BEFE29D003792E1 /* FrequencyDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BD85CA1BEFE29D003792E1 /* FrequencyDetector.swift */; settings = {ASSET_TAGS = (); }; };
+		D5BD85CD1BEFE32B003792E1 /* gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = D5BD85CC1BEFE32B003792E1 /* gitkeep */; settings = {ASSET_TAGS = (); }; };
+		D5BD85D31BEFE373003792E1 /* FrequencyDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BD85D21BEFE373003792E1 /* FrequencyDetector.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +21,8 @@
 		14C136521AB784B200B7B07A /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTING.md; path = ../CONTRIBUTING.md; sourceTree = "<group>"; };
 		14C136541AB784B200B7B07A /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 		14C136551AB784B200B7B07A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		D5BD85CA1BEFE29D003792E1 /* FrequencyDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrequencyDetector.swift; path = ../../Pitchy/Source/FrequencyDetector.swift; sourceTree = "<group>"; };
+		D5BD85CC1BEFE32B003792E1 /* gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gitkeep; sourceTree = "<group>"; };
+		D5BD85D21BEFE373003792E1 /* FrequencyDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,8 @@
 		14C1365B1AB784BC00B7B07A /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D5BD85CA1BEFE29D003792E1 /* FrequencyDetector.swift */,
+				D5BD85D21BEFE373003792E1 /* FrequencyDetector.swift */,
+				D5BD85CC1BEFE32B003792E1 /* gitkeep */,
 			);
 			name = Source;
 			path = ../Source;
@@ -150,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5BD85CD1BEFE32B003792E1 /* gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5BD85CB1BEFE29D003792E1 /* FrequencyDetector.swift in Sources */,
+				D5BD85D31BEFE373003792E1 /* FrequencyDetector.swift in Sources */,
 				14A139B41AEFC72B00AD732F /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
