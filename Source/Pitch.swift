@@ -2,6 +2,11 @@ import Foundation
 
 public struct Pitch {
 
+  public static var orderedNotes: [Note] = [
+    .A, .ASharp, .B, .C, .CSharp, .D,
+    .DSharp, .E, .F, .FSharp, .G, .GSharp
+  ]
+
   public struct Base {
     public static let frequency: Float = 440
     public static let octave = 4
