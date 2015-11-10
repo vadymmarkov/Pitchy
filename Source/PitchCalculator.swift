@@ -2,6 +2,8 @@ import Foundation
 
 public struct PitchCalculator {
 
+  // MARK: - Constants
+
   public struct Standard {
     public static let frequency: Float = 440
     public static let octave = 4
@@ -12,10 +14,7 @@ public struct PitchCalculator {
     .DSharp, .E, .F, .FSharp, .G, .GSharp
   ]
 
-  public static func index(frequency frequency: Float) -> Int {
-    let count = Float(notes.count)
-    return Int(round(count * log2(frequency / Standard.frequency)))
-  }
+  // MARK: - Transformations
 
   public static func frequency(index index: Int) -> Float {
     let count = notes.count
@@ -36,5 +35,16 @@ public struct PitchCalculator {
     return index < 0
       ? Standard.octave - (abs(index) + 2) / count
       : Standard.octave + (index + 9) / count
+  }
+
+  public static func index(frequency frequency: Float) -> Int {
+    let count = Float(notes.count)
+    return Int(round(count * log2(frequency / Standard.frequency)))
+  }
+
+  public static func index(note note: Note, octave: Int) -> Int {
+    let count = notes.count
+    let noteIndex = notes.indexOf(note) ?? 0
+    return noteIndex + count * (octave - Standard.octave)
   }
 }

@@ -2,8 +2,6 @@ import Foundation
 
 public struct Pitch {
 
-
-
   public var index: Int
   public var note: Note
   public var octave: Int
@@ -14,14 +12,14 @@ public struct Pitch {
   public init(note: Note, octave: Int) {
     self.note = note
     self.octave = octave
-    self.frequency = PitchCalculator.frequency(<#T##index: Int##Int#>)
+    index = PitchCalculator.index(note: note, octave: octave)
+    frequency = PitchCalculator.frequency(index: index)
   }
 
   public init(frequency: Float) {
-    self.frequency
-
-    self.octave = n < 0
-      ? Base.octave - (abs(n) + 2) / 12
-      : Base.octave + (n + 9) / 12
+    self.frequency = frequency
+    index = PitchCalculator.index(frequency: frequency)
+    note = PitchCalculator.note(index: index)
+    octave = PitchCalculator.octave(index: index)
   }
 }
