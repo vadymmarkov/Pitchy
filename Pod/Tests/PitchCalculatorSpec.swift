@@ -45,6 +45,26 @@ class PitchCalculatorSpec: QuickSpec {
           expect(PitchCalculator.frequency(index: 29)) ≈ (2349.32, 0.01)
         }
       }
+
+      describe(".note") {
+        it("returns a correct note by pitch index") {
+          expect(PitchCalculator.note(index: 0)).to(equal(Note.A))
+          expect(PitchCalculator.note(index: -9)).to(equal(Note.C))
+          expect(PitchCalculator.note(index: -30)).to(equal(Note.DSharp))
+          expect(PitchCalculator.note(index: 11)).to(equal(Note.GSharp))
+          expect(PitchCalculator.note(index: 29)).to(equal(Note.D))
+        }
+      }
+
+      describe(".octave") {
+        it("returns a correct octave by pitch index") {
+          expect(PitchCalculator.octave(index: 0)).to(equal(4))
+          expect(PitchCalculator.octave(index: -9)).to(equal(4))
+          expect(PitchCalculator.octave(index: -30)).to(equal(2))
+          expect(PitchCalculator.octave(index: 11)).to(equal(5))
+          expect(PitchCalculator.octave(index: 29)).to(equal(7))
+        }
+      }
     }
   }
 }
