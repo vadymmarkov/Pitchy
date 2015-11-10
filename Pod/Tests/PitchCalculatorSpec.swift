@@ -4,6 +4,17 @@ import Nimble
 class PitchCalculatorSpec: QuickSpec {
 
   override func spec() {
+    let piches = [
+      (index: 0, note: Note.A, octave: 4, frequency: 440.0),
+      (index: 12, note: Note.A, octave: 5, frequency: 880.000),
+      (index: 2, note: Note.B, octave: 4, frequency: 493.883),
+      (index: -10, note: Note.B, octave: 3, frequency: 246.942),
+      (index: -9, note: Note.C, octave: 4, frequency: 261.626),
+      (index: -30, note: Note.DSharp, octave: 2, frequency: 77.7817),
+      (index: 11, note: Note.GSharp, octave: 5, frequency: 830.609),
+      (index: 29, note: Note.D, octave: 7, frequency: 2349.32)
+    ]
+
     describe("PitchCalculator") {
 
       describe("Standard") {
@@ -36,37 +47,45 @@ class PitchCalculatorSpec: QuickSpec {
         }
       }
       
-      describe(".frequency") {
+      describe(".frequency:index") {
         it("returns a correct frequency by pitch index") {
-          expect(PitchCalculator.frequency(index: 0)) ≈ (440.0, 0.01)
-          expect(PitchCalculator.frequency(index: -9)) ≈ (261.626, 0.01)
-          expect(PitchCalculator.frequency(index: -30)) ≈ ( 77.7817, 0.01)
-          expect(PitchCalculator.frequency(index: 11)) ≈ (830.609, 0.01)
-          expect(PitchCalculator.frequency(index: 29)) ≈ (2349.32, 0.01)
+          piches.forEach {
+            expect(PitchCalculator.frequency(index: $0.index)) ≈ ($0.frequency, 0.01)
+          }
         }
       }
 
-      describe(".note") {
+      describe(".note:index") {
         it("returns a correct note by pitch index") {
-          expect(PitchCalculator.note(index: 0)).to(equal(Note.A))
-          expect(PitchCalculator.note(index: -9)).to(equal(Note.C))
-          expect(PitchCalculator.note(index: -30)).to(equal(Note.DSharp))
-          expect(PitchCalculator.note(index: 11)).to(equal(Note.GSharp))
-          expect(PitchCalculator.note(index: 29)).to(equal(Note.D))
+          piches.forEach {
+            expect(PitchCalculator.note(index: $0.index)).to(equal($0.note))
+          }
         }
       }
 
-      describe(".octave") {
+      describe(".octave:index") {
         it("returns a correct octave by pitch index") {
-          expect(PitchCalculator.octave(index: 0)).to(equal(4))
-          expect(PitchCalculator.octave(index: -9)).to(equal(4))
-          expect(PitchCalculator.octave(index: -30)).to(equal(2))
-          expect(PitchCalculator.octave(index: 11)).to(equal(5))
-          expect(PitchCalculator.octave(index: 29)).to(equal(7))
+          piches.forEach {
+            expect(PitchCalculator.octave(index: $0.index)).to(equal($0.octave))
+          }
+        }
+      }
+
+      describe(".index:frequency") {
+        it("returns a correct pitch index by frequency") {
+          piches.forEach {
+            expect(PitchCalculator.index(frequency: $0.frequency)).to(equal($0.index))
+          }
+        }
+      }
+
+      describe(".index:note:octave") {
+        it("returns a correct pitch index by note and octave") {
+          piches.forEach {
+            expect(PitchCalculator.index(note: $0.note, octave: $0.octave)).to(equal($0.index))
+          }
         }
       }
     }
   }
 }
-
-

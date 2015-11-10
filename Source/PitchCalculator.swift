@@ -50,7 +50,8 @@ public struct PitchCalculator {
   public static func index(note note: Note, octave: Int) -> Int {
     let count = notes.count
     let noteIndex = notes.indexOf(note) ?? 0
+    let offset = noteIndex < 3 ? 0 : count
 
-    return noteIndex + count * (octave - Standard.octave)
+    return noteIndex + count * (octave - Standard.octave) - offset
   }
 }
