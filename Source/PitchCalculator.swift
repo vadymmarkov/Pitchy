@@ -14,10 +14,11 @@ public struct PitchCalculator {
     .DSharp, .E, .F, .FSharp, .G, .GSharp
   ]
 
-  // MARK: - Transformations
+  // MARK: - Notations
 
   public static func frequency(index index: Int) -> Float {
     let count = notes.count
+
     return powf(2, Float(index / count)) * Standard.frequency
   }
 
@@ -32,19 +33,24 @@ public struct PitchCalculator {
 
   public static func octave(index index: Int) -> Int {
     let count = notes.count
+
     return index < 0
       ? Standard.octave - (abs(index) + 2) / count
       : Standard.octave + (index + 9) / count
   }
 
+  // MARK: - Pitch Index
+
   public static func index(frequency frequency: Float) -> Int {
     let count = Float(notes.count)
+
     return Int(round(count * log2(frequency / Standard.frequency)))
   }
 
   public static func index(note note: Note, octave: Int) -> Int {
     let count = notes.count
     let noteIndex = notes.indexOf(note) ?? 0
+
     return noteIndex + count * (octave - Standard.octave)
   }
 }
