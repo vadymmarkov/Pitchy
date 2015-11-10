@@ -38,13 +38,15 @@ class PitchCalculatorSpec: QuickSpec {
       
       describe(".frequency") {
         it("returns a correct frequency by pitch index") {
-          expect(PitchCalculator.frequency(index: 0)) ≈ 440.00
-          expect(PitchCalculator.frequency(index: -9)) ≈ 261.626
-          expect(PitchCalculator.frequency(index: -30)) ≈ 77.7817
-          expect(PitchCalculator.frequency(index: 11)) ≈ 830.609
-          expect(PitchCalculator.frequency(index: 29)) ≈ 2349.32
+          expect(PitchCalculator.frequency(index: 0)) ≈ (440.0, 0.01)
+          expect(PitchCalculator.frequency(index: -9)) ≈ (261.626, 0.01)
+          expect(PitchCalculator.frequency(index: -30)) ≈ ( 77.7817, 0.01)
+          expect(PitchCalculator.frequency(index: 11)) ≈ (830.609, 0.01)
+          expect(PitchCalculator.frequency(index: 29)) ≈ (2349.32, 0.01)
         }
       }
     }
   }
 }
+
+

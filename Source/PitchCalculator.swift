@@ -19,6 +19,7 @@ public struct PitchCalculator {
   public static func frequency(index index: Int) -> Double {
     let count = notes.count
     let power = Double(index) / Double(count)
+    
     return pow(2, power) * Standard.frequency
   }
 
