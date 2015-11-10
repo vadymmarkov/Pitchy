@@ -5,7 +5,7 @@ public struct Pitch {
   public var index: Int
   public var note: Note
   public var octave: Int
-  public var frequency: Float
+  public var frequency: Double
 
   // MARK: - Initializers
 
@@ -16,7 +16,7 @@ public struct Pitch {
     frequency = PitchCalculator.frequency(index: index)
   }
 
-  public init(frequency: Float) {
+  public init(frequency: Double) {
     self.frequency = frequency
     index = PitchCalculator.index(frequency: frequency)
     note = PitchCalculator.note(index: index)
