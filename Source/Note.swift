@@ -13,7 +13,7 @@ public enum Note: String {
   case B = "B"
 
   public static var values = [
-    A, ASharp, B, C, CSharp, D,
-    DSharp, E, F, FSharp, G, GSharp
+    C, CSharp, D, DSharp, E, F,
+    FSharp, G, GSharp, A, ASharp, B,
   ]
 }
