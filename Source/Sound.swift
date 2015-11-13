@@ -17,6 +17,8 @@ public struct Sound {
         ? left : right
     }
 
+    // MARK: - Initialization
+
     public init(left: Offset, right: Offset) {
       if left.pitch.frequency < right.pitch.frequency {
         self.left = left
