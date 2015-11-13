@@ -1,11 +1,12 @@
 import Foundation
 
-public struct Pitch {
+public struct Sound {
 
-  public var index: Int
-  public var note: Note
-  public var octave: Int
+  public var pitch: Pitch
+  public var adjoinedPitch: Pitch
   public var frequency: Double
+  public var frequencyOffset: Double
+  public var percentageOffset: Double
 
   // MARK: - Initialization
 
