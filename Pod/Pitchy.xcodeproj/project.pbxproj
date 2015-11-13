@@ -11,7 +11,6 @@
 		D505269A1BF151BD00B4F835 /* PitchCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50526991BF151BD00B4F835 /* PitchCalculator.swift */; };
 		D505269E1BF16F4E00B4F835 /* PitchCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D505269D1BF16F4E00B4F835 /* PitchCalculatorSpec.swift */; };
 		D5219A0D1BF56527009D44DF /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5219A0C1BF56527009D44DF /* Sound.swift */; };
-		D5219A0F1BF569F3009D44DF /* PitchOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5219A0E1BF569F3009D44DF /* PitchOffset.swift */; };
 		D5E383A41BEFE98300C1A402 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E383A21BEFE98300C1A402 /* Note.swift */; };
 		D5E383A51BEFE98300C1A402 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E383A31BEFE98300C1A402 /* Pitch.swift */; };
 		D5E383A81BEFE9BA00C1A402 /* NoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E383A61BEFE9BA00C1A402 /* NoteSpec.swift */; };
@@ -31,7 +30,6 @@
 		D50526991BF151BD00B4F835 /* PitchCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculator.swift; sourceTree = "<group>"; };
 		D505269D1BF16F4E00B4F835 /* PitchCalculatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculatorSpec.swift; sourceTree = "<group>"; };
 		D5219A0C1BF56527009D44DF /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
-		D5219A0E1BF569F3009D44DF /* PitchOffset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchOffset.swift; sourceTree = "<group>"; };
 		D5E383A21BEFE98300C1A402 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D5E383A31BEFE98300C1A402 /* Pitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
 		D5E383A61BEFE9BA00C1A402 /* NoteSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteSpec.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 				D5E383A31BEFE98300C1A402 /* Pitch.swift */,
 				D50526991BF151BD00B4F835 /* PitchCalculator.swift */,
 				D5219A0C1BF56527009D44DF /* Sound.swift */,
-				D5219A0E1BF569F3009D44DF /* PitchOffset.swift */,
 			);
 			name = Source;
 			path = ../Source;
@@ -254,7 +251,6 @@
 				D5219A0D1BF56527009D44DF /* Sound.swift in Sources */,
 				D5E383A51BEFE98300C1A402 /* Pitch.swift in Sources */,
 				D505269A1BF151BD00B4F835 /* PitchCalculator.swift in Sources */,
-				D5219A0F1BF569F3009D44DF /* PitchOffset.swift in Sources */,
 				D5E383A41BEFE98300C1A402 /* Note.swift in Sources */,
 				D5E383A91BEFE9BA00C1A402 /* PitchSpec.swift in Sources */,
 				D5E383A81BEFE9BA00C1A402 /* NoteSpec.swift in Sources */,
