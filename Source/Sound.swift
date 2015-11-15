@@ -9,23 +9,23 @@ public struct Sound {
   )
 
   public struct Offsets {
-    let left: Sound.Offset
-    let right: Sound.Offset
+    let lower: Sound.Offset
+    let higher: Sound.Offset
 
     public var closest: Sound.Offset {
-      return abs(left.frequency) < abs(right.frequency)
-        ? left : right
+      return abs(lower.frequency) < abs(higher.frequency)
+        ? lower : higher
     }
 
     // MARK: - Initialization
 
-    public init(left: Offset, right: Offset) {
-      if left.pitch.frequency < right.pitch.frequency {
-        self.left = left
-        self.right = right
+    public init(_ first: Offset, _ second: Offset) {
+      if first.pitch.frequency < second.pitch.frequency {
+        self.lower = first
+        self.higher = second
       } else {
-        self.left = right
-        self.right = left
+        self.lower = second
+        self.higher = first
       }
     }
   }

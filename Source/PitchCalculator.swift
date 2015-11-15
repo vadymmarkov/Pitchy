@@ -84,6 +84,6 @@ public struct PitchCalculator {
         / abs(pitch.frequency - closestPitch.frequency)
     )
 
-    return Sound.Offsets(left: firstOffset, right: secondOffset)
+    return Sound.Offsets(firstOffset, secondOffset)
   }
 }
