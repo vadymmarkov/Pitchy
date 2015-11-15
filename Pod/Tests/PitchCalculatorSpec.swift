@@ -18,8 +18,13 @@ class PitchCalculatorSpec: QuickSpec {
     let offsets = [
       (frequency: 445.0,
         lower: Sound.Offset(pitch: Pitch(index: 0), frequency: 5, percentage: 19.1),
-        higher: Sound.Offset(pitch: Pitch(index: 1), frequency: 21.164, percentage: -80.9),
+        higher: Sound.Offset(pitch: Pitch(index: 1), frequency: 21.164, percentage: 80.9),
         closest: "A4"
+      ),
+      (frequency: 108.0,
+        lower: Sound.Offset(pitch: Pitch(index: -25), frequency: 4.174, percentage: 67.6),
+        higher: Sound.Offset(pitch: Pitch(index: -24), frequency: 2, percentage: 32.39),
+        closest: "A2"
       )
     ]
 

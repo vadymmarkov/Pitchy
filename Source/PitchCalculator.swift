@@ -73,15 +73,17 @@ public struct PitchCalculator {
     let firstOffset = Sound.Offset(
       pitch: pitch,
       frequency: frequency - pitch.frequency,
-      percentage: (frequency - pitch.frequency) * 100
-        / abs(pitch.frequency - closestPitch.frequency)
+      percentage: abs(
+        (frequency - pitch.frequency) * 100
+        / (pitch.frequency - closestPitch.frequency))
     )
 
     let secondOffset = Sound.Offset(
       pitch: closestPitch,
       frequency: frequency - closestPitch.frequency,
-      percentage: (frequency - closestPitch.frequency) * 100
-        / abs(pitch.frequency - closestPitch.frequency)
+      percentage: abs(
+        (frequency - closestPitch.frequency) * 100
+        / (pitch.frequency - closestPitch.frequency))
     )
 
     return Sound.Offsets(firstOffset, secondOffset)
