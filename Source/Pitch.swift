@@ -7,12 +7,17 @@ public struct Pitch {
   public let octave: Int
   public let frequency: Double
 
-  public var previousPitch: Pitch {
+  public var string: String {
+    let string = "\(self.note.rawValue)\(self.octave)"
+    return string
+  }
+
+  public var lowerPitch: Pitch {
     let pitch = Pitch(index: index - 1)
     return pitch
   }
 
-  public var nextPitch: Pitch {
+  public var higherPitch: Pitch {
     let pitch = Pitch(index: index + 1)
     return pitch
   }
