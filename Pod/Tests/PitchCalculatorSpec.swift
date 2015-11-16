@@ -4,6 +4,7 @@ import Nimble
 class PitchCalculatorSpec: QuickSpec {
 
   override func spec() {
+
     let piches = [
       (index: 0, note: Note.A, octave: 4, frequency: 440.0),
       (index: 12, note: Note.A, octave: 5, frequency: 880.000),
