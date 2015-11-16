@@ -3,7 +3,7 @@ public struct Sound {
   // MARK: - Offsets
 
   public typealias Offset = (
-    pitch: Pitch,
+    note: Note,
     frequency: Double,
     percentage: Double
   )
@@ -20,7 +20,7 @@ public struct Sound {
     // MARK: - Initialization
 
     public init(_ first: Offset, _ second: Offset) {
-      if first.pitch.frequency < second.pitch.frequency {
+      if first.note.frequency < second.note.frequency {
         self.lower = first
         self.higher = second
       } else {

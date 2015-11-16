@@ -9,7 +9,7 @@ public struct PitchCalculator {
     public static let octave = 4
   }
 
-  public static var notes: [Note] = [
+  public static var notes: [Note.Letter] = [
     .A, .ASharp, .B, .C, .CSharp, .D,
     .DSharp, .E, .F, .FSharp, .G, .GSharp
   ]
@@ -23,7 +23,7 @@ public struct PitchCalculator {
     return pow(2, power) * Standard.frequency
   }
 
-  public static func note(index index: Int) -> Note {
+  public static func letter(index index: Int) -> Note.Letter {
     let count = notes.count
     var noteIndex = index < 0
       ? count - abs(index) % count
@@ -51,39 +51,39 @@ public struct PitchCalculator {
     return Int(round(count * log2(frequency / Standard.frequency)))
   }
 
-  public static func index(note note: Note, octave: Int) -> Int {
+  public static func index(letter letter: Note.Letter, octave: Int) -> Int {
     let count = notes.count
-    let noteIndex = notes.indexOf(note) ?? 0
-    let offset = noteIndex < 3 ? 0 : count
+    let letterIndex = notes.indexOf(letter) ?? 0
+    let offset = letterIndex < 3 ? 0 : count
 
-    return noteIndex + count * (octave - Standard.octave) - offset
+    return letterIndex + count * (octave - Standard.octave) - offset
   }
 
   // MARK: - Offsets
 
   public static func offsets(frequency: Double) -> Sound.Offsets {
-    let pitch = Pitch(frequency: frequency)
-    let higherPitch = pitch.higherPitch
-    let lowerPitch = pitch.lowerPitch
-    let closestPitch = abs(higherPitch.frequency - frequency)
-      < abs(lowerPitch.frequency - frequency)
-      ? higherPitch
-      : lowerPitch
+    let note = Note(frequency: frequency)
+    let higherNote = note.higher
+    let lowerNote = note.lower
+    let closestNote = abs(higherNote.frequency - frequency)
+      < abs(lowerNote.frequency - frequency)
+      ? higherNote
+      : lowerNote
 
     let firstOffset = Sound.Offset(
-      pitch: pitch,
-      frequency: frequency - pitch.frequency,
+      note: note,
+      frequency: frequency - note.frequency,
       percentage: abs(
-        (frequency - pitch.frequency) * 100
-        / (pitch.frequency - closestPitch.frequency))
+        (frequency - note.frequency) * 100
+        / (note.frequency - closestNote.frequency))
     )
 
     let secondOffset = Sound.Offset(
-      pitch: closestPitch,
-      frequency: frequency - closestPitch.frequency,
+      note: closestNote,
+      frequency: frequency - closestNote.frequency,
       percentage: abs(
-        (frequency - closestPitch.frequency) * 100
-        / (pitch.frequency - closestPitch.frequency))
+        (frequency - closestNote.frequency) * 100
+        / (note.frequency - closestNote.frequency))
     )
 
     return Sound.Offsets(firstOffset, secondOffset)
