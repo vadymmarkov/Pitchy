@@ -4,7 +4,6 @@ import Nimble
 class NoteCalculatorSpec: QuickSpec {
 
   override func spec() {
-
     let notes = [
       (index: 0, note: Note.Letter.A, octave: 4, frequency: 440.0),
       (index: 12, note: Note.Letter.A, octave: 5, frequency: 880.000),
@@ -14,19 +13,6 @@ class NoteCalculatorSpec: QuickSpec {
       (index: -30, note: Note.Letter.DSharp, octave: 2, frequency: 77.7817),
       (index: 11, note: Note.Letter.GSharp, octave: 5, frequency: 830.609),
       (index: 29, note: Note.Letter.D, octave: 7, frequency: 2349.32)
-    ]
-
-    let offsets = [
-      (frequency: 445.0,
-        lower: Sound.Offset(note: Note(index: 0), frequency: 5, percentage: 19.1),
-        higher: Sound.Offset(note: Note(index: 1), frequency: 21.164, percentage: 80.9),
-        closest: "A4"
-      ),
-      (frequency: 108.0,
-        lower: Sound.Offset(note: Note(index: -25), frequency: 4.174, percentage: 67.6),
-        higher: Sound.Offset(note: Note(index: -24), frequency: 2, percentage: 32.39),
-        closest: "A2"
-      )
     ]
 
     describe("NoteCalculator") {
@@ -97,24 +83,6 @@ class NoteCalculatorSpec: QuickSpec {
         it("returns a correct pitch index by note letter and octave") {
           notes.forEach {
             expect(NoteCalculator.index(letter: $0.note, octave: $0.octave)).to(equal($0.index))
-          }
-        }
-      }
-
-      describe(".offsets") {
-        it("returns a correct offsets for the specified frequency") {
-          offsets.forEach {
-            let result = NoteCalculator.offsets($0.frequency)
-
-            expect(result.lower.frequency) ≈ ($0.lower.frequency, 0.01)
-            expect(result.lower.percentage) ≈ ($0.lower.percentage, 0.1)
-            expect(result.lower.note.index).to(equal($0.lower.note.index))
-
-            expect(result.higher.frequency) ≈ (-$0.higher.frequency, 0.01)
-            expect(result.higher.percentage) ≈ ($0.higher.percentage, 0.1)
-            expect(result.higher.note.index).to(equal($0.higher.note.index))
-
-            expect(result.closest.note.string).to(equal($0.closest))
           }
         }
       }
