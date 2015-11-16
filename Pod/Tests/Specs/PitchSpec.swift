@@ -1,30 +1,30 @@
 import Quick
 import Nimble
 
-class SoundSpec: QuickSpec {
+class PitchSpec: QuickSpec {
 
   override func spec() {
 
     let offsets = [
       (frequency: 445.0,
-        lower: Sound.Offset(note: Note(index: 0), frequency: 5, percentage: 19.1),
-        higher: Sound.Offset(note: Note(index: 1), frequency: 21.164, percentage: 80.9),
+        lower: Pitch.Offset(note: Note(index: 0), frequency: 5, percentage: 19.1),
+        higher: Pitch.Offset(note: Note(index: 1), frequency: 21.164, percentage: 80.9),
         closest: "A4"
       ),
       (frequency: 108.0,
-        lower: Sound.Offset(note: Note(index: -25), frequency: 4.174, percentage: 67.6),
-        higher: Sound.Offset(note: Note(index: -24), frequency: 2, percentage: 32.39),
+        lower: Pitch.Offset(note: Note(index: -25), frequency: 4.174, percentage: 67.6),
+        higher: Pitch.Offset(note: Note(index: -24), frequency: 2, percentage: 32.39),
         closest: "A2"
       )
     ]
 
-    describe("Sound") {
+    describe("Pitch") {
 
       describe("Offsets") {
         describe("#init") {
           it("rearrange offsets based on frequency") {
             let sample = offsets[0]
-            let offsets = Sound.Offsets(sample.higher, sample.lower)
+            let offsets = Pitch.Offsets(sample.higher, sample.lower)
             expect(offsets.lower.note.index).to(equal(sample.lower.note.index))
             expect(offsets.higher.note.index).to(equal(sample.higher.note.index))
           }
@@ -34,8 +34,8 @@ class SoundSpec: QuickSpec {
       describe("#init") {
         it("sets a correct offsets for the specified frequency") {
           offsets.forEach {
-            let sound = Sound(frequency: $0.frequency)
-            let result = sound.offsets
+            let pitch = Pitch(frequency: $0.frequency)
+            let result = pitch.offsets
 
             expect(result.lower.frequency) ≈ ($0.lower.frequency, 0.01)
             expect(result.lower.percentage) ≈ ($0.lower.percentage, 0.1)

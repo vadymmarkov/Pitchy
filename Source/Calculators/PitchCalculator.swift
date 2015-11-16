@@ -4,7 +4,7 @@ public struct PitchCalculator {
 
   // MARK: - Offsets
 
-  public static func offsets(frequency: Double) -> Sound.Offsets {
+  public static func offsets(frequency: Double) -> Pitch.Offsets {
     let note = Note(frequency: frequency)
     let higherNote = note.higher
     let lowerNote = note.lower
@@ -13,7 +13,7 @@ public struct PitchCalculator {
       ? higherNote
       : lowerNote
 
-    let firstOffset = Sound.Offset(
+    let firstOffset = Pitch.Offset(
       note: note,
       frequency: frequency - note.frequency,
       percentage: abs(
@@ -21,7 +21,7 @@ public struct PitchCalculator {
           / (note.frequency - closestNote.frequency))
     )
 
-    let secondOffset = Sound.Offset(
+    let secondOffset = Pitch.Offset(
       note: closestNote,
       frequency: frequency - closestNote.frequency,
       percentage: abs(
@@ -29,6 +29,6 @@ public struct PitchCalculator {
           / (note.frequency - closestNote.frequency))
     )
 
-    return Sound.Offsets(firstOffset, secondOffset)
+    return Pitch.Offsets(firstOffset, secondOffset)
   }
 }

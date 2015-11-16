@@ -6,13 +6,13 @@ class PitchCalculatorSpec: QuickSpec {
   override func spec() {
     let offsets = [
       (frequency: 445.0,
-        lower: Sound.Offset(note: Note(index: 0), frequency: 5, percentage: 19.1),
-        higher: Sound.Offset(note: Note(index: 1), frequency: 21.164, percentage: 80.9),
+        lower: Pitch.Offset(note: Note(index: 0), frequency: 5, percentage: 19.1),
+        higher: Pitch.Offset(note: Note(index: 1), frequency: 21.164, percentage: 80.9),
         closest: "A4"
       ),
       (frequency: 108.0,
-        lower: Sound.Offset(note: Note(index: -25), frequency: 4.174, percentage: 67.6),
-        higher: Sound.Offset(note: Note(index: -24), frequency: 2, percentage: 32.39),
+        lower: Pitch.Offset(note: Note(index: -25), frequency: 4.174, percentage: 67.6),
+        higher: Pitch.Offset(note: Note(index: -24), frequency: 2, percentage: 32.39),
         closest: "A2"
       )
     ]

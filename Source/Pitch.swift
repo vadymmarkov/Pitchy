@@ -1,4 +1,4 @@
-public struct Sound {
+public struct Pitch {
 
   // MARK: - Offsets
 
@@ -9,10 +9,10 @@ public struct Sound {
   )
 
   public struct Offsets {
-    let lower: Sound.Offset
-    let higher: Sound.Offset
+    let lower: Pitch.Offset
+    let higher: Pitch.Offset
 
-    public var closest: Sound.Offset {
+    public var closest: Pitch.Offset {
       return abs(lower.frequency) < abs(higher.frequency)
         ? lower : higher
     }
