@@ -25,9 +25,13 @@ public struct PitchCalculator {
 
   public static func note(index index: Int) -> Note {
     let count = notes.count
-    let noteIndex = index < 0
+    var noteIndex = index < 0
       ? count - abs(index) % count
       : index % count
+
+    if noteIndex == 12 {
+      noteIndex = 0
+    }
 
     return notes[noteIndex]
   }
@@ -53,5 +57,35 @@ public struct PitchCalculator {
     let offset = noteIndex < 3 ? 0 : count
 
     return noteIndex + count * (octave - Standard.octave) - offset
+  }
+
+  // MARK: - Offsets
+
+  public static func offsets(frequency: Double) -> Sound.Offsets {
+    let pitch = Pitch(frequency: frequency)
+    let higherPitch = pitch.higherPitch
+    let lowerPitch = pitch.lowerPitch
+    let closestPitch = abs(higherPitch.frequency - frequency)
+      < abs(lowerPitch.frequency - frequency)
+      ? higherPitch
+      : lowerPitch
+
+    let firstOffset = Sound.Offset(
+      pitch: pitch,
+      frequency: frequency - pitch.frequency,
+      percentage: abs(
+        (frequency - pitch.frequency) * 100
+        / (pitch.frequency - closestPitch.frequency))
+    )
+
+    let secondOffset = Sound.Offset(
+      pitch: closestPitch,
+      frequency: frequency - closestPitch.frequency,
+      percentage: abs(
+        (frequency - closestPitch.frequency) * 100
+        / (pitch.frequency - closestPitch.frequency))
+    )
+
+    return Sound.Offsets(firstOffset, secondOffset)
   }
 }
