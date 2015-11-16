@@ -81,7 +81,7 @@ class NoteSpec: QuickSpec {
           }
         }
 
-        it("creates note with note and octave") {
+        it("creates note with letter and octave") {
           notes.forEach {
             note = Note(letter: $0.letter, octave: $0.octave)
 
