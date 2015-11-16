@@ -1,5 +1,3 @@
-import Foundation
-
 public struct Pitch {
 
   public let index: Int

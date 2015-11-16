@@ -1,6 +1,6 @@
-import Foundation
-
 public struct Sound {
+
+  // MARK: - Offsets
 
   public typealias Offset = (
     pitch: Pitch,
