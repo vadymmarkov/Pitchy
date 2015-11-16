@@ -15,6 +15,7 @@
 		D5684E911BFA9AB200488B96 /* PitchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5684E8E1BFA9AB200488B96 /* PitchSpec.swift */; };
 		D5684E931BFA9B6600488B96 /* PitchCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5684E921BFA9B6600488B96 /* PitchCalculator.swift */; };
 		D58517791BFA9C77007A03BA /* PitchCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58517781BFA9C77007A03BA /* PitchCalculatorSpec.swift */; };
+		D585177B1BFA9E39007A03BA /* AcousticWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585177A1BFA9E39007A03BA /* AcousticWave.swift */; };
 		D5E383A51BEFE98300C1A402 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E383A31BEFE98300C1A402 /* Note.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		D5684E8E1BFA9AB200488B96 /* PitchSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchSpec.swift; sourceTree = "<group>"; };
 		D5684E921BFA9B6600488B96 /* PitchCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculator.swift; sourceTree = "<group>"; };
 		D58517781BFA9C77007A03BA /* PitchCalculatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculatorSpec.swift; sourceTree = "<group>"; };
+		D585177A1BFA9E39007A03BA /* AcousticWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWave.swift; sourceTree = "<group>"; };
 		D5E383A31BEFE98300C1A402 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				D5684E871BFA993F00488B96 /* Calculators */,
 				D5E383A31BEFE98300C1A402 /* Note.swift */,
 				D5219A0C1BF56527009D44DF /* Pitch.swift */,
+				D585177A1BFA9E39007A03BA /* AcousticWave.swift */,
 			);
 			name = Source;
 			path = ../Source;
@@ -281,6 +284,7 @@
 				D5684E911BFA9AB200488B96 /* PitchSpec.swift in Sources */,
 				D5684E8F1BFA9AB200488B96 /* NoteCalculatorSpec.swift in Sources */,
 				D5684E901BFA9AB200488B96 /* NoteSpec.swift in Sources */,
+				D585177B1BFA9E39007A03BA /* AcousticWave.swift in Sources */,
 				D5684E931BFA9B6600488B96 /* PitchCalculator.swift in Sources */,
 				D5E383A51BEFE98300C1A402 /* Note.swift in Sources */,
 			);
