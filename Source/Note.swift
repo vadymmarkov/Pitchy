@@ -44,22 +44,22 @@ public struct Note {
 
   public init(index: Int) {
     self.index = index
-    self.letter = Calculator.letter(index: index)
-    self.octave = Calculator.octave(index: index)
-    self.frequency = Calculator.frequency(index: index)
+    self.letter = NoteCalculator.letter(index: index)
+    self.octave = NoteCalculator.octave(index: index)
+    self.frequency = NoteCalculator.frequency(index: index)
   }
 
   public init(frequency: Double) {
-    index = Calculator.index(frequency: frequency)
-    letter = Calculator.letter(index: index)
-    octave = Calculator.octave(index: index)
-    self.frequency = Calculator.frequency(index: index)
+    index = NoteCalculator.index(frequency: frequency)
+    letter = NoteCalculator.letter(index: index)
+    octave = NoteCalculator.octave(index: index)
+    self.frequency = NoteCalculator.frequency(index: index)
   }
 
   public init(letter: Letter, octave: Int) {
     self.letter = letter
     self.octave = octave
-    index = Calculator.index(letter: letter, octave: octave)
-    frequency = Calculator.frequency(index: index)
+    index = NoteCalculator.index(letter: letter, octave: octave)
+    frequency = NoteCalculator.frequency(index: index)
   }
 }

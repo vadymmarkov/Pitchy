@@ -37,6 +37,6 @@ public struct Sound {
 
   public init(frequency: Double) {
     self.frequency = frequency
-    offsets = Calculator.offsets(frequency)
+    offsets = NoteCalculator.offsets(frequency)
   }
 }

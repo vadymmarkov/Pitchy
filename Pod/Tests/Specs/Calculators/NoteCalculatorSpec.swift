@@ -1,7 +1,7 @@
 import Quick
 import Nimble
 
-class CalculatorSpec: QuickSpec {
+class NoteCalculatorSpec: QuickSpec {
 
   override func spec() {
 
@@ -29,50 +29,50 @@ class CalculatorSpec: QuickSpec {
       )
     ]
 
-    describe("PitchCalculator") {
+    describe("NoteCalculator") {
 
       describe("Standard") {
         it("has base constant values") {
-          expect(Calculator.Standard.frequency).to(equal(440))
-          expect(Calculator.Standard.octave).to(equal(4))
+          expect(NoteCalculator.Standard.frequency).to(equal(440))
+          expect(NoteCalculator.Standard.octave).to(equal(4))
         }
       }
 
       describe(".notes") {
         it("returns an array of 12 notes") {
-          let notes = Calculator.notes
-          expect(notes.count).to(equal(12))
+          let letters = NoteCalculator.letters
+          expect(letters.count).to(equal(12))
         }
 
-        it("returns an array of notes in the correct order") {
-          let notes = Calculator.notes
-          expect(notes[0]).to(equal(Note.Letter.A))
-          expect(notes[1]).to(equal(Note.Letter.ASharp))
-          expect(notes[2]).to(equal(Note.Letter.B))
-          expect(notes[3]).to(equal(Note.Letter.C))
-          expect(notes[4]).to(equal(Note.Letter.CSharp))
-          expect(notes[5]).to(equal(Note.Letter.D))
-          expect(notes[6]).to(equal(Note.Letter.DSharp))
-          expect(notes[7]).to(equal(Note.Letter.E))
-          expect(notes[8]).to(equal(Note.Letter.F))
-          expect(notes[9]).to(equal(Note.Letter.FSharp))
-          expect(notes[10]).to(equal(Note.Letter.G))
-          expect(notes[11]).to(equal(Note.Letter.GSharp))
+        it("returns an array of note letters in the correct order") {
+          let letters = NoteCalculator.letters
+          expect(letters[0]).to(equal(Note.Letter.A))
+          expect(letters[1]).to(equal(Note.Letter.ASharp))
+          expect(letters[2]).to(equal(Note.Letter.B))
+          expect(letters[3]).to(equal(Note.Letter.C))
+          expect(letters[4]).to(equal(Note.Letter.CSharp))
+          expect(letters[5]).to(equal(Note.Letter.D))
+          expect(letters[6]).to(equal(Note.Letter.DSharp))
+          expect(letters[7]).to(equal(Note.Letter.E))
+          expect(letters[8]).to(equal(Note.Letter.F))
+          expect(letters[9]).to(equal(Note.Letter.FSharp))
+          expect(letters[10]).to(equal(Note.Letter.G))
+          expect(letters[11]).to(equal(Note.Letter.GSharp))
         }
       }
       
       describe(".frequency:index") {
         it("returns a correct frequency by pitch index") {
           notes.forEach {
-            expect(Calculator.frequency(index: $0.index)) ≈ ($0.frequency, 0.01)
+            expect(NoteCalculator.frequency(index: $0.index)) ≈ ($0.frequency, 0.01)
           }
         }
       }
 
       describe(".note:index") {
-        it("returns a correct note by pitch index") {
+        it("returns a correct note letter by pitch index") {
           notes.forEach {
-            expect(Calculator.letter(index: $0.index)).to(equal($0.note))
+            expect(NoteCalculator.letter(index: $0.index)).to(equal($0.note))
           }
         }
       }
@@ -80,7 +80,7 @@ class CalculatorSpec: QuickSpec {
       describe(".octave:index") {
         it("returns a correct octave by pitch index") {
           notes.forEach {
-            expect(Calculator.octave(index: $0.index)).to(equal($0.octave))
+            expect(NoteCalculator.octave(index: $0.index)).to(equal($0.octave))
           }
         }
       }
@@ -88,15 +88,15 @@ class CalculatorSpec: QuickSpec {
       describe(".index:frequency") {
         it("returns a correct pitch index by frequency") {
           notes.forEach {
-            expect(Calculator.index(frequency: $0.frequency)).to(equal($0.index))
+            expect(NoteCalculator.index(frequency: $0.frequency)).to(equal($0.index))
           }
         }
       }
 
       describe(".index:note:octave") {
-        it("returns a correct pitch index by note and octave") {
+        it("returns a correct pitch index by note letter and octave") {
           notes.forEach {
-            expect(Calculator.index(letter: $0.note, octave: $0.octave)).to(equal($0.index))
+            expect(NoteCalculator.index(letter: $0.note, octave: $0.octave)).to(equal($0.index))
           }
         }
       }
@@ -104,7 +104,7 @@ class CalculatorSpec: QuickSpec {
       describe(".offsets") {
         it("returns a correct offsets for the specified frequency") {
           offsets.forEach {
-            let result = Calculator.offsets($0.frequency)
+            let result = NoteCalculator.offsets($0.frequency)
 
             expect(result.lower.frequency) ≈ ($0.lower.frequency, 0.01)
             expect(result.lower.percentage) ≈ ($0.lower.percentage, 0.1)
