@@ -37,6 +37,6 @@ public struct Sound {
 
   public init(frequency: Double) {
     self.frequency = frequency
-    offsets = PitchCalculator.offsets(frequency)
+    offsets = Calculator.offsets(frequency)
   }
 }

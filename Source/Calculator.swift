@@ -1,6 +1,6 @@
 import Foundation
 
-public struct PitchCalculator {
+public struct Calculator {
 
   // MARK: - Constants
 

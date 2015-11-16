@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2FC944984445975819ED9BF8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FB18BDE286530B64DFC690 /* Pods.framework */; };
-		D505269A1BF151BD00B4F835 /* PitchCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50526991BF151BD00B4F835 /* PitchCalculator.swift */; };
+		D505269A1BF151BD00B4F835 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50526991BF151BD00B4F835 /* Calculator.swift */; };
 		D505269E1BF16F4E00B4F835 /* PitchCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D505269D1BF16F4E00B4F835 /* PitchCalculatorSpec.swift */; };
 		D5219A0D1BF56527009D44DF /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5219A0C1BF56527009D44DF /* Sound.swift */; };
 		D5D2D0C91BF9CA2D00527DE2 /* SoundSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2D0C81BF9CA2D00527DE2 /* SoundSpec.swift */; };
@@ -27,7 +27,7 @@
 		35213F820B25955D75C5A5F7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		69A8BF37422F1184B1CE794A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		69FB18BDE286530B64DFC690 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D50526991BF151BD00B4F835 /* PitchCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculator.swift; sourceTree = "<group>"; };
+		D50526991BF151BD00B4F835 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		D505269D1BF16F4E00B4F835 /* PitchCalculatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculatorSpec.swift; sourceTree = "<group>"; };
 		D5219A0C1BF56527009D44DF /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		D5D2D0C81BF9CA2D00527DE2 /* SoundSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundSpec.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				D5E383A31BEFE98300C1A402 /* Note.swift */,
-				D50526991BF151BD00B4F835 /* PitchCalculator.swift */,
+				D50526991BF151BD00B4F835 /* Calculator.swift */,
 				D5219A0C1BF56527009D44DF /* Sound.swift */,
 			);
 			name = Source;
@@ -250,7 +250,7 @@
 			files = (
 				D5219A0D1BF56527009D44DF /* Sound.swift in Sources */,
 				D5E383A51BEFE98300C1A402 /* Note.swift in Sources */,
-				D505269A1BF151BD00B4F835 /* PitchCalculator.swift in Sources */,
+				D505269A1BF151BD00B4F835 /* Calculator.swift in Sources */,
 				D5E383A91BEFE9BA00C1A402 /* PitchSpec.swift in Sources */,
 				D5E383A81BEFE9BA00C1A402 /* NoteSpec.swift in Sources */,
 				D5D2D0C91BF9CA2D00527DE2 /* SoundSpec.swift in Sources */,
