@@ -1,5 +1,3 @@
-import Foundation
-
 public struct PitchCalculator {
 
   // MARK: - Offsets

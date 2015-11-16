@@ -1,5 +1,3 @@
-import Foundation
-
 public struct AcousticWave {
 
   public static let speed: Double = 343
