@@ -10,8 +10,8 @@ public struct Pitch {
   )
 
   public struct Offsets {
-    let lower: Pitch.Offset
-    let higher: Pitch.Offset
+    public let lower: Pitch.Offset
+    public let higher: Pitch.Offset
 
     public var closest: Pitch.Offset {
       return abs(lower.frequency) < abs(higher.frequency)
@@ -34,6 +34,14 @@ public struct Pitch {
   public let frequency: Double
   public let wave: AcousticWave
   public let offsets: Offsets
+
+  public var note: Note {
+    return offsets.closest.note
+  }
+
+  public var closestOffset: Offset {
+    return offsets.closest
+  }
 
   // MARK: - Initialization
 
