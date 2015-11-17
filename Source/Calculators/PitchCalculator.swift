@@ -1,3 +1,5 @@
+import Foundation
+
 public struct PitchCalculator {
 
   // MARK: - Offsets
@@ -14,19 +16,23 @@ public struct PitchCalculator {
     let firstOffset = Pitch.Offset(
       note: note,
       frequency: frequency - note.frequency,
-      percentage: abs(
-        (frequency - note.frequency) * 100
-          / (note.frequency - closestNote.frequency))
+      percentage: (frequency - note.frequency) * 100
+        / abs(note.frequency - closestNote.frequency),
+      cents: cents(note.frequency, frequency2: frequency)
     )
 
     let secondOffset = Pitch.Offset(
       note: closestNote,
       frequency: frequency - closestNote.frequency,
-      percentage: abs(
-        (frequency - closestNote.frequency) * 100
-          / (note.frequency - closestNote.frequency))
+      percentage: (frequency - closestNote.frequency) * 100
+        / abs(note.frequency - closestNote.frequency),
+      cents: cents(closestNote.frequency, frequency2: frequency)
     )
 
     return Pitch.Offsets(firstOffset, secondOffset)
+  }
+
+  public static func cents(frequency1: Double, frequency2: Double) -> Double {
+    return 1200.0 * log2(frequency2 / frequency1)
   }
 }

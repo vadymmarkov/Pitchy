@@ -6,7 +6,7 @@ public struct Pitch {
     note: Note,
     frequency: Double,
     percentage: Double,
-    cents: Int
+    cents: Double
   )
 
   public struct Offsets {
