@@ -30,6 +30,15 @@ class PitchSpec: QuickSpec {
 
     describe("Pitch") {
       describe("#init") {
+        it("sets correct values for the specified frequency") {
+          offsets.forEach {
+            let pitch = Pitch(frequency: $0.frequency)
+
+            expect(pitch.frequency) ≈ ($0.frequency, 0.01)
+            expect(pitch.wave.frequency) ≈ ($0.frequency, 0.01)
+          }
+        }
+
         it("sets a correct offsets for the specified frequency") {
           offsets.forEach {
             let pitch = Pitch(frequency: $0.frequency)
