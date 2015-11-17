@@ -17,6 +17,7 @@
 		D58517791BFA9C77007A03BA /* PitchCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58517781BFA9C77007A03BA /* PitchCalculatorSpec.swift */; };
 		D585177B1BFA9E39007A03BA /* AcousticWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585177A1BFA9E39007A03BA /* AcousticWave.swift */; };
 		D585177D1BFA9FE6007A03BA /* WaveCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585177C1BFA9FE6007A03BA /* WaveCalculator.swift */; };
+		D585177F1BFAA2F1007A03BA /* WaveCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585177E1BFAA2F1007A03BA /* WaveCalculatorSpec.swift */; };
 		D5E383A51BEFE98300C1A402 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E383A31BEFE98300C1A402 /* Note.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		D58517781BFA9C77007A03BA /* PitchCalculatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculatorSpec.swift; sourceTree = "<group>"; };
 		D585177A1BFA9E39007A03BA /* AcousticWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWave.swift; sourceTree = "<group>"; };
 		D585177C1BFA9FE6007A03BA /* WaveCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveCalculator.swift; sourceTree = "<group>"; };
+		D585177E1BFAA2F1007A03BA /* WaveCalculatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveCalculatorSpec.swift; sourceTree = "<group>"; };
 		D5E383A31BEFE98300C1A402 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 			children = (
 				D5684E8C1BFA9AB200488B96 /* NoteCalculatorSpec.swift */,
 				D58517781BFA9C77007A03BA /* PitchCalculatorSpec.swift */,
+				D585177E1BFAA2F1007A03BA /* WaveCalculatorSpec.swift */,
 			);
 			path = Calculators;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				D5684E8F1BFA9AB200488B96 /* NoteCalculatorSpec.swift in Sources */,
 				D585177D1BFA9FE6007A03BA /* WaveCalculator.swift in Sources */,
 				D5684E901BFA9AB200488B96 /* NoteSpec.swift in Sources */,
+				D585177F1BFAA2F1007A03BA /* WaveCalculatorSpec.swift in Sources */,
 				D585177B1BFA9E39007A03BA /* AcousticWave.swift in Sources */,
 				D5684E931BFA9B6600488B96 /* PitchCalculator.swift in Sources */,
 				D5E383A51BEFE98300C1A402 /* Note.swift in Sources */,
