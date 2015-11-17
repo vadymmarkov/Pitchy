@@ -33,6 +33,11 @@ public struct Pitch {
   public let frequency: Double
   public let offsets: Offsets
 
+  public lazy var wave: AcousticWave = {
+    let wave = AcousticWave(frequency: self.frequency)
+    return wave
+    }()
+
   // MARK: - Initialization
 
   public init(frequency: Double) {

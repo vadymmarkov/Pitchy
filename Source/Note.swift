@@ -25,6 +25,11 @@ public struct Note {
   public let octave: Int
   public let frequency: Double
 
+  public lazy var wave: AcousticWave = {
+    let wave = AcousticWave(frequency: self.frequency)
+    return wave
+    }()
+
   public var string: String {
     let string = "\(self.letter.rawValue)\(self.octave)"
     return string
