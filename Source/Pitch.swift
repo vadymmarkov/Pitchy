@@ -39,6 +39,10 @@ public struct Pitch {
     return offsets.closest.note
   }
 
+  public var closestOffset: Offset {
+    return offsets.closest
+  }
+
   // MARK: - Initialization
 
   public init(frequency: Double) {
