@@ -35,6 +35,10 @@ public struct Pitch {
   public let wave: AcousticWave
   public let offsets: Offsets
 
+  public var note: Note {
+    return offsets.closest.note
+  }
+
   // MARK: - Initialization
 
   public init(frequency: Double) {
