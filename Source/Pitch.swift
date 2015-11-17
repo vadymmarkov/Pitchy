@@ -5,7 +5,8 @@ public struct Pitch {
   public typealias Offset = (
     note: Note,
     frequency: Double,
-    percentage: Double
+    percentage: Double,
+    cents: Int
   )
 
   public struct Offsets {
