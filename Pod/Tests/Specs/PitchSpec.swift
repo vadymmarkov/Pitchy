@@ -4,7 +4,6 @@ import Nimble
 class PitchSpec: QuickSpec {
 
   override func spec() {
-
     let offsets = [
       (frequency: 445.0,
         lower: Pitch.Offset(note: Note(index: 0), frequency: 5, percentage: 19.1),
@@ -18,19 +17,18 @@ class PitchSpec: QuickSpec {
       )
     ]
 
-    describe("Pitch") {
-
-      describe("Offsets") {
-        describe("#init") {
-          it("rearrange offsets based on frequency") {
-            let sample = offsets[0]
-            let offsets = Pitch.Offsets(sample.higher, sample.lower)
-            expect(offsets.lower.note.index).to(equal(sample.lower.note.index))
-            expect(offsets.higher.note.index).to(equal(sample.higher.note.index))
-          }
+    describe("Pitch.Offsets") {
+      describe("#init") {
+        it("rearrange offsets based on frequency") {
+          let sample = offsets[0]
+          let offsets = Pitch.Offsets(sample.higher, sample.lower)
+          expect(offsets.lower.note.index).to(equal(sample.lower.note.index))
+          expect(offsets.higher.note.index).to(equal(sample.higher.note.index))
         }
       }
+    }
 
+    describe("Pitch") {
       describe("#init") {
         it("sets a correct offsets for the specified frequency") {
           offsets.forEach {

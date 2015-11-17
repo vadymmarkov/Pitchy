@@ -18,6 +18,7 @@
 		D585177B1BFA9E39007A03BA /* AcousticWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585177A1BFA9E39007A03BA /* AcousticWave.swift */; };
 		D585177D1BFA9FE6007A03BA /* WaveCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585177C1BFA9FE6007A03BA /* WaveCalculator.swift */; };
 		D585177F1BFAA2F1007A03BA /* WaveCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585177E1BFAA2F1007A03BA /* WaveCalculatorSpec.swift */; };
+		D58517811BFAA5F3007A03BA /* AcousticWaveSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58517801BFAA5F3007A03BA /* AcousticWaveSpec.swift */; };
 		D5E383A51BEFE98300C1A402 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E383A31BEFE98300C1A402 /* Note.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		D585177A1BFA9E39007A03BA /* AcousticWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWave.swift; sourceTree = "<group>"; };
 		D585177C1BFA9FE6007A03BA /* WaveCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveCalculator.swift; sourceTree = "<group>"; };
 		D585177E1BFAA2F1007A03BA /* WaveCalculatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveCalculatorSpec.swift; sourceTree = "<group>"; };
+		D58517801BFAA5F3007A03BA /* AcousticWaveSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWaveSpec.swift; sourceTree = "<group>"; };
 		D5E383A31BEFE98300C1A402 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,9 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				D5684E871BFA993F00488B96 /* Calculators */,
+				D585177A1BFA9E39007A03BA /* AcousticWave.swift */,
 				D5E383A31BEFE98300C1A402 /* Note.swift */,
 				D5219A0C1BF56527009D44DF /* Pitch.swift */,
-				D585177A1BFA9E39007A03BA /* AcousticWave.swift */,
 			);
 			name = Source;
 			path = ../Source;
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				D5684E8B1BFA9AB200488B96 /* Calculators */,
+				D58517801BFAA5F3007A03BA /* AcousticWaveSpec.swift */,
 				D5684E8D1BFA9AB200488B96 /* NoteSpec.swift */,
 				D5684E8E1BFA9AB200488B96 /* PitchSpec.swift */,
 			);
@@ -290,6 +293,7 @@
 				D5684E911BFA9AB200488B96 /* PitchSpec.swift in Sources */,
 				D5684E8F1BFA9AB200488B96 /* NoteCalculatorSpec.swift in Sources */,
 				D585177D1BFA9FE6007A03BA /* WaveCalculator.swift in Sources */,
+				D58517811BFAA5F3007A03BA /* AcousticWaveSpec.swift in Sources */,
 				D5684E901BFA9AB200488B96 /* NoteSpec.swift in Sources */,
 				D585177F1BFAA2F1007A03BA /* WaveCalculatorSpec.swift in Sources */,
 				D585177B1BFA9E39007A03BA /* AcousticWave.swift in Sources */,
