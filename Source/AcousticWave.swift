@@ -6,6 +6,16 @@ public struct AcousticWave {
   public let wavelength: Double
   public let period: Double
 
+  public var harmonics: [Pitch] {
+    var pitches = [Pitch]()
+
+    for index in 1...16 {
+      pitches.append(Pitch(frequency: Double(index) * frequency))
+    }
+
+    return pitches
+  }
+
   // MARK: - Initialization
 
   public init(frequency: Double) {
