@@ -31,12 +31,14 @@ public struct Pitch {
   }
 
   public let frequency: Double
+  public let wave: AcousticWave
   public let offsets: Offsets
 
   // MARK: - Initialization
 
   public init(frequency: Double) {
     self.frequency = frequency
+    wave = AcousticWave(frequency: frequency)
     offsets = PitchCalculator.offsets(frequency)
   }
 }

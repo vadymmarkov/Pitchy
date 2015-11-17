@@ -24,6 +24,7 @@ public struct Note {
   public let letter: Letter
   public let octave: Int
   public let frequency: Double
+  public let wave: AcousticWave
 
   public var string: String {
     let string = "\(self.letter.rawValue)\(self.octave)"
@@ -44,9 +45,10 @@ public struct Note {
 
   public init(index: Int) {
     self.index = index
-    self.letter = NoteCalculator.letter(index: index)
-    self.octave = NoteCalculator.octave(index: index)
-    self.frequency = NoteCalculator.frequency(index: index)
+    letter = NoteCalculator.letter(index: index)
+    octave = NoteCalculator.octave(index: index)
+    frequency = NoteCalculator.frequency(index: index)
+    wave = AcousticWave(frequency: frequency)
   }
 
   public init(frequency: Double) {
@@ -54,6 +56,7 @@ public struct Note {
     letter = NoteCalculator.letter(index: index)
     octave = NoteCalculator.octave(index: index)
     self.frequency = NoteCalculator.frequency(index: index)
+    wave = AcousticWave(frequency: frequency)
   }
 
   public init(letter: Letter, octave: Int) {
@@ -61,5 +64,6 @@ public struct Note {
     self.octave = octave
     index = NoteCalculator.index(letter: letter, octave: octave)
     frequency = NoteCalculator.frequency(index: index)
+    wave = AcousticWave(frequency: frequency)
   }
 }
