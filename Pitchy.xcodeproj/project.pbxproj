@@ -254,9 +254,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5DF49A11C2EE43E00343F13 /* PitchyTests */,
 				D5DF49D11C2EE72E00343F13 /* Pitchy-iOS */,
 				D5DF49DE1C2EE77A00343F13 /* Pitchy-Mac */,
+				D5DF49A11C2EE43E00343F13 /* PitchyTests */,
 			);
 		};
 /* End PBXProject section */
