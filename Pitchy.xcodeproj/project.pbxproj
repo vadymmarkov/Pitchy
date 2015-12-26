@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D5DF49A81C2EE43E00343F13 /* PitchyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49A71C2EE43E00343F13 /* PitchyTests.swift */; };
-		D5DF49D51C2EE72F00343F13 /* Pitchy-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D5DF49D41C2EE72F00343F13 /* Pitchy-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5DF49E21C2EE77A00343F13 /* Pitchy-Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = D5DF49E11C2EE77A00343F13 /* Pitchy-Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5DF49E71C2EE85900343F13 /* NoteCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */; };
+		D5DF49E81C2EE85900343F13 /* PitchCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */; };
+		D5DF49E91C2EE85900343F13 /* WaveCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B71C2EE67800343F13 /* WaveCalculator.swift */; };
+		D5DF49EA1C2EE85900343F13 /* AcousticWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B31C2EE67800343F13 /* AcousticWave.swift */; };
+		D5DF49EB1C2EE85900343F13 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B81C2EE67800343F13 /* Note.swift */; };
+		D5DF49EC1C2EE85900343F13 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B91C2EE67800343F13 /* Pitch.swift */; };
+		D5DF49ED1C2EE85A00343F13 /* NoteCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */; };
+		D5DF49EE1C2EE85A00343F13 /* PitchCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */; };
+		D5DF49EF1C2EE85A00343F13 /* WaveCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B71C2EE67800343F13 /* WaveCalculator.swift */; };
+		D5DF49F01C2EE85A00343F13 /* AcousticWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B31C2EE67800343F13 /* AcousticWave.swift */; };
+		D5DF49F11C2EE85A00343F13 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B81C2EE67800343F13 /* Note.swift */; };
+		D5DF49F21C2EE85A00343F13 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B91C2EE67800343F13 /* Pitch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D5DF499D1C2EE43D00343F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5DF49A21C2EE43E00343F13 /* PitchyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5DF49A71C2EE43E00343F13 /* PitchyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchyTests.swift; sourceTree = "<group>"; };
 		D5DF49A91C2EE43E00343F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5DF49B31C2EE67800343F13 /* AcousticWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWave.swift; sourceTree = "<group>"; };
 		D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCalculator.swift; sourceTree = "<group>"; };
@@ -23,14 +30,10 @@
 		D5DF49B71C2EE67800343F13 /* WaveCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveCalculator.swift; sourceTree = "<group>"; };
 		D5DF49B81C2EE67800343F13 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D5DF49B91C2EE67800343F13 /* Pitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
-		D5DF49C71C2EE6E700343F13 /* Pitchy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pitchy.h; sourceTree = "<group>"; };
-		D5DF49C91C2EE6E700343F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5DF49D21C2EE72E00343F13 /* Pitchy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pitchy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5DF49D41C2EE72F00343F13 /* Pitchy-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pitchy-iOS.h"; sourceTree = "<group>"; };
-		D5DF49D61C2EE72F00343F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5DF49DF1C2EE77A00343F13 /* Pitchy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pitchy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5DF49E11C2EE77A00343F13 /* Pitchy-Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pitchy-Mac.h"; sourceTree = "<group>"; };
-		D5DF49E31C2EE77A00343F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5DF49F41C2EE87200343F13 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5DF49F61C2EE87200343F13 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +67,6 @@
 				D5DF49B21C2EE67800343F13 /* Source */,
 				D5DF499A1C2EE43D00343F13 /* Pitchy */,
 				D5DF49A61C2EE43E00343F13 /* PitchyTests */,
-				D5DF49C61C2EE6E700343F13 /* Pitchy */,
-				D5DF49D31C2EE72F00343F13 /* Pitchy-iOS */,
-				D5DF49E01C2EE77A00343F13 /* Pitchy-Mac */,
 				D5DF49991C2EE43D00343F13 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,7 +84,8 @@
 		D5DF499A1C2EE43D00343F13 /* Pitchy */ = {
 			isa = PBXGroup;
 			children = (
-				D5DF499D1C2EE43D00343F13 /* Info.plist */,
+				D5DF49F51C2EE87200343F13 /* iOS */,
+				D5DF49F31C2EE87200343F13 /* Mac */,
 			);
 			path = Pitchy;
 			sourceTree = "<group>";
@@ -92,7 +93,6 @@
 		D5DF49A61C2EE43E00343F13 /* PitchyTests */ = {
 			isa = PBXGroup;
 			children = (
-				D5DF49A71C2EE43E00343F13 /* PitchyTests.swift */,
 				D5DF49A91C2EE43E00343F13 /* Info.plist */,
 			);
 			path = PitchyTests;
@@ -119,31 +119,20 @@
 			path = Calculators;
 			sourceTree = "<group>";
 		};
-		D5DF49C61C2EE6E700343F13 /* Pitchy */ = {
+		D5DF49F31C2EE87200343F13 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				D5DF49C71C2EE6E700343F13 /* Pitchy.h */,
-				D5DF49C91C2EE6E700343F13 /* Info.plist */,
+				D5DF49F41C2EE87200343F13 /* Info.plist */,
 			);
-			path = Pitchy;
+			path = Mac;
 			sourceTree = "<group>";
 		};
-		D5DF49D31C2EE72F00343F13 /* Pitchy-iOS */ = {
+		D5DF49F51C2EE87200343F13 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D5DF49D41C2EE72F00343F13 /* Pitchy-iOS.h */,
-				D5DF49D61C2EE72F00343F13 /* Info.plist */,
+				D5DF49F61C2EE87200343F13 /* Info.plist */,
 			);
-			path = "Pitchy-iOS";
-			sourceTree = "<group>";
-		};
-		D5DF49E01C2EE77A00343F13 /* Pitchy-Mac */ = {
-			isa = PBXGroup;
-			children = (
-				D5DF49E11C2EE77A00343F13 /* Pitchy-Mac.h */,
-				D5DF49E31C2EE77A00343F13 /* Info.plist */,
-			);
-			path = "Pitchy-Mac";
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +142,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5DF49D51C2EE72F00343F13 /* Pitchy-iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +149,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5DF49E21C2EE77A00343F13 /* Pitchy-Mac.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +277,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5DF49A81C2EE43E00343F13 /* PitchyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DF49EC1C2EE85900343F13 /* Pitch.swift in Sources */,
+				D5DF49EB1C2EE85900343F13 /* Note.swift in Sources */,
+				D5DF49E81C2EE85900343F13 /* PitchCalculator.swift in Sources */,
+				D5DF49E71C2EE85900343F13 /* NoteCalculator.swift in Sources */,
+				D5DF49E91C2EE85900343F13 /* WaveCalculator.swift in Sources */,
+				D5DF49EA1C2EE85900343F13 /* AcousticWave.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DF49F21C2EE85A00343F13 /* Pitch.swift in Sources */,
+				D5DF49F11C2EE85A00343F13 /* Note.swift in Sources */,
+				D5DF49EE1C2EE85A00343F13 /* PitchCalculator.swift in Sources */,
+				D5DF49ED1C2EE85A00343F13 /* NoteCalculator.swift in Sources */,
+				D5DF49EF1C2EE85A00343F13 /* WaveCalculator.swift in Sources */,
+				D5DF49F01C2EE85A00343F13 /* AcousticWave.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
