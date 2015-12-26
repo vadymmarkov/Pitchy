@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D5DF49A11C2EE43E00343F13"
-               BuildableName = "PitchyTests.xctest"
-               BlueprintName = "PitchyTests"
+               BlueprintIdentifier = "D5DF4A191C2EE96D00343F13"
+               BuildableName = "Pitchy-Mac-Tests.xctest"
+               BlueprintName = "Pitchy-Mac-Tests"
                ReferencedContainer = "container:Pitchy.xcodeproj">
             </BuildableReference>
          </TestableReference>

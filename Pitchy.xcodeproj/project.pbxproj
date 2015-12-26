@@ -19,11 +19,44 @@
 		D5DF49F01C2EE85A00343F13 /* AcousticWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B31C2EE67800343F13 /* AcousticWave.swift */; };
 		D5DF49F11C2EE85A00343F13 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B81C2EE67800343F13 /* Note.swift */; };
 		D5DF49F21C2EE85A00343F13 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B91C2EE67800343F13 /* Pitch.swift */; };
+		D5DF4A101C2EE95600343F13 /* Pitchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DF49D21C2EE72E00343F13 /* Pitchy.framework */; };
+		D5DF4A1F1C2EE96D00343F13 /* Pitchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DF49DF1C2EE77A00343F13 /* Pitchy.framework */; };
+		D5DF4A2D1C2EEAE400343F13 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DF4A2B1C2EEAE400343F13 /* Quick.framework */; };
+		D5DF4A2E1C2EEAE400343F13 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DF4A2C1C2EEAE400343F13 /* Nimble.framework */; };
+		D5DF4A311C2EEAF200343F13 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DF4A2F1C2EEAF200343F13 /* Quick.framework */; };
+		D5DF4A321C2EEAF200343F13 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DF4A301C2EEAF200343F13 /* Nimble.framework */; };
+		D5DF4A331C2EEB5200343F13 /* NoteCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FC1C2EE8AC00343F13 /* NoteCalculatorSpec.swift */; };
+		D5DF4A341C2EEB5200343F13 /* PitchCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FD1C2EE8AC00343F13 /* PitchCalculatorSpec.swift */; };
+		D5DF4A351C2EEB5200343F13 /* WaveCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FE1C2EE8AC00343F13 /* WaveCalculatorSpec.swift */; };
+		D5DF4A361C2EEB5200343F13 /* AcousticWaveSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FA1C2EE8AC00343F13 /* AcousticWaveSpec.swift */; };
+		D5DF4A371C2EEB5200343F13 /* NoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FF1C2EE8AC00343F13 /* NoteSpec.swift */; };
+		D5DF4A381C2EEB5200343F13 /* PitchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF4A001C2EE8AC00343F13 /* PitchSpec.swift */; };
+		D5DF4A391C2EEB5300343F13 /* NoteCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FC1C2EE8AC00343F13 /* NoteCalculatorSpec.swift */; };
+		D5DF4A3A1C2EEB5300343F13 /* PitchCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FD1C2EE8AC00343F13 /* PitchCalculatorSpec.swift */; };
+		D5DF4A3B1C2EEB5300343F13 /* WaveCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FE1C2EE8AC00343F13 /* WaveCalculatorSpec.swift */; };
+		D5DF4A3C1C2EEB5300343F13 /* AcousticWaveSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FA1C2EE8AC00343F13 /* AcousticWaveSpec.swift */; };
+		D5DF4A3D1C2EEB5300343F13 /* NoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FF1C2EE8AC00343F13 /* NoteSpec.swift */; };
+		D5DF4A3E1C2EEB5300343F13 /* PitchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF4A001C2EE8AC00343F13 /* PitchSpec.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D5DF4A111C2EE95600343F13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5DF498F1C2EE43D00343F13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5DF49D11C2EE72E00343F13;
+			remoteInfo = "Pitchy-iOS";
+		};
+		D5DF4A201C2EE96D00343F13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5DF498F1C2EE43D00343F13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5DF49DE1C2EE77A00343F13;
+			remoteInfo = "Pitchy-Mac";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		D5DF49A21C2EE43E00343F13 /* PitchyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5DF49A91C2EE43E00343F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5DF49B31C2EE67800343F13 /* AcousticWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWave.swift; sourceTree = "<group>"; };
 		D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCalculator.swift; sourceTree = "<group>"; };
 		D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculator.swift; sourceTree = "<group>"; };
@@ -34,16 +67,23 @@
 		D5DF49DF1C2EE77A00343F13 /* Pitchy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pitchy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DF49F41C2EE87200343F13 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5DF49F61C2EE87200343F13 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5DF49FA1C2EE8AC00343F13 /* AcousticWaveSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWaveSpec.swift; sourceTree = "<group>"; };
+		D5DF49FC1C2EE8AC00343F13 /* NoteCalculatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCalculatorSpec.swift; sourceTree = "<group>"; };
+		D5DF49FD1C2EE8AC00343F13 /* PitchCalculatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculatorSpec.swift; sourceTree = "<group>"; };
+		D5DF49FE1C2EE8AC00343F13 /* WaveCalculatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveCalculatorSpec.swift; sourceTree = "<group>"; };
+		D5DF49FF1C2EE8AC00343F13 /* NoteSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteSpec.swift; sourceTree = "<group>"; };
+		D5DF4A001C2EE8AC00343F13 /* PitchSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchSpec.swift; sourceTree = "<group>"; };
+		D5DF4A0B1C2EE95600343F13 /* Pitchy-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pitchy-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5DF4A1A1C2EE96D00343F13 /* Pitchy-Mac-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pitchy-Mac-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5DF4A261C2EE9FF00343F13 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5DF4A281C2EE9FF00343F13 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5DF4A2B1C2EEAE400343F13 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		D5DF4A2C1C2EEAE400343F13 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		D5DF4A2F1C2EEAF200343F13 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		D5DF4A301C2EEAF200343F13 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D5DF499F1C2EE43E00343F13 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D5DF49CE1C2EE72E00343F13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,12 +98,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5DF4A081C2EE95600343F13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5DF4A2D1C2EEAE400343F13 /* Quick.framework in Frameworks */,
+				D5DF4A2E1C2EEAE400343F13 /* Nimble.framework in Frameworks */,
+				D5DF4A101C2EE95600343F13 /* Pitchy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5DF4A171C2EE96D00343F13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5DF4A311C2EEAF200343F13 /* Quick.framework in Frameworks */,
+				D5DF4A321C2EEAF200343F13 /* Nimble.framework in Frameworks */,
+				D5DF4A1F1C2EE96D00343F13 /* Pitchy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		D5DF498E1C2EE43D00343F13 = {
 			isa = PBXGroup;
 			children = (
+				D5DF4A2F1C2EEAF200343F13 /* Quick.framework */,
+				D5DF4A301C2EEAF200343F13 /* Nimble.framework */,
+				D5DF4A2B1C2EEAE400343F13 /* Quick.framework */,
+				D5DF4A2C1C2EEAE400343F13 /* Nimble.framework */,
 				D5DF49B21C2EE67800343F13 /* Source */,
 				D5DF499A1C2EE43D00343F13 /* Pitchy */,
 				D5DF49A61C2EE43E00343F13 /* PitchyTests */,
@@ -74,9 +138,10 @@
 		D5DF49991C2EE43D00343F13 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5DF49A21C2EE43E00343F13 /* PitchyTests.xctest */,
 				D5DF49D21C2EE72E00343F13 /* Pitchy.framework */,
 				D5DF49DF1C2EE77A00343F13 /* Pitchy.framework */,
+				D5DF4A0B1C2EE95600343F13 /* Pitchy-iOS-Tests.xctest */,
+				D5DF4A1A1C2EE96D00343F13 /* Pitchy-Mac-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,7 +158,9 @@
 		D5DF49A61C2EE43E00343F13 /* PitchyTests */ = {
 			isa = PBXGroup;
 			children = (
-				D5DF49A91C2EE43E00343F13 /* Info.plist */,
+				D5DF4A251C2EE9FF00343F13 /* Mac */,
+				D5DF4A271C2EE9FF00343F13 /* iOS */,
+				D5DF49F91C2EE8AC00343F13 /* Specs */,
 			);
 			path = PitchyTests;
 			sourceTree = "<group>";
@@ -135,6 +202,43 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
+		D5DF49F91C2EE8AC00343F13 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				D5DF49FB1C2EE8AC00343F13 /* Calculators */,
+				D5DF49FA1C2EE8AC00343F13 /* AcousticWaveSpec.swift */,
+				D5DF49FF1C2EE8AC00343F13 /* NoteSpec.swift */,
+				D5DF4A001C2EE8AC00343F13 /* PitchSpec.swift */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		D5DF49FB1C2EE8AC00343F13 /* Calculators */ = {
+			isa = PBXGroup;
+			children = (
+				D5DF49FC1C2EE8AC00343F13 /* NoteCalculatorSpec.swift */,
+				D5DF49FD1C2EE8AC00343F13 /* PitchCalculatorSpec.swift */,
+				D5DF49FE1C2EE8AC00343F13 /* WaveCalculatorSpec.swift */,
+			);
+			path = Calculators;
+			sourceTree = "<group>";
+		};
+		D5DF4A251C2EE9FF00343F13 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				D5DF4A261C2EE9FF00343F13 /* Info.plist */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		D5DF4A271C2EE9FF00343F13 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D5DF4A281C2EE9FF00343F13 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -155,23 +259,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D5DF49A11C2EE43E00343F13 /* PitchyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D5DF49AF1C2EE43E00343F13 /* Build configuration list for PBXNativeTarget "PitchyTests" */;
-			buildPhases = (
-				D5DF499E1C2EE43E00343F13 /* Sources */,
-				D5DF499F1C2EE43E00343F13 /* Frameworks */,
-				D5DF49A01C2EE43E00343F13 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PitchyTests;
-			productName = PitchyTests;
-			productReference = D5DF49A21C2EE43E00343F13 /* PitchyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		D5DF49D11C2EE72E00343F13 /* Pitchy-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5DF49D71C2EE72F00343F13 /* Build configuration list for PBXNativeTarget "Pitchy-iOS" */;
@@ -208,6 +295,44 @@
 			productReference = D5DF49DF1C2EE77A00343F13 /* Pitchy.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D5DF4A0A1C2EE95600343F13 /* Pitchy-iOS-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5DF4A131C2EE95600343F13 /* Build configuration list for PBXNativeTarget "Pitchy-iOS-Tests" */;
+			buildPhases = (
+				D5DF4A071C2EE95600343F13 /* Sources */,
+				D5DF4A081C2EE95600343F13 /* Frameworks */,
+				D5DF4A091C2EE95600343F13 /* Resources */,
+				D5DF4A3F1C2EEBC500343F13 /* Copy frameworks with Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5DF4A121C2EE95600343F13 /* PBXTargetDependency */,
+			);
+			name = "Pitchy-iOS-Tests";
+			productName = "Pitchy-iOS-Tests";
+			productReference = D5DF4A0B1C2EE95600343F13 /* Pitchy-iOS-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D5DF4A191C2EE96D00343F13 /* Pitchy-Mac-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5DF4A221C2EE96D00343F13 /* Build configuration list for PBXNativeTarget "Pitchy-Mac-Tests" */;
+			buildPhases = (
+				D5DF4A161C2EE96D00343F13 /* Sources */,
+				D5DF4A171C2EE96D00343F13 /* Frameworks */,
+				D5DF4A181C2EE96D00343F13 /* Resources */,
+				D5DF4A401C2EEC1B00343F13 /* Copy frameworks with Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5DF4A211C2EE96D00343F13 /* PBXTargetDependency */,
+			);
+			name = "Pitchy-Mac-Tests";
+			productName = "Pitchy-Mac-Tests";
+			productReference = D5DF4A1A1C2EE96D00343F13 /* Pitchy-Mac-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -218,13 +343,16 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Vadym Markov";
 				TargetAttributes = {
-					D5DF49A11C2EE43E00343F13 = {
-						CreatedOnToolsVersion = 7.2;
-					};
 					D5DF49D11C2EE72E00343F13 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 					D5DF49DE1C2EE77A00343F13 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D5DF4A0A1C2EE95600343F13 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D5DF4A191C2EE96D00343F13 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -243,19 +371,13 @@
 			targets = (
 				D5DF49D11C2EE72E00343F13 /* Pitchy-iOS */,
 				D5DF49DE1C2EE77A00343F13 /* Pitchy-Mac */,
-				D5DF49A11C2EE43E00343F13 /* PitchyTests */,
+				D5DF4A0A1C2EE95600343F13 /* Pitchy-iOS-Tests */,
+				D5DF4A191C2EE96D00343F13 /* Pitchy-Mac-Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D5DF49A01C2EE43E00343F13 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D5DF49D01C2EE72E00343F13 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,16 +392,58 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		D5DF499E1C2EE43E00343F13 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		D5DF4A091C2EE95600343F13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5DF4A181C2EE96D00343F13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D5DF4A3F1C2EEBC500343F13 /* Copy frameworks with Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			name = "Copy frameworks with Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		D5DF4A401C2EEC1B00343F13 /* Copy frameworks with Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Nimble.framework",
+			);
+			name = "Copy frameworks with Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		D5DF49CD1C2EE72E00343F13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,7 +470,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5DF4A071C2EE95600343F13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5DF4A351C2EEB5200343F13 /* WaveCalculatorSpec.swift in Sources */,
+				D5DF4A331C2EEB5200343F13 /* NoteCalculatorSpec.swift in Sources */,
+				D5DF4A361C2EEB5200343F13 /* AcousticWaveSpec.swift in Sources */,
+				D5DF4A381C2EEB5200343F13 /* PitchSpec.swift in Sources */,
+				D5DF4A371C2EEB5200343F13 /* NoteSpec.swift in Sources */,
+				D5DF4A341C2EEB5200343F13 /* PitchCalculatorSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5DF4A161C2EE96D00343F13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5DF4A3B1C2EEB5300343F13 /* WaveCalculatorSpec.swift in Sources */,
+				D5DF4A391C2EEB5300343F13 /* NoteCalculatorSpec.swift in Sources */,
+				D5DF4A3C1C2EEB5300343F13 /* AcousticWaveSpec.swift in Sources */,
+				D5DF4A3E1C2EEB5300343F13 /* PitchSpec.swift in Sources */,
+				D5DF4A3D1C2EEB5300343F13 /* NoteSpec.swift in Sources */,
+				D5DF4A3A1C2EEB5300343F13 /* PitchCalculatorSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D5DF4A121C2EE95600343F13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5DF49D11C2EE72E00343F13 /* Pitchy-iOS */;
+			targetProxy = D5DF4A111C2EE95600343F13 /* PBXContainerItemProxy */;
+		};
+		D5DF4A211C2EE96D00343F13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5DF49DE1C2EE77A00343F13 /* Pitchy-Mac */;
+			targetProxy = D5DF4A201C2EE96D00343F13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D5DF49AA1C2EE43E00343F13 /* Debug */ = {
@@ -398,26 +601,6 @@
 			};
 			name = Release;
 		};
-		D5DF49B01C2EE43E00343F13 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = PitchyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vadymmarkov.PitchyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		D5DF49B11C2EE43E00343F13 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = PitchyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vadymmarkov.PitchyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		D5DF49D81C2EE72F00343F13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -494,6 +677,70 @@
 			};
 			name = Release;
 		};
+		D5DF4A141C2EE95600343F13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/PitchyTests/iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vadymmarkov.Pitchy-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D5DF4A151C2EE95600343F13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/PitchyTests/iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vadymmarkov.Pitchy-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D5DF4A231C2EE96D00343F13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/PitchyTests/Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vadymmarkov.Pitchy-Mac-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D5DF4A241C2EE96D00343F13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/PitchyTests/Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vadymmarkov.Pitchy-Mac-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -502,15 +749,6 @@
 			buildConfigurations = (
 				D5DF49AA1C2EE43E00343F13 /* Debug */,
 				D5DF49AB1C2EE43E00343F13 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D5DF49AF1C2EE43E00343F13 /* Build configuration list for PBXNativeTarget "PitchyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D5DF49B01C2EE43E00343F13 /* Debug */,
-				D5DF49B11C2EE43E00343F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -528,6 +766,22 @@
 			buildConfigurations = (
 				D5DF49E51C2EE77A00343F13 /* Debug */,
 				D5DF49E61C2EE77A00343F13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D5DF4A131C2EE95600343F13 /* Build configuration list for PBXNativeTarget "Pitchy-iOS-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5DF4A141C2EE95600343F13 /* Debug */,
+				D5DF4A151C2EE95600343F13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D5DF4A221C2EE96D00343F13 /* Build configuration list for PBXNativeTarget "Pitchy-Mac-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5DF4A231C2EE96D00343F13 /* Debug */,
+				D5DF4A241C2EE96D00343F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
