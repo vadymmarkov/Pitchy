@@ -1,9 +1,13 @@
-# Pitchy
+![Cache](https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyPresentation.png)
 
 [![CI Status](http://img.shields.io/travis/vadymmarkov/Pitchy.svg?style=flat)](https://travis-ci.org/vadymmarkov/Pitchy)
 [![Version](https://img.shields.io/cocoapods/v/Pitchy.svg?style=flat)](http://cocoadocs.org/docsets/Pitchy)
 [![License](https://img.shields.io/cocoapods/l/Pitchy.svg?style=flat)](http://cocoadocs.org/docsets/Pitchy)
 [![Platform](https://img.shields.io/cocoapods/p/Pitchy.svg?style=flat)](http://cocoadocs.org/docsets/Pitchy)
+
+## Description
+
+<img src="https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyIcon.png" alt="Cache Icon" align="right" />
 
 ## Usage
 
