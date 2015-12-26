@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0720"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "146D72AB1AB782920058798C"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
+               BlueprintIdentifier = "D5DF49D11C2EE72E00343F13"
+               BuildableName = "Pitchy.framework"
+               BlueprintName = "Pitchy-iOS"
                ReferencedContainer = "container:Pitchy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "146D72AB1AB782920058798C"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
+               BlueprintIdentifier = "D5DF4A0A1C2EE95600343F13"
+               BuildableName = "Pitchy-iOS-Tests.xctest"
+               BlueprintName = "Pitchy-iOS-Tests"
                ReferencedContainer = "container:Pitchy.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "146D72AB1AB782920058798C"
-            BuildableName = "Tests.xctest"
-            BlueprintName = "Tests"
+            BlueprintIdentifier = "D5DF49D11C2EE72E00343F13"
+            BuildableName = "Pitchy.framework"
+            BlueprintName = "Pitchy-iOS"
             ReferencedContainer = "container:Pitchy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "146D72AB1AB782920058798C"
-            BuildableName = "Tests.xctest"
-            BlueprintName = "Tests"
+            BlueprintIdentifier = "D5DF49D11C2EE72E00343F13"
+            BuildableName = "Pitchy.framework"
+            BlueprintName = "Pitchy-iOS"
             ReferencedContainer = "container:Pitchy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "146D72AB1AB782920058798C"
-            BuildableName = "Tests.xctest"
-            BlueprintName = "Tests"
+            BlueprintIdentifier = "D5DF49D11C2EE72E00343F13"
+            BuildableName = "Pitchy.framework"
+            BlueprintName = "Pitchy-iOS"
             ReferencedContainer = "container:Pitchy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

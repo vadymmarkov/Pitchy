@@ -1,3 +1,4 @@
+@testable import Pitchy
 import Quick
 import Nimble
 
@@ -46,7 +47,7 @@ class NoteCalculatorSpec: QuickSpec {
           expect(letters[11]).to(equal(Note.Letter.GSharp))
         }
       }
-      
+
       describe(".frequency:index") {
         it("returns a correct frequency by pitch index") {
           notes.forEach {

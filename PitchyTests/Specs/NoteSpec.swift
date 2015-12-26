@@ -1,3 +1,4 @@
+@testable import Pitchy
 import Quick
 import Nimble
 
