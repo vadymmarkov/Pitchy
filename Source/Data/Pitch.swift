@@ -21,13 +21,10 @@ public struct Pitch {
     // MARK: - Initialization
 
     public init(_ first: Offset, _ second: Offset) {
-      if first.note.frequency < second.note.frequency {
-        self.lower = first
-        self.higher = second
-      } else {
-        self.lower = second
-        self.higher = first
-      }
+      let lowerFirst = first.note.frequency < second.note.frequency
+
+      self.lower = lowerFirst ? first : second
+      self.higher = lowerFirst ? second : first
     }
   }
 
@@ -45,9 +42,13 @@ public struct Pitch {
 
   // MARK: - Initialization
 
-  public init(frequency: Double) {
+  public init(frequency: Double) throws {
+    guard PitchCalculator.isValidFrequency(frequency) else {
+      throw Error.InvalidFrequency
+    }
+
     self.frequency = frequency
-    wave = AcousticWave(frequency: frequency)
-    offsets = PitchCalculator.offsets(frequency)
+    wave = try AcousticWave(frequency: frequency)
+    offsets = try PitchCalculator.offsets(frequency)
   }
 }

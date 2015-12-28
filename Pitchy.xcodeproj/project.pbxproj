@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D512C1211C319917002DD504 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1201C319917002DD504 /* Config.swift */; };
+		D512C1221C319917002DD504 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1201C319917002DD504 /* Config.swift */; };
+		D512C1241C319A40002DD504 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1231C319A40002DD504 /* Error.swift */; };
+		D512C1251C319A40002DD504 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1231C319A40002DD504 /* Error.swift */; };
+		D512C12A1C319BC1002DD504 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1271C319BC1002DD504 /* Pitch.swift */; };
+		D512C12B1C319BC1002DD504 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1271C319BC1002DD504 /* Pitch.swift */; };
+		D512C12C1C319BC1002DD504 /* AcousticWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1281C319BC1002DD504 /* AcousticWave.swift */; };
+		D512C12D1C319BC1002DD504 /* AcousticWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1281C319BC1002DD504 /* AcousticWave.swift */; };
+		D512C12E1C319BC1002DD504 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1291C319BC1002DD504 /* Note.swift */; };
+		D512C12F1C319BC1002DD504 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1291C319BC1002DD504 /* Note.swift */; };
+		D512C13D1C319E36002DD504 /* AcousticWaveSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1311C319C82002DD504 /* AcousticWaveSpec.swift */; };
+		D512C13E1C319E36002DD504 /* NoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1321C319C82002DD504 /* NoteSpec.swift */; };
+		D512C13F1C319E36002DD504 /* PitchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1331C319C82002DD504 /* PitchSpec.swift */; };
+		D512C1401C319E36002DD504 /* AcousticWaveSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1311C319C82002DD504 /* AcousticWaveSpec.swift */; };
+		D512C1411C319E36002DD504 /* NoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1321C319C82002DD504 /* NoteSpec.swift */; };
+		D512C1421C319E36002DD504 /* PitchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1331C319C82002DD504 /* PitchSpec.swift */; };
 		D5DF49E71C2EE85900343F13 /* NoteCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */; };
 		D5DF49E81C2EE85900343F13 /* PitchCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */; };
 		D5DF49E91C2EE85900343F13 /* WaveCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B71C2EE67800343F13 /* WaveCalculator.swift */; };
-		D5DF49EA1C2EE85900343F13 /* AcousticWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B31C2EE67800343F13 /* AcousticWave.swift */; };
-		D5DF49EB1C2EE85900343F13 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B81C2EE67800343F13 /* Note.swift */; };
-		D5DF49EC1C2EE85900343F13 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B91C2EE67800343F13 /* Pitch.swift */; };
 		D5DF49ED1C2EE85A00343F13 /* NoteCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */; };
 		D5DF49EE1C2EE85A00343F13 /* PitchCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */; };
 		D5DF49EF1C2EE85A00343F13 /* WaveCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B71C2EE67800343F13 /* WaveCalculator.swift */; };
-		D5DF49F01C2EE85A00343F13 /* AcousticWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B31C2EE67800343F13 /* AcousticWave.swift */; };
-		D5DF49F11C2EE85A00343F13 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B81C2EE67800343F13 /* Note.swift */; };
-		D5DF49F21C2EE85A00343F13 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B91C2EE67800343F13 /* Pitch.swift */; };
 		D5DF4A101C2EE95600343F13 /* Pitchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DF49D21C2EE72E00343F13 /* Pitchy.framework */; };
 		D5DF4A1F1C2EE96D00343F13 /* Pitchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DF49DF1C2EE77A00343F13 /* Pitchy.framework */; };
 		D5DF4A2D1C2EEAE400343F13 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DF4A2B1C2EEAE400343F13 /* Quick.framework */; };
@@ -28,15 +38,9 @@
 		D5DF4A331C2EEB5200343F13 /* NoteCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FC1C2EE8AC00343F13 /* NoteCalculatorSpec.swift */; };
 		D5DF4A341C2EEB5200343F13 /* PitchCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FD1C2EE8AC00343F13 /* PitchCalculatorSpec.swift */; };
 		D5DF4A351C2EEB5200343F13 /* WaveCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FE1C2EE8AC00343F13 /* WaveCalculatorSpec.swift */; };
-		D5DF4A361C2EEB5200343F13 /* AcousticWaveSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FA1C2EE8AC00343F13 /* AcousticWaveSpec.swift */; };
-		D5DF4A371C2EEB5200343F13 /* NoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FF1C2EE8AC00343F13 /* NoteSpec.swift */; };
-		D5DF4A381C2EEB5200343F13 /* PitchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF4A001C2EE8AC00343F13 /* PitchSpec.swift */; };
 		D5DF4A391C2EEB5300343F13 /* NoteCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FC1C2EE8AC00343F13 /* NoteCalculatorSpec.swift */; };
 		D5DF4A3A1C2EEB5300343F13 /* PitchCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FD1C2EE8AC00343F13 /* PitchCalculatorSpec.swift */; };
 		D5DF4A3B1C2EEB5300343F13 /* WaveCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FE1C2EE8AC00343F13 /* WaveCalculatorSpec.swift */; };
-		D5DF4A3C1C2EEB5300343F13 /* AcousticWaveSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FA1C2EE8AC00343F13 /* AcousticWaveSpec.swift */; };
-		D5DF4A3D1C2EEB5300343F13 /* NoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49FF1C2EE8AC00343F13 /* NoteSpec.swift */; };
-		D5DF4A3E1C2EEB5300343F13 /* PitchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF4A001C2EE8AC00343F13 /* PitchSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,22 +61,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D5DF49B31C2EE67800343F13 /* AcousticWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWave.swift; sourceTree = "<group>"; };
+		D512C1201C319917002DD504 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		D512C1231C319A40002DD504 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		D512C1271C319BC1002DD504 /* Pitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
+		D512C1281C319BC1002DD504 /* AcousticWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWave.swift; sourceTree = "<group>"; };
+		D512C1291C319BC1002DD504 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		D512C1311C319C82002DD504 /* AcousticWaveSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWaveSpec.swift; sourceTree = "<group>"; };
+		D512C1321C319C82002DD504 /* NoteSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteSpec.swift; sourceTree = "<group>"; };
+		D512C1331C319C82002DD504 /* PitchSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchSpec.swift; sourceTree = "<group>"; };
 		D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCalculator.swift; sourceTree = "<group>"; };
 		D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculator.swift; sourceTree = "<group>"; };
 		D5DF49B71C2EE67800343F13 /* WaveCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveCalculator.swift; sourceTree = "<group>"; };
-		D5DF49B81C2EE67800343F13 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		D5DF49B91C2EE67800343F13 /* Pitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
 		D5DF49D21C2EE72E00343F13 /* Pitchy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pitchy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DF49DF1C2EE77A00343F13 /* Pitchy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pitchy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DF49F41C2EE87200343F13 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5DF49F61C2EE87200343F13 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5DF49FA1C2EE8AC00343F13 /* AcousticWaveSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWaveSpec.swift; sourceTree = "<group>"; };
 		D5DF49FC1C2EE8AC00343F13 /* NoteCalculatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCalculatorSpec.swift; sourceTree = "<group>"; };
 		D5DF49FD1C2EE8AC00343F13 /* PitchCalculatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculatorSpec.swift; sourceTree = "<group>"; };
 		D5DF49FE1C2EE8AC00343F13 /* WaveCalculatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveCalculatorSpec.swift; sourceTree = "<group>"; };
-		D5DF49FF1C2EE8AC00343F13 /* NoteSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteSpec.swift; sourceTree = "<group>"; };
-		D5DF4A001C2EE8AC00343F13 /* PitchSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchSpec.swift; sourceTree = "<group>"; };
 		D5DF4A0B1C2EE95600343F13 /* Pitchy-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pitchy-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DF4A1A1C2EE96D00343F13 /* Pitchy-Mac-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pitchy-Mac-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DF4A261C2EE9FF00343F13 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +127,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D512C1261C319B9D002DD504 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D512C1271C319BC1002DD504 /* Pitch.swift */,
+				D512C1281C319BC1002DD504 /* AcousticWave.swift */,
+				D512C1291C319BC1002DD504 /* Note.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D512C1301C319C48002DD504 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D512C1311C319C82002DD504 /* AcousticWaveSpec.swift */,
+				D512C1321C319C82002DD504 /* NoteSpec.swift */,
+				D512C1331C319C82002DD504 /* PitchSpec.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		D5DF498E1C2EE43D00343F13 = {
 			isa = PBXGroup;
 			children = (
@@ -168,10 +194,10 @@
 		D5DF49B21C2EE67800343F13 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D512C1261C319B9D002DD504 /* Data */,
 				D5DF49B41C2EE67800343F13 /* Calculators */,
-				D5DF49B31C2EE67800343F13 /* AcousticWave.swift */,
-				D5DF49B81C2EE67800343F13 /* Note.swift */,
-				D5DF49B91C2EE67800343F13 /* Pitch.swift */,
+				D512C1201C319917002DD504 /* Config.swift */,
+				D512C1231C319A40002DD504 /* Error.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -205,10 +231,8 @@
 		D5DF49F91C2EE8AC00343F13 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				D512C1301C319C48002DD504 /* Data */,
 				D5DF49FB1C2EE8AC00343F13 /* Calculators */,
-				D5DF49FA1C2EE8AC00343F13 /* AcousticWaveSpec.swift */,
-				D5DF49FF1C2EE8AC00343F13 /* NoteSpec.swift */,
-				D5DF4A001C2EE8AC00343F13 /* PitchSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -448,12 +472,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5DF49EC1C2EE85900343F13 /* Pitch.swift in Sources */,
-				D5DF49EB1C2EE85900343F13 /* Note.swift in Sources */,
+				D512C12C1C319BC1002DD504 /* AcousticWave.swift in Sources */,
+				D512C12A1C319BC1002DD504 /* Pitch.swift in Sources */,
+				D512C1241C319A40002DD504 /* Error.swift in Sources */,
+				D512C12E1C319BC1002DD504 /* Note.swift in Sources */,
 				D5DF49E81C2EE85900343F13 /* PitchCalculator.swift in Sources */,
+				D512C1211C319917002DD504 /* Config.swift in Sources */,
 				D5DF49E71C2EE85900343F13 /* NoteCalculator.swift in Sources */,
 				D5DF49E91C2EE85900343F13 /* WaveCalculator.swift in Sources */,
-				D5DF49EA1C2EE85900343F13 /* AcousticWave.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,12 +487,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5DF49F21C2EE85A00343F13 /* Pitch.swift in Sources */,
-				D5DF49F11C2EE85A00343F13 /* Note.swift in Sources */,
+				D512C12D1C319BC1002DD504 /* AcousticWave.swift in Sources */,
+				D512C12B1C319BC1002DD504 /* Pitch.swift in Sources */,
+				D512C1251C319A40002DD504 /* Error.swift in Sources */,
+				D512C12F1C319BC1002DD504 /* Note.swift in Sources */,
 				D5DF49EE1C2EE85A00343F13 /* PitchCalculator.swift in Sources */,
+				D512C1221C319917002DD504 /* Config.swift in Sources */,
 				D5DF49ED1C2EE85A00343F13 /* NoteCalculator.swift in Sources */,
 				D5DF49EF1C2EE85A00343F13 /* WaveCalculator.swift in Sources */,
-				D5DF49F01C2EE85A00343F13 /* AcousticWave.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,11 +502,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D512C13E1C319E36002DD504 /* NoteSpec.swift in Sources */,
 				D5DF4A351C2EEB5200343F13 /* WaveCalculatorSpec.swift in Sources */,
 				D5DF4A331C2EEB5200343F13 /* NoteCalculatorSpec.swift in Sources */,
-				D5DF4A361C2EEB5200343F13 /* AcousticWaveSpec.swift in Sources */,
-				D5DF4A381C2EEB5200343F13 /* PitchSpec.swift in Sources */,
-				D5DF4A371C2EEB5200343F13 /* NoteSpec.swift in Sources */,
+				D512C13D1C319E36002DD504 /* AcousticWaveSpec.swift in Sources */,
+				D512C13F1C319E36002DD504 /* PitchSpec.swift in Sources */,
 				D5DF4A341C2EEB5200343F13 /* PitchCalculatorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,11 +515,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D512C1411C319E36002DD504 /* NoteSpec.swift in Sources */,
 				D5DF4A3B1C2EEB5300343F13 /* WaveCalculatorSpec.swift in Sources */,
 				D5DF4A391C2EEB5300343F13 /* NoteCalculatorSpec.swift in Sources */,
-				D5DF4A3C1C2EEB5300343F13 /* AcousticWaveSpec.swift in Sources */,
-				D5DF4A3E1C2EEB5300343F13 /* PitchSpec.swift in Sources */,
-				D5DF4A3D1C2EEB5300343F13 /* NoteSpec.swift in Sources */,
+				D512C1401C319E36002DD504 /* AcousticWaveSpec.swift in Sources */,
+				D512C1421C319E36002DD504 /* PitchSpec.swift in Sources */,
 				D5DF4A3A1C2EEB5300343F13 /* PitchCalculatorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,6 +788,7 @@
 				D5DF49D91C2EE72F00343F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5DF49E41C2EE77A00343F13 /* Build configuration list for PBXNativeTarget "Pitchy-Mac" */ = {
 			isa = XCConfigurationList;
@@ -768,6 +797,7 @@
 				D5DF49E61C2EE77A00343F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5DF4A131C2EE95600343F13 /* Build configuration list for PBXNativeTarget "Pitchy-iOS-Tests" */ = {
 			isa = XCConfigurationList;
@@ -776,6 +806,7 @@
 				D5DF4A151C2EE95600343F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5DF4A221C2EE96D00343F13 /* Build configuration list for PBXNativeTarget "Pitchy-Mac-Tests" */ = {
 			isa = XCConfigurationList;
@@ -784,6 +815,7 @@
 				D5DF4A241C2EE96D00343F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
