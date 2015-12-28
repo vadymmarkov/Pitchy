@@ -46,12 +46,12 @@ public struct Pitch {
   // MARK: - Initialization
 
   public init(frequency: Double) throws {
-    guard Validator.isValidFrequency(frequency) else {
+    guard PitchCalculator.isValidFrequency(frequency) else {
       throw Error.InvalidFrequency
     }
 
     self.frequency = frequency
     wave = try AcousticWave(frequency: frequency)
-    offsets = PitchCalculator.offsets(frequency)
+    offsets = try PitchCalculator.offsets(frequency)
   }
 }

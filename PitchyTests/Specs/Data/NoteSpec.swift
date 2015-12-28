@@ -52,7 +52,7 @@ class NoteSpec: QuickSpec {
 
         it("creates note with index") {
           notes.forEach {
-            note = Note(index: $0.index)
+            note = try! Note(index: $0.index)
 
             expect(note).toNot(beNil())
             expect(note.index).to(equal($0.index))
@@ -61,14 +61,14 @@ class NoteSpec: QuickSpec {
             expect(note.frequency) ≈ ($0.frequency, 0.01)
             expect(note.wave.frequency) ≈ ($0.frequency, 0.01)
             expect(note.string).to(equal($0.string))
-            expect(note.lower.string).to(equal($0.lower))
-            expect(note.higher.string).to(equal($0.higher))
+            expect(try! note.lower().string).to(equal($0.lower))
+            expect(try! note.higher().string).to(equal($0.higher))
           }
         }
 
         it("creates note with frequency") {
           notes.forEach {
-            note = Note(frequency: $0.frequency)
+            note = try! Note(frequency: $0.frequency)
 
             expect(note).toNot(beNil())
             expect(note.index).to(equal($0.index))
@@ -77,14 +77,14 @@ class NoteSpec: QuickSpec {
             expect(note.frequency) ≈ ($0.frequency, 0.01)
             expect(note.wave.frequency) ≈ ($0.frequency, 0.01)
             expect(note.string).to(equal($0.string))
-            expect(note.lower.string).to(equal($0.lower))
-            expect(note.higher.string).to(equal($0.higher))
+            expect(try! note.lower().string).to(equal($0.lower))
+            expect(try! note.higher().string).to(equal($0.higher))
           }
         }
 
         it("creates note with letter and octave") {
           notes.forEach {
-            note = Note(letter: $0.letter, octave: $0.octave)
+            note = try! Note(letter: $0.letter, octave: $0.octave)
 
             expect(note).toNot(beNil())
             expect(note.index).to(equal($0.index))
@@ -93,8 +93,8 @@ class NoteSpec: QuickSpec {
             expect(note.frequency) ≈ ($0.frequency, 0.01)
             expect(note.wave.frequency) ≈ ($0.frequency, 0.01)
             expect(note.string).to(equal($0.string))
-            expect(note.lower.string).to(equal($0.lower))
-            expect(note.higher.string).to(equal($0.higher))
+            expect(try! note.lower().string).to(equal($0.lower))
+            expect(try! note.higher().string).to(equal($0.higher))
           }
         }
       }

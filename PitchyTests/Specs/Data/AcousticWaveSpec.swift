@@ -25,7 +25,7 @@ class AcousticWaveSpec: QuickSpec {
         context("with frequency") {
           it("sets correct values") {
             waves.forEach {
-              let wave = AcousticWave(frequency: $0.frequency)
+              let wave = try! AcousticWave(frequency: $0.frequency)
 
               expect(wave.frequency) ≈ ($0.frequency, 0.01)
               expect(wave.wavelength) ≈ ($0.wavelength, 0.01)
@@ -41,7 +41,7 @@ class AcousticWaveSpec: QuickSpec {
         context("with wavelength") {
           it("sets correct values") {
             waves.forEach {
-              let wave = AcousticWave(wavelength: $0.wavelength)
+              let wave = try! AcousticWave(wavelength: $0.wavelength)
 
               expect(wave.frequency) ≈ ($0.frequency, 0.1)
               expect(wave.wavelength) ≈ ($0.wavelength, 0.01)
@@ -57,7 +57,7 @@ class AcousticWaveSpec: QuickSpec {
         context("with period") {
           it("sets correct values") {
             waves.forEach {
-              let wave = AcousticWave(period: $0.period)
+              let wave = try! AcousticWave(period: $0.period)
 
               expect(wave.frequency) ≈ ($0.frequency, 0.1)
               expect(wave.wavelength) ≈ ($0.wavelength, 0.01)

@@ -21,32 +21,32 @@ public struct AcousticWave {
   // MARK: - Initialization
 
   public init(frequency: Double) throws {
-    guard Validator.isValidFrequency(frequency) else {
+    guard PitchCalculator.isValidFrequency(frequency) else {
       throw Error.InvalidFrequency
     }
 
     self.frequency = frequency
-    wavelength = WaveCalculator.wavelength(frequency: frequency)
-    period = WaveCalculator.period(wavelength: wavelength)
+    wavelength = try WaveCalculator.wavelength(frequency: frequency)
+    period = try WaveCalculator.period(wavelength: wavelength)
   }
 
   public init(wavelength: Double) throws {
-    guard Validator.isValidWavelength(wavelength) else {
+    guard WaveCalculator.isValidWavelength(wavelength) else {
       throw Error.InvalidWavelength
     }
 
     self.wavelength = wavelength
-    frequency = WaveCalculator.frequency(wavelength: wavelength)
-    period = WaveCalculator.period(wavelength: wavelength)
+    frequency = try WaveCalculator.frequency(wavelength: wavelength)
+    period = try WaveCalculator.period(wavelength: wavelength)
   }
 
   public init(period: Double) throws {
-    guard Validator.isValidPeriod(period) else {
+    guard WaveCalculator.isValidPeriod(period) else {
       throw Error.InvalidPeriod
     }
 
     self.period = period
-    wavelength = WaveCalculator.wavelength(period: period)
-    frequency = WaveCalculator.frequency(wavelength: wavelength)
+    wavelength = try WaveCalculator.wavelength(period: period)
+    frequency = try WaveCalculator.frequency(wavelength: wavelength)
   }
 }

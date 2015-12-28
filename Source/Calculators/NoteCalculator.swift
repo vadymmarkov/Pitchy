@@ -47,12 +47,12 @@ public struct NoteCalculator {
   // MARK: - Pitch Index
 
   public static func index(frequency frequency: Double) throws -> Int {
-    guard Validator.isValidFrequency(frequency) else {
+    guard PitchCalculator.isValidFrequency(frequency) else {
       throw Error.InvalidFrequency
     }
 
     let count = Double(letters.count)
-    
+
     return Int(round(count * log2(frequency / Standard.frequency)))
   }
 

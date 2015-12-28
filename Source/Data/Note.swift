@@ -42,7 +42,7 @@ public struct Note {
   }
 
   public init(frequency: Double) throws {
-    index = NoteCalculator.index(frequency: frequency)
+    index = try NoteCalculator.index(frequency: frequency)
     letter = NoteCalculator.letter(index: index)
     octave = NoteCalculator.octave(index: index)
     self.frequency = NoteCalculator.frequency(index: index)

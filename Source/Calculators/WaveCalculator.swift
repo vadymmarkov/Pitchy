@@ -1,9 +1,29 @@
 public struct WaveCalculator {
 
+  // MARK: - Validators
+
+  public static func isValidWavelength(wavelength: Double) -> Bool {
+    let wavelengthBounds = Config.wavelengthBounds
+
+    return wavelength > 0.0
+      && wavelength >= wavelengthBounds.minimum
+      && wavelength <= wavelengthBounds.maximum
+  }
+
+  public static func isValidPeriod(period: Double) -> Bool {
+    let periodBounds = Config.periodBounds
+
+    print(periodBounds)
+
+    return period > 0.0
+      && period >= periodBounds.minimum
+      && period <= periodBounds.maximum
+  }
+
   // MARK: - Conversions
 
   public static func frequency(wavelength wavelength: Double) throws -> Double {
-    guard Validator.isValidWavelength(wavelength) else {
+    guard isValidWavelength(wavelength) else {
       throw Error.InvalidWavelength
     }
 
@@ -11,7 +31,7 @@ public struct WaveCalculator {
   }
 
   public static func wavelength(frequency frequency: Double) throws -> Double {
-    guard Validator.isValidFrequency(frequency) else {
+    guard PitchCalculator.isValidFrequency(frequency) else {
       throw Error.InvalidFrequency
     }
 
@@ -19,7 +39,7 @@ public struct WaveCalculator {
   }
 
   public static func wavelength(period period: Double) throws -> Double {
-    guard Validator.isValidPeriod(period) else {
+    guard isValidPeriod(period) else {
       throw Error.InvalidPeriod
     }
 
@@ -27,7 +47,7 @@ public struct WaveCalculator {
   }
 
   public static func period(wavelength wavelength: Double) throws -> Double {
-    guard Validator.isValidWavelength(wavelength) else {
+    guard isValidWavelength(wavelength) else {
       throw Error.InvalidWavelength
     }
 

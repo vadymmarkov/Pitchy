@@ -74,7 +74,7 @@ class NoteCalculatorSpec: QuickSpec {
       describe(".index:frequency") {
         it("returns a correct pitch index by frequency") {
           notes.forEach {
-            expect(NoteCalculator.index(frequency: $0.frequency)).to(equal($0.index))
+            expect(try! NoteCalculator.index(frequency: $0.frequency)).to(equal($0.index))
           }
         }
       }

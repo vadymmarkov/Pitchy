@@ -2,6 +2,14 @@ import Foundation
 
 public struct PitchCalculator {
 
+  // MARK: - Validators
+
+  public static func isValidFrequency(frequency: Double) -> Bool {
+    return frequency > 0.0
+      && frequency >= Config.minimumFrequency
+      && frequency <= Config.maximumFrequency
+  }
+
   // MARK: - Offsets
 
   public static func offsets(frequency: Double) throws -> Pitch.Offsets {
@@ -33,8 +41,8 @@ public struct PitchCalculator {
   }
 
   public static func cents(frequency1: Double, frequency2: Double) throws -> Double {
-    guard Validator.isValidFrequency(frequency1)
-      && Validator.isValidFrequency(frequency2)
+    guard isValidFrequency(frequency1)
+      && isValidFrequency(frequency2)
       else { throw Error.InvalidFrequency }
 
     return 1200.0 * log2(frequency2 / frequency1)

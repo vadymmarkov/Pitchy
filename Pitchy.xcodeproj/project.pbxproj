@@ -17,8 +17,6 @@
 		D512C12D1C319BC1002DD504 /* AcousticWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1281C319BC1002DD504 /* AcousticWave.swift */; };
 		D512C12E1C319BC1002DD504 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1291C319BC1002DD504 /* Note.swift */; };
 		D512C12F1C319BC1002DD504 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1291C319BC1002DD504 /* Note.swift */; };
-		D512C13B1C319E2C002DD504 /* ValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C13A1C319E2C002DD504 /* ValidatorSpec.swift */; };
-		D512C13C1C319E2C002DD504 /* ValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C13A1C319E2C002DD504 /* ValidatorSpec.swift */; };
 		D512C13D1C319E36002DD504 /* AcousticWaveSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1311C319C82002DD504 /* AcousticWaveSpec.swift */; };
 		D512C13E1C319E36002DD504 /* NoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1321C319C82002DD504 /* NoteSpec.swift */; };
 		D512C13F1C319E36002DD504 /* PitchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1331C319C82002DD504 /* PitchSpec.swift */; };
@@ -73,7 +71,6 @@
 		D512C1311C319C82002DD504 /* AcousticWaveSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWaveSpec.swift; sourceTree = "<group>"; };
 		D512C1321C319C82002DD504 /* NoteSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteSpec.swift; sourceTree = "<group>"; };
 		D512C1331C319C82002DD504 /* PitchSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchSpec.swift; sourceTree = "<group>"; };
-		D512C13A1C319E2C002DD504 /* ValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorSpec.swift; sourceTree = "<group>"; };
 		D512C1431C31A146002DD504 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCalculator.swift; sourceTree = "<group>"; };
 		D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculator.swift; sourceTree = "<group>"; };
@@ -240,7 +237,6 @@
 			children = (
 				D512C1301C319C48002DD504 /* Data */,
 				D5DF49FB1C2EE8AC00343F13 /* Calculators */,
-				D512C13A1C319E2C002DD504 /* ValidatorSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -513,7 +509,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D512C13E1C319E36002DD504 /* NoteSpec.swift in Sources */,
-				D512C13B1C319E2C002DD504 /* ValidatorSpec.swift in Sources */,
 				D5DF4A351C2EEB5200343F13 /* WaveCalculatorSpec.swift in Sources */,
 				D5DF4A331C2EEB5200343F13 /* NoteCalculatorSpec.swift in Sources */,
 				D512C13D1C319E36002DD504 /* AcousticWaveSpec.swift in Sources */,
@@ -527,7 +522,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D512C1411C319E36002DD504 /* NoteSpec.swift in Sources */,
-				D512C13C1C319E2C002DD504 /* ValidatorSpec.swift in Sources */,
 				D5DF4A3B1C2EEB5300343F13 /* WaveCalculatorSpec.swift in Sources */,
 				D5DF4A391C2EEB5300343F13 /* NoteCalculatorSpec.swift in Sources */,
 				D512C1401C319E36002DD504 /* AcousticWaveSpec.swift in Sources */,

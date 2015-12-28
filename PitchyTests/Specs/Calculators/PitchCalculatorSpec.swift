@@ -7,22 +7,44 @@ class PitchCalculatorSpec: QuickSpec {
   override func spec() {
     let offsets = [
       (frequency: 445.0,
-        lower: Pitch.Offset(note: Note(index: 0), frequency: 5, percentage: 19.1, cents: 19.56),
-        higher: Pitch.Offset(note: Note(index: 1), frequency: -21.164, percentage: -80.9, cents: -80.4338),
+        lower: Pitch.Offset(note: try! Note(index: 0), frequency: 5, percentage: 19.1, cents: 19.56),
+        higher: Pitch.Offset(note: try! Note(index: 1), frequency: -21.164, percentage: -80.9, cents: -80.4338),
         closest: "A4"
       ),
       (frequency: 108.0,
-        lower: Pitch.Offset(note: Note(index: -25), frequency: 4.174, percentage: 67.6, cents: 68.2333),
-        higher: Pitch.Offset(note: Note(index: -24), frequency: -2, percentage: -32.39, cents: -31.76),
+        lower: Pitch.Offset(note: try! Note(index: -25), frequency: 4.174, percentage: 67.6, cents: 68.2333),
+        higher: Pitch.Offset(note: try! Note(index: -24), frequency: -2, percentage: -32.39, cents: -31.76),
         closest: "A2"
       )
     ]
 
     describe("PitchCalculator") {
+      describe(".isValidFrequency") {
+        it("is invalid if frequency is higher than maximum") {
+          let frequency = 5000.0
+          expect(PitchCalculator.isValidFrequency(frequency)).to(beFalse())
+        }
+
+        it("is invalid if frequency is lower than minimum") {
+          let frequency = 10.0
+          expect(PitchCalculator.isValidFrequency(frequency)).to(beFalse())
+        }
+
+        it("is invalid if frequency is zero") {
+          let frequency = 0.0
+          expect(PitchCalculator.isValidFrequency(frequency)).to(beFalse())
+        }
+
+        it("is valid if frequency is within valid bounds") {
+          let frequency = 440.0
+          expect(PitchCalculator.isValidFrequency(frequency)).to(beTrue())
+        }
+      }
+
       describe(".offsets") {
         it("returns a correct offsets for the specified frequency") {
           offsets.forEach {
-            let result = PitchCalculator.offsets($0.frequency)
+            let result = try! PitchCalculator.offsets($0.frequency)
 
             expect(result.lower.frequency) ≈ ($0.lower.frequency, 0.01)
             expect(result.lower.percentage) ≈ ($0.lower.percentage, 0.1)
