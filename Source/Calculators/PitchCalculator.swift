@@ -16,6 +16,7 @@ public struct PitchCalculator {
     let note = try Note(frequency: frequency)
     let higherNote = try note.higher()
     let lowerNote = try note.lower()
+
     let closestNote = abs(higherNote.frequency - frequency)
       < abs(lowerNote.frequency - frequency)
       ? higherNote

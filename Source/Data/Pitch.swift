@@ -21,13 +21,10 @@ public struct Pitch {
     // MARK: - Initialization
 
     public init(_ first: Offset, _ second: Offset) {
-      if first.note.frequency < second.note.frequency {
-        self.lower = first
-        self.higher = second
-      } else {
-        self.lower = second
-        self.higher = first
-      }
+      let lowerFirst = first.note.frequency < second.note.frequency
+
+      self.lower = lowerFirst ? first : second
+      self.higher = lowerFirst ? second : first
     }
   }
 

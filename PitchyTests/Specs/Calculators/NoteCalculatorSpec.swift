@@ -91,6 +91,7 @@ class NoteCalculatorSpec: QuickSpec {
 
         it("returns an array of note letters in the correct order") {
           let letters = NoteCalculator.letters
+          
           expect(letters[0]).to(equal(Note.Letter.A))
           expect(letters[1]).to(equal(Note.Letter.ASharp))
           expect(letters[2]).to(equal(Note.Letter.B))

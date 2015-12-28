@@ -27,8 +27,7 @@ public struct Note {
   public let wave: AcousticWave
 
   public var string: String {
-    let string = "\(self.letter.rawValue)\(self.octave)"
-    return string
+    return "\(self.letter.rawValue)\(self.octave)"
   }
 
   // MARK: - Initialization
@@ -57,15 +56,13 @@ public struct Note {
     wave = try AcousticWave(frequency: frequency)
   }
 
-  // MARK: - Closest notes
+  // MARK: - Closest Notes
 
   public func lower() throws -> Note {
-    let pitch = try Note(index: index - 1)
-    return pitch
+    return try Note(index: index - 1)
   }
 
   public func higher() throws -> Note {
-    let pitch = try Note(index: index + 1)
-    return pitch
+    return try Note(index: index + 1)
   }
 }
