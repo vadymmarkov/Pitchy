@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D512C1211C319917002DD504 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1201C319917002DD504 /* Config.swift */; };
+		D512C1221C319917002DD504 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1201C319917002DD504 /* Config.swift */; };
 		D5DF49E71C2EE85900343F13 /* NoteCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */; };
 		D5DF49E81C2EE85900343F13 /* PitchCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */; };
 		D5DF49E91C2EE85900343F13 /* WaveCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B71C2EE67800343F13 /* WaveCalculator.swift */; };
@@ -57,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D512C1201C319917002DD504 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		D5DF49B31C2EE67800343F13 /* AcousticWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWave.swift; sourceTree = "<group>"; };
 		D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCalculator.swift; sourceTree = "<group>"; };
 		D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculator.swift; sourceTree = "<group>"; };
@@ -172,6 +175,7 @@
 				D5DF49B31C2EE67800343F13 /* AcousticWave.swift */,
 				D5DF49B81C2EE67800343F13 /* Note.swift */,
 				D5DF49B91C2EE67800343F13 /* Pitch.swift */,
+				D512C1201C319917002DD504 /* Config.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -451,6 +455,7 @@
 				D5DF49EC1C2EE85900343F13 /* Pitch.swift in Sources */,
 				D5DF49EB1C2EE85900343F13 /* Note.swift in Sources */,
 				D5DF49E81C2EE85900343F13 /* PitchCalculator.swift in Sources */,
+				D512C1211C319917002DD504 /* Config.swift in Sources */,
 				D5DF49E71C2EE85900343F13 /* NoteCalculator.swift in Sources */,
 				D5DF49E91C2EE85900343F13 /* WaveCalculator.swift in Sources */,
 				D5DF49EA1C2EE85900343F13 /* AcousticWave.swift in Sources */,
@@ -464,6 +469,7 @@
 				D5DF49F21C2EE85A00343F13 /* Pitch.swift in Sources */,
 				D5DF49F11C2EE85A00343F13 /* Note.swift in Sources */,
 				D5DF49EE1C2EE85A00343F13 /* PitchCalculator.swift in Sources */,
+				D512C1221C319917002DD504 /* Config.swift in Sources */,
 				D5DF49ED1C2EE85A00343F13 /* NoteCalculator.swift in Sources */,
 				D5DF49EF1C2EE85A00343F13 /* WaveCalculator.swift in Sources */,
 				D5DF49F01C2EE85A00343F13 /* AcousticWave.swift in Sources */,
@@ -760,6 +766,7 @@
 				D5DF49D91C2EE72F00343F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5DF49E41C2EE77A00343F13 /* Build configuration list for PBXNativeTarget "Pitchy-Mac" */ = {
 			isa = XCConfigurationList;
@@ -768,6 +775,7 @@
 				D5DF49E61C2EE77A00343F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5DF4A131C2EE95600343F13 /* Build configuration list for PBXNativeTarget "Pitchy-iOS-Tests" */ = {
 			isa = XCConfigurationList;
@@ -776,6 +784,7 @@
 				D5DF4A151C2EE95600343F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5DF4A221C2EE96D00343F13 /* Build configuration list for PBXNativeTarget "Pitchy-Mac-Tests" */ = {
 			isa = XCConfigurationList;
@@ -784,6 +793,7 @@
 				D5DF4A241C2EE96D00343F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
