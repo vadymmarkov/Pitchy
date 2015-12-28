@@ -35,25 +35,25 @@ public struct Note {
 
   public init(index: Int) throws {
     self.index = index
-    letter = NoteCalculator.letter(index: index)
-    octave = NoteCalculator.octave(index: index)
-    frequency = NoteCalculator.frequency(index: index)
+    letter = try NoteCalculator.letter(index: index)
+    octave = try NoteCalculator.octave(index: index)
+    frequency = try NoteCalculator.frequency(index: index)
     wave = try AcousticWave(frequency: frequency)
   }
 
   public init(frequency: Double) throws {
     index = try NoteCalculator.index(frequency: frequency)
-    letter = NoteCalculator.letter(index: index)
-    octave = NoteCalculator.octave(index: index)
-    self.frequency = NoteCalculator.frequency(index: index)
+    letter = try NoteCalculator.letter(index: index)
+    octave = try NoteCalculator.octave(index: index)
+    self.frequency = try NoteCalculator.frequency(index: index)
     wave = try AcousticWave(frequency: frequency)
   }
 
   public init(letter: Letter, octave: Int) throws {
     self.letter = letter
     self.octave = octave
-    index = NoteCalculator.index(letter: letter, octave: octave)
-    frequency = NoteCalculator.frequency(index: index)
+    index = try NoteCalculator.index(letter: letter, octave: octave)
+    frequency = try NoteCalculator.frequency(index: index)
     wave = try AcousticWave(frequency: frequency)
   }
 

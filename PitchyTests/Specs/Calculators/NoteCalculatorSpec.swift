@@ -50,7 +50,7 @@ class NoteCalculatorSpec: QuickSpec {
       describe(".frequency:index") {
         it("returns a correct frequency by pitch index") {
           notes.forEach {
-            expect(NoteCalculator.frequency(index: $0.index)) ≈ ($0.frequency, 0.01)
+            expect(try! NoteCalculator.frequency(index: $0.index)) ≈ ($0.frequency, 0.01)
           }
         }
       }
@@ -58,7 +58,7 @@ class NoteCalculatorSpec: QuickSpec {
       describe(".note:index") {
         it("returns a correct note letter by pitch index") {
           notes.forEach {
-            expect(NoteCalculator.letter(index: $0.index)).to(equal($0.note))
+            expect(try! NoteCalculator.letter(index: $0.index)).to(equal($0.note))
           }
         }
       }
@@ -66,7 +66,7 @@ class NoteCalculatorSpec: QuickSpec {
       describe(".octave:index") {
         it("returns a correct octave by pitch index") {
           notes.forEach {
-            expect(NoteCalculator.octave(index: $0.index)).to(equal($0.octave))
+            expect(try! NoteCalculator.octave(index: $0.index)).to(equal($0.octave))
           }
         }
       }
@@ -82,7 +82,7 @@ class NoteCalculatorSpec: QuickSpec {
       describe(".index:note:octave") {
         it("returns a correct pitch index by note letter and octave") {
           notes.forEach {
-            expect(NoteCalculator.index(letter: $0.note, octave: $0.octave)).to(equal($0.index))
+            expect(try! NoteCalculator.index(letter: $0.note, octave: $0.octave)).to(equal($0.index))
           }
         }
       }

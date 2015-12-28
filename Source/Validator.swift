@@ -1,6 +1,0 @@
-public struct Validator {
-
-  
-
-
-}
