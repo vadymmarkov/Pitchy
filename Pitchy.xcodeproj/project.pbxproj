@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D512C1211C319917002DD504 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1201C319917002DD504 /* Config.swift */; };
 		D512C1221C319917002DD504 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1201C319917002DD504 /* Config.swift */; };
+		D512C1241C319A40002DD504 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1231C319A40002DD504 /* Error.swift */; };
+		D512C1251C319A40002DD504 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1231C319A40002DD504 /* Error.swift */; };
 		D5DF49E71C2EE85900343F13 /* NoteCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */; };
 		D5DF49E81C2EE85900343F13 /* PitchCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */; };
 		D5DF49E91C2EE85900343F13 /* WaveCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B71C2EE67800343F13 /* WaveCalculator.swift */; };
@@ -60,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		D512C1201C319917002DD504 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		D512C1231C319A40002DD504 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		D5DF49B31C2EE67800343F13 /* AcousticWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWave.swift; sourceTree = "<group>"; };
 		D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCalculator.swift; sourceTree = "<group>"; };
 		D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculator.swift; sourceTree = "<group>"; };
@@ -176,6 +179,7 @@
 				D5DF49B81C2EE67800343F13 /* Note.swift */,
 				D5DF49B91C2EE67800343F13 /* Pitch.swift */,
 				D512C1201C319917002DD504 /* Config.swift */,
+				D512C1231C319A40002DD504 /* Error.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -452,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D512C1241C319A40002DD504 /* Error.swift in Sources */,
 				D5DF49EC1C2EE85900343F13 /* Pitch.swift in Sources */,
 				D5DF49EB1C2EE85900343F13 /* Note.swift in Sources */,
 				D5DF49E81C2EE85900343F13 /* PitchCalculator.swift in Sources */,
@@ -466,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D512C1251C319A40002DD504 /* Error.swift in Sources */,
 				D5DF49F21C2EE85A00343F13 /* Pitch.swift in Sources */,
 				D5DF49F11C2EE85A00343F13 /* Note.swift in Sources */,
 				D5DF49EE1C2EE85A00343F13 /* PitchCalculator.swift in Sources */,
