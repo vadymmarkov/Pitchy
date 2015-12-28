@@ -17,7 +17,6 @@ class AcousticWaveSpec: QuickSpec {
     ]
 
     describe("AcousticWave") {
-
       describe(".speed") {
         expect(AcousticWave.speed) ≈ (343, 0.001)
       }

@@ -17,7 +17,6 @@ class WaveCalculatorSpec: QuickSpec {
     ]
 
     describe("WaveCalculator") {
-
       describe(".frequency:wavelength") {
         it("returns a correct frequency for the specified wavelength") {
           waves.forEach {

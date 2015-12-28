@@ -19,7 +19,6 @@ class PitchCalculatorSpec: QuickSpec {
     ]
 
     describe("PitchCalculator") {
-
       describe(".offsets") {
         it("returns a correct offsets for the specified frequency") {
           offsets.forEach {

@@ -17,7 +17,6 @@ class NoteCalculatorSpec: QuickSpec {
     ]
 
     describe("NoteCalculator") {
-
       describe("Standard") {
         it("has base constant values") {
           expect(NoteCalculator.Standard.frequency).to(equal(440))
