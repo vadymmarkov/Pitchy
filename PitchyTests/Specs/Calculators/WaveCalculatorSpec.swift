@@ -17,6 +17,31 @@ class WaveCalculatorSpec: QuickSpec {
     ]
 
     describe("WaveCalculator") {
+      describe(".wavelengthBounds") {
+        it("has bounds based on min and max frequencies from the config") {
+          let minimum = try! WaveCalculator.wavelength(frequency: Config.maximumFrequency)
+          let maximum = try! WaveCalculator.wavelength(frequency: Config.minimumFrequency)
+          let expected = (minimum: minimum, maximum: maximum)
+          let result = WaveCalculator.wavelengthBounds
+
+          expect(result.minimum).to(equal(expected.minimum))
+          expect(result.maximum).to(equal(expected.maximum))
+        }
+      }
+
+      describe(".periodBounds") {
+        it("has bounds based on min and max frequencies from the config") {
+          let bounds = WaveCalculator.wavelengthBounds
+          let minimum = try! WaveCalculator.period(wavelength: bounds.minimum)
+          let maximum = try! WaveCalculator.period(wavelength: bounds.maximum)
+          let expected = (minimum: minimum, maximum: maximum)
+          let result = WaveCalculator.periodBounds
+
+          expect(result.minimum).to(equal(expected.minimum))
+          expect(result.maximum).to(equal(expected.maximum))
+        }
+      }
+
       describe(".isValidWavelength") {
         it("is invalid if value is higher than maximum") {
           let wavelength = 1000.0
@@ -33,7 +58,7 @@ class WaveCalculatorSpec: QuickSpec {
           expect(WaveCalculator.isValidWavelength(wavelength)).to(beFalse())
         }
 
-        it("is valid if frequency is within valid bounds") {
+        it("is valid if value is within valid bounds") {
           let wavelength = 16.0
           expect(WaveCalculator.isValidWavelength(wavelength)).to(beTrue())
         }
@@ -55,7 +80,7 @@ class WaveCalculatorSpec: QuickSpec {
           expect(WaveCalculator.isValidPeriod(period)).to(beFalse())
         }
 
-        it("is valid if frequency is within valid bounds") {
+        it("is valid if value is within valid bounds") {
           let period = 0.02
           expect(WaveCalculator.isValidPeriod(period)).to(beTrue())
         }

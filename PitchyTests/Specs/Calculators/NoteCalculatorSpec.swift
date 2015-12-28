@@ -24,6 +24,65 @@ class NoteCalculatorSpec: QuickSpec {
         }
       }
 
+      describe(".indexBounds") {
+        it("has bounds based on min and max frequencies from the config") {
+          let minimum = try! NoteCalculator.index(frequency: Config.minimumFrequency)
+          let maximum = try! NoteCalculator.index(frequency: Config.maximumFrequency)
+          let expected = (minimum: minimum, maximum: maximum)
+          let result = NoteCalculator.indexBounds
+
+          expect(result.minimum).to(equal(expected.minimum))
+          expect(result.maximum).to(equal(expected.maximum))
+        }
+      }
+
+      describe(".octaveBounds") {
+        it("has bounds based on min and max frequencies from the config") {
+          let bounds = NoteCalculator.indexBounds
+          let minimum = try! NoteCalculator.octave(index: bounds.minimum)
+          let maximum = try! NoteCalculator.octave(index: bounds.maximum)
+          let expected = (minimum: minimum, maximum: maximum)
+          let result = NoteCalculator.octaveBounds
+
+          expect(result.minimum).to(equal(expected.minimum))
+          expect(result.maximum).to(equal(expected.maximum))
+        }
+      }
+
+      describe(".isValidIndex") {
+        it("is invalid if value is higher than maximum") {
+          let value = 1000
+          expect(NoteCalculator.isValidIndex(value)).to(beFalse())
+        }
+
+        it("is invalid if value is lower than minimum") {
+          let value = -100
+          expect(NoteCalculator.isValidIndex(value)).to(beFalse())
+        }
+
+        it("is valid if value is within valid bounds") {
+          let value = 6
+          expect(NoteCalculator.isValidIndex(value)).to(beTrue())
+        }
+      }
+
+      describe(".isValidOctave") {
+        it("is invalid if value is higher than maximum") {
+          let value = 10
+          expect(NoteCalculator.isValidOctave(value)).to(beFalse())
+        }
+
+        it("is invalid if value is lower than minimum") {
+          let value = -1
+          expect(NoteCalculator.isValidOctave(value)).to(beFalse())
+        }
+
+        it("is valid if value is within valid bounds") {
+          let value = 2
+          expect(NoteCalculator.isValidOctave(value)).to(beTrue())
+        }
+      }
+
       describe(".notes") {
         it("returns an array of 12 notes") {
           let letters = NoteCalculator.letters

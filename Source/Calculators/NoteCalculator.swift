@@ -2,6 +2,18 @@ import Foundation
 
 public struct NoteCalculator {
 
+  // MARK: - Constants
+
+  public struct Standard {
+    public static let frequency = 440.0
+    public static let octave = 4
+  }
+
+  public static var letters: [Note.Letter] = [
+    .A, .ASharp, .B, .C, .CSharp, .D,
+    .DSharp, .E, .F, .FSharp, .G, .GSharp
+  ]
+
   // MARK: - Bounds
 
   public static var indexBounds: (minimum: Int, maximum: Int) {
@@ -34,18 +46,6 @@ public struct NoteCalculator {
     return octave >= bounds.minimum
       && octave <= bounds.maximum
   }
-
-  // MARK: - Constants
-
-  public struct Standard {
-    public static let frequency = 440.0
-    public static let octave = 4
-  }
-
-  public static var letters: [Note.Letter] = [
-    .A, .ASharp, .B, .C, .CSharp, .D,
-    .DSharp, .E, .F, .FSharp, .G, .GSharp
-  ]
 
   // MARK: - Pitch Notations
 
