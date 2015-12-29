@@ -1,4 +1,4 @@
-![Cache](https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyPresentation.png)
+![Pitchy](https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyPresentation.png)
 
 [![CI Status](http://img.shields.io/travis/vadymmarkov/Pitchy.svg?style=flat)](https://travis-ci.org/vadymmarkov/Pitchy)
 [![Version](https://img.shields.io/cocoapods/v/Pitchy.svg?style=flat)](http://cocoadocs.org/docsets/Pitchy)
@@ -24,14 +24,14 @@
 
 ## Description
 
-<img src="https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyIcon.png" alt="Cache Icon" align="right" />
+<img src="https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyIcon.png" alt="Pitchy Icon" align="right" />
 **Pitchy** provides a simple way to get a music pitch from a frequency. Other
 than that it has a bunch of useful data structures, calculators and helper
 functions to work with notes, octaves and acoustic waves.
 
 From [Wikipedia](https://en.wikipedia.org/wiki/Pitch_(music)):
 > Pitch is a perceptual property of sounds that allows their ordering on a
-> frequency-related scale,[1] or more commonly, pitch is the quality that makes
+> frequency-related scale, or more commonly, pitch is the quality that makes
 > it possible to judge sounds as "higher" and "lower" in the sense associated
 > with musical melodies.
 
@@ -68,7 +68,7 @@ do {
 
   print(pitchOffsets.closest.note.string) // "A4"
 
-  // You could also use acoustic wave of the pitch
+  // You could also use acoustic wave
   print(pitch.wave.wavelength)            // 0.7795 meters
 } catch {
   // Handle errors
@@ -79,24 +79,30 @@ do {
 Get an acoustic wave with wavelength, period and harmonics.
 
 ```swift
-// AcousticWave(wavelength: 0.7795)
-// AcousticWave(period: 0.00227259)
-let wave = AcousticWave(frequency: 440.0)
+do {
+  // AcousticWave(wavelength: 0.7795)
+  // AcousticWave(period: 0.00227259)
+  let wave = try AcousticWave(frequency: 440.0)
 
-print(wave.frequency)     // 440 Hz
-print(wave.wavelength)    // 0.7795 meters
-print(wave.period)        // 0.00227259 seconds
-print(wave.harmonics[0])  // 440 Hz
-print(wave.harmonics[1])  // 880 Hz
+  print(wave.frequency)       // 440 Hz
+  print(wave.wavelength)      // 0.7795 meters
+  print(wave.period)          // 0.00227259 s
+  print(wave.harmonics[0])    // 440 Hz
+  print(wave.harmonics[1])    // 880 Hz
+} catch {
+  // Handle errors
+}
 ```
 
 ### Note
+Note could be created with a corresponding frequency, letter + octave number or
+a pitch index.
 
 ```swift
 do {
   // Note(frequency: 261.626)
   // Note(letter: .C, octave: 4)
-  note = try Note(index: -9)
+  let note = try Note(index: -9)
 
   print(note.index)                 // -9
   print(note.letter)                // .C
@@ -126,14 +132,14 @@ do {
   let frequency1 = try NoteCalculator.frequency(index: 0)       // 440.0 Hz
   let letter = try NoteCalculator.letter(index: 0)              // .A
   let octave = try NoteCalculator.octave(index: 0)              // 4
-  let index = try NoteCalculator.index(frequency: 440.0)        // 0
-  let index = try NoteCalculator.index(letter: .A, octave: 4)   // 0
+  let index1 = try NoteCalculator.index(frequency: 440.0)       // 0
+  let index2 = try NoteCalculator.index(letter: .A, octave: 4)  // 0
 
   // WaveCalculator
   let f = try WaveCalculator.frequency(wavelength: 0.7795)      // 440.0 Hz
-  let wl1 = try WaveCalculator.wavelength(frequency: 440.0)     // 0.7795
-  let wl2 = try WaveCalculator.wavelength(period: 0.00227259)   // 0.7795
-  let period = try WaveCalculator.period(wavelength: 0.7795)    // 0.00227259
+  let wl1 = try WaveCalculator.wavelength(frequency: 440.0)     // 0.7795 meters
+  let wl2 = try WaveCalculator.wavelength(period: 0.00227259)   // 0.7795 meters
+  let period = try WaveCalculator.period(wavelength: 0.7795)    // 0.00227259 s
 } catch {
   // Handle errors
 }
@@ -142,7 +148,7 @@ do {
 ### Config
 
 With a help of `Config` it's possible to adjust minimum and maximum frequencies
-that are used for validation in all calculations:
+that are used for validations in all calculations:
 
 ```swift
 Config.minimumFrequency = 20.0
@@ -187,7 +193,7 @@ Vadym Markov, markov.vadym@gmail.com
 
 ## Contributing
 
-Check the [CONTRIBUTING](https://github.com/hyperoslo/Cache/blob/master/CONTRIBUTING.md)
+Check the [CONTRIBUTING](https://github.com/vadymmarkov/Pitchy/blob/master/CONTRIBUTING.md)
 file for more info.
 
 ## License

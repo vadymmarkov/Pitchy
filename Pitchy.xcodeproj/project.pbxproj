@@ -69,6 +69,7 @@
 		D512C1311C319C82002DD504 /* AcousticWaveSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWaveSpec.swift; sourceTree = "<group>"; };
 		D512C1321C319C82002DD504 /* NoteSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteSpec.swift; sourceTree = "<group>"; };
 		D512C1331C319C82002DD504 /* PitchSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchSpec.swift; sourceTree = "<group>"; };
+		D51575A01C330432006F8E75 /* PitchyPlayground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "PitchyPlayground-iOS.playground"; sourceTree = "<group>"; };
 		D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCalculator.swift; sourceTree = "<group>"; };
 		D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculator.swift; sourceTree = "<group>"; };
 		D5DF49B71C2EE67800343F13 /* WaveCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveCalculator.swift; sourceTree = "<group>"; };
@@ -150,6 +151,7 @@
 		D5DF498E1C2EE43D00343F13 = {
 			isa = PBXGroup;
 			children = (
+				D51575A01C330432006F8E75 /* PitchyPlayground-iOS.playground */,
 				D5DF4A2F1C2EEAF200343F13 /* Quick.framework */,
 				D5DF4A301C2EEAF200343F13 /* Nimble.framework */,
 				D5DF4A2B1C2EEAE400343F13 /* Quick.framework */,
