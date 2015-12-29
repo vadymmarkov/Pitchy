@@ -79,15 +79,19 @@ do {
 Get an acoustic wave with wavelength, period and harmonics.
 
 ```swift
-// AcousticWave(wavelength: 0.7795)
-// AcousticWave(period: 0.00227259)
-let wave = AcousticWave(frequency: 440.0)
+do {
+  // AcousticWave(wavelength: 0.7795)
+  // AcousticWave(period: 0.00227259)
+  let wave = try AcousticWave(frequency: 440.0)
 
-print(wave.frequency)       // 440 Hz
-print(wave.wavelength)      // 0.7795 meters
-print(wave.period)          // 0.00227259 s
-print(wave.harmonics[0])    // 440 Hz
-print(wave.harmonics[1])    // 880 Hz
+  print(wave.frequency)       // 440 Hz
+  print(wave.wavelength)      // 0.7795 meters
+  print(wave.period)          // 0.00227259 s
+  print(wave.harmonics[0])    // 440 Hz
+  print(wave.harmonics[1])    // 880 Hz
+} catch {
+  // Handle errors
+}
 ```
 
 ### Note
@@ -98,7 +102,7 @@ a pitch index.
 do {
   // Note(frequency: 261.626)
   // Note(letter: .C, octave: 4)
-  note = try Note(index: -9)
+  let note = try Note(index: -9)
 
   print(note.index)                 // -9
   print(note.letter)                // .C
@@ -128,8 +132,8 @@ do {
   let frequency1 = try NoteCalculator.frequency(index: 0)       // 440.0 Hz
   let letter = try NoteCalculator.letter(index: 0)              // .A
   let octave = try NoteCalculator.octave(index: 0)              // 4
-  let index = try NoteCalculator.index(frequency: 440.0)        // 0
-  let index = try NoteCalculator.index(letter: .A, octave: 4)   // 0
+  let index1 = try NoteCalculator.index(frequency: 440.0)       // 0
+  let index2 = try NoteCalculator.index(letter: .A, octave: 4)  // 0
 
   // WaveCalculator
   let f = try WaveCalculator.frequency(wavelength: 0.7795)      // 440.0 Hz
