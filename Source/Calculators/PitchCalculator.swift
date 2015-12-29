@@ -27,7 +27,7 @@ public struct PitchCalculator {
       frequency: frequency - note.frequency,
       percentage: (frequency - note.frequency) * 100
         / abs(note.frequency - closestNote.frequency),
-      cents: try cents(note.frequency, frequency2: frequency)
+      cents: try cents(frequency1: note.frequency, frequency2: frequency)
     )
 
     let secondOffset = Pitch.Offset(
@@ -35,13 +35,13 @@ public struct PitchCalculator {
       frequency: frequency - closestNote.frequency,
       percentage: (frequency - closestNote.frequency) * 100
         / abs(note.frequency - closestNote.frequency),
-      cents: try cents(closestNote.frequency, frequency2: frequency)
+      cents: try cents(frequency1: closestNote.frequency, frequency2: frequency)
     )
 
     return Pitch.Offsets(firstOffset, secondOffset)
   }
 
-  public static func cents(frequency1: Double, frequency2: Double) throws -> Double {
+  public static func cents(frequency1 frequency1: Double, frequency2: Double) throws -> Double {
     guard isValidFrequency(frequency1)
       && isValidFrequency(frequency2)
       else { throw Error.InvalidFrequency }
