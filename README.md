@@ -1,4 +1,4 @@
-![Cache](https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyPresentation.png)
+![Pitchy](https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyPresentation.png)
 
 [![CI Status](http://img.shields.io/travis/vadymmarkov/Pitchy.svg?style=flat)](https://travis-ci.org/vadymmarkov/Pitchy)
 [![Version](https://img.shields.io/cocoapods/v/Pitchy.svg?style=flat)](http://cocoadocs.org/docsets/Pitchy)
@@ -24,7 +24,7 @@
 
 ## Description
 
-<img src="https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyIcon.png" alt="Cache Icon" align="right" />
+<img src="https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyIcon.png" alt="Pitchy Icon" align="right" />
 **Pitchy** provides a simple way to get a music pitch from a frequency. Other
 than that it has a bunch of useful data structures, calculators and helper
 functions to work with notes, octaves and acoustic waves.
@@ -187,7 +187,7 @@ Vadym Markov, markov.vadym@gmail.com
 
 ## Contributing
 
-Check the [CONTRIBUTING](https://github.com/hyperoslo/Cache/blob/master/CONTRIBUTING.md)
+Check the [CONTRIBUTING](https://github.com/vadymmarkov/Pitchy/blob/master/CONTRIBUTING.md)
 file for more info.
 
 ## License
