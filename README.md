@@ -31,7 +31,7 @@ functions to work with notes, octaves and acoustic waves.
 
 From [Wikipedia](https://en.wikipedia.org/wiki/Pitch_(music)):
 > Pitch is a perceptual property of sounds that allows their ordering on a
-> frequency-related scale,[1] or more commonly, pitch is the quality that makes
+> frequency-related scale, or more commonly, pitch is the quality that makes
 > it possible to judge sounds as "higher" and "lower" in the sense associated
 > with musical melodies.
 
@@ -68,7 +68,7 @@ do {
 
   print(pitchOffsets.closest.note.string) // "A4"
 
-  // You could also use acoustic wave of the pitch
+  // You could also use acoustic wave
   print(pitch.wave.wavelength)            // 0.7795 meters
 } catch {
   // Handle errors
@@ -83,14 +83,16 @@ Get an acoustic wave with wavelength, period and harmonics.
 // AcousticWave(period: 0.00227259)
 let wave = AcousticWave(frequency: 440.0)
 
-print(wave.frequency)     // 440 Hz
-print(wave.wavelength)    // 0.7795 meters
-print(wave.period)        // 0.00227259 seconds
-print(wave.harmonics[0])  // 440 Hz
-print(wave.harmonics[1])  // 880 Hz
+print(wave.frequency)       // 440 Hz
+print(wave.wavelength)      // 0.7795 meters
+print(wave.period)          // 0.00227259 s
+print(wave.harmonics[0])    // 440 Hz
+print(wave.harmonics[1])    // 880 Hz
 ```
 
 ### Note
+Note could be created with a corresponding frequency, letter + octave number or
+a pitch index.
 
 ```swift
 do {
@@ -131,9 +133,9 @@ do {
 
   // WaveCalculator
   let f = try WaveCalculator.frequency(wavelength: 0.7795)      // 440.0 Hz
-  let wl1 = try WaveCalculator.wavelength(frequency: 440.0)     // 0.7795
-  let wl2 = try WaveCalculator.wavelength(period: 0.00227259)   // 0.7795
-  let period = try WaveCalculator.period(wavelength: 0.7795)    // 0.00227259
+  let wl1 = try WaveCalculator.wavelength(frequency: 440.0)     // 0.7795 meters
+  let wl2 = try WaveCalculator.wavelength(period: 0.00227259)   // 0.7795 meters
+  let period = try WaveCalculator.period(wavelength: 0.7795)    // 0.00227259 s
 } catch {
   // Handle errors
 }
@@ -142,7 +144,7 @@ do {
 ### Config
 
 With a help of `Config` it's possible to adjust minimum and maximum frequencies
-that are used for validation in all calculations:
+that are used for validations in all calculations:
 
 ```swift
 Config.minimumFrequency = 20.0
