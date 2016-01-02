@@ -24,7 +24,7 @@
 
 ## Description
 
-<img src="https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyIcon.png" alt="Pitchy Icon" align="right" />
+<img src="https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyIcon.png" alt="Pitchy Icon" width="193" height="195" align="right" />
 **Pitchy** provides a simple way to get a music pitch from a frequency. Other
 than that it has a bunch of useful data structures, calculators and helper
 functions to work with notes, octaves and acoustic waves.
