@@ -6,9 +6,20 @@
 [![License](https://img.shields.io/cocoapods/l/Pitchy.svg?style=flat)](http://cocoadocs.org/docsets/Pitchy)
 [![Platform](https://img.shields.io/cocoapods/p/Pitchy.svg?style=flat)](http://cocoadocs.org/docsets/Pitchy)
 
+**Pitchy** provides a simple way to get a music pitch from a frequency. Other
+than that it has a bunch of useful data structures, calculators and helper
+functions to work with notes, octaves and acoustic waves.
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Pitch_(music)):
+> Pitch is a perceptual property of sounds that allows their ordering on a
+> frequency-related scale, or more commonly, pitch is the quality that makes
+> it possible to judge sounds as "higher" and "lower" in the sense associated
+> with musical melodies.
+
 ## Table of Contents
 
-* [Description](#description)
+<img src="https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyIcon.png" alt="Pitchy Icon" width="193" height="195" align="right" />
+
 * [Key features](#key-features)
 * [Usage](#usage)
   * [Pitch](#pitch)
@@ -21,19 +32,6 @@
 * [Author](#author)
 * [Contributing](#contributing)
 * [License](#license)
-
-## Description
-
-<img src="https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyIcon.png" alt="Pitchy Icon" width="193" height="195" align="right" />
-**Pitchy** provides a simple way to get a music pitch from a frequency. Other
-than that it has a bunch of useful data structures, calculators and helper
-functions to work with notes, octaves and acoustic waves.
-
-From [Wikipedia](https://en.wikipedia.org/wiki/Pitch_(music)):
-> Pitch is a perceptual property of sounds that allows their ordering on a
-> frequency-related scale, or more commonly, pitch is the quality that makes
-> it possible to judge sounds as "higher" and "lower" in the sense associated
-> with musical melodies.
 
 ## Key features
 - Get lower, higher and closest pitch offsets from a specified frequency.
