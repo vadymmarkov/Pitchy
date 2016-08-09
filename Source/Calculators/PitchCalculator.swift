@@ -4,7 +4,7 @@ public struct PitchCalculator {
 
   // MARK: - Validators
 
-  public static func isValidFrequency(frequency: Double) -> Bool {
+  public static func isValidFrequency(_ frequency: Double) -> Bool {
     return frequency > 0.0
       && frequency >= Config.minimumFrequency
       && frequency <= Config.maximumFrequency
@@ -12,7 +12,7 @@ public struct PitchCalculator {
 
   // MARK: - Offsets
 
-  public static func offsets(frequency: Double) throws -> Pitch.Offsets {
+  public static func offsets(_ frequency: Double) throws -> Pitch.Offsets {
     let note = try Note(frequency: frequency)
     let higherNote = try note.higher()
     let lowerNote = try note.lower()
@@ -41,10 +41,10 @@ public struct PitchCalculator {
     return Pitch.Offsets(firstOffset, secondOffset)
   }
 
-  public static func cents(frequency1 frequency1: Double, frequency2: Double) throws -> Double {
+  public static func cents(frequency1: Double, frequency2: Double) throws -> Double {
     guard isValidFrequency(frequency1)
       && isValidFrequency(frequency2)
-      else { throw Error.InvalidFrequency }
+      else { throw PitchError.invalidFrequency }
 
     return 1200.0 * log2(frequency2 / frequency1)
   }

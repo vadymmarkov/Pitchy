@@ -22,7 +22,7 @@ public struct AcousticWave {
 
   public init(frequency: Double) throws {
     guard PitchCalculator.isValidFrequency(frequency) else {
-      throw Error.InvalidFrequency
+      throw PitchError.invalidFrequency
     }
 
     self.frequency = frequency
@@ -32,7 +32,7 @@ public struct AcousticWave {
 
   public init(wavelength: Double) throws {
     guard WaveCalculator.isValidWavelength(wavelength) else {
-      throw Error.InvalidWavelength
+      throw PitchError.invalidWavelength
     }
 
     self.wavelength = wavelength
@@ -42,7 +42,7 @@ public struct AcousticWave {
 
   public init(period: Double) throws {
     guard WaveCalculator.isValidPeriod(period) else {
-      throw Error.InvalidPeriod
+      throw PitchError.invalidPeriod
     }
 
     self.period = period
