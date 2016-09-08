@@ -44,7 +44,7 @@ public struct Pitch {
 
   public init(frequency: Double) throws {
     guard PitchCalculator.isValidFrequency(frequency) else {
-      throw Error.InvalidFrequency
+      throw PitchError.invalidFrequency
     }
 
     self.frequency = frequency
