@@ -17,16 +17,16 @@ public struct NoteCalculator {
   // MARK: - Bounds
 
   public static var indexBounds: (minimum: Int, maximum: Int) {
-    let minimum = try! index(frequency: Config.minimumFrequency)
-    let maximum = try! index(frequency: Config.maximumFrequency)
+    let minimum = try! index(Config.minimumFrequency)
+    let maximum = try! index(Config.maximumFrequency)
 
     return (minimum: minimum, maximum: maximum)
   }
 
   public static var octaveBounds: (minimum: Int, maximum: Int) {
     let bounds = indexBounds
-    let minimum = try! octave(index: bounds.minimum)
-    let maximum = try! octave(index: bounds.maximum)
+    let minimum = try! octave(bounds.minimum)
+    let maximum = try! octave(bounds.maximum)
 
     return (minimum: minimum, maximum: maximum)
   }
@@ -49,7 +49,7 @@ public struct NoteCalculator {
 
   // MARK: - Pitch Notations
 
-  public static func frequency(index: Int) throws -> Double {
+  public static func frequency(_ index: Int) throws -> Double {
     guard isValidIndex(index) else {
       throw PitchError.invalidPitchIndex
     }
@@ -60,7 +60,7 @@ public struct NoteCalculator {
     return pow(2, power) * Standard.frequency
   }
 
-  public static func letter(index: Int) throws -> Note.Letter {
+  public static func letter(_ index: Int) throws -> Note.Letter {
     guard isValidIndex(index) else {
       throw PitchError.invalidPitchIndex
     }
@@ -81,7 +81,7 @@ public struct NoteCalculator {
     return letters[lettersIndex]
   }
 
-  public static func octave(index: Int) throws -> Int {
+  public static func octave(_ index: Int) throws -> Int {
     guard isValidIndex(index) else {
       throw PitchError.invalidPitchIndex
     }
@@ -98,7 +98,7 @@ public struct NoteCalculator {
 
   // MARK: - Pitch Index
 
-  public static func index(frequency: Double) throws -> Int {
+  public static func index(_ frequency: Double) throws -> Int {
     guard PitchCalculator.isValidFrequency(frequency) else {
       throw PitchError.invalidFrequency
     }
@@ -108,7 +108,7 @@ public struct NoteCalculator {
     return Int(round(count * log2(frequency / Standard.frequency)))
   }
 
-  public static func index(letter: Note.Letter, octave: Int) throws -> Int {
+  public static func index(_ letter: Note.Letter, octave: Int) throws -> Int {
     guard isValidOctave(octave) else {
       throw PitchError.invalidOctave
     }

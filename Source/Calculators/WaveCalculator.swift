@@ -11,8 +11,8 @@ public struct WaveCalculator {
 
   public static var periodBounds: (minimum: Double, maximum: Double) {
     let bounds = wavelengthBounds
-    let minimum = try! period(wavelength: bounds.minimum)
-    let maximum = try! period(wavelength: bounds.maximum)
+    let minimum = try! period(bounds.minimum)
+    let maximum = try! period(bounds.maximum)
 
     return (minimum: minimum, maximum: maximum)
   }
@@ -37,7 +37,7 @@ public struct WaveCalculator {
 
   // MARK: - Conversions
 
-  public static func frequency(wavelength: Double) throws -> Double {
+  public static func frequency(_ wavelength: Double) throws -> Double {
     guard isValidWavelength(wavelength) else {
       throw PitchError.invalidWavelength
     }
@@ -45,7 +45,7 @@ public struct WaveCalculator {
     return AcousticWave.speed / wavelength
   }
 
-  public static func wavelength(frequency: Double) throws -> Double {
+  public static func wavelength(frequency frequency: Double) throws -> Double {
     guard PitchCalculator.isValidFrequency(frequency) else {
       throw PitchError.invalidFrequency
     }
@@ -53,7 +53,7 @@ public struct WaveCalculator {
     return AcousticWave.speed / frequency
   }
 
-  public static func wavelength(period: Double) throws -> Double {
+  public static func wavelength(period period: Double) throws -> Double {
     guard isValidPeriod(period) else {
       throw PitchError.invalidPeriod
     }
@@ -61,7 +61,7 @@ public struct WaveCalculator {
     return period * AcousticWave.speed
   }
 
-  public static func period(wavelength: Double) throws -> Double {
+  public static func period(_ wavelength: Double) throws -> Double {
     guard isValidWavelength(wavelength) else {
       throw PitchError.invalidWavelength
     }
