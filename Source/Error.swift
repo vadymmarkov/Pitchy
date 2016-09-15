@@ -1,7 +1,7 @@
-enum Error: ErrorType {
-  case InvalidFrequency
-  case InvalidWavelength
-  case InvalidPeriod
-  case InvalidPitchIndex
-  case InvalidOctave
+enum PitchError: Error {
+  case invalidFrequency
+  case invalidWavelength
+  case invalidPeriod
+  case invalidPitchIndex
+  case invalidOctave
 }

@@ -11,15 +11,15 @@ public struct WaveCalculator {
 
   public static var periodBounds: (minimum: Double, maximum: Double) {
     let bounds = wavelengthBounds
-    let minimum = try! period(wavelength: bounds.minimum)
-    let maximum = try! period(wavelength: bounds.maximum)
+    let minimum = try! period(bounds.minimum)
+    let maximum = try! period(bounds.maximum)
 
     return (minimum: minimum, maximum: maximum)
   }
 
   // MARK: - Validators
 
-  public static func isValidWavelength(wavelength: Double) -> Bool {
+  public static func isValidWavelength(_ wavelength: Double) -> Bool {
     let bounds = wavelengthBounds
 
     return wavelength > 0.0
@@ -27,7 +27,7 @@ public struct WaveCalculator {
       && wavelength <= bounds.maximum
   }
 
-  public static func isValidPeriod(period: Double) -> Bool {
+  public static func isValidPeriod(_ period: Double) -> Bool {
     let bounds = periodBounds
 
     return period > 0.0
@@ -37,9 +37,9 @@ public struct WaveCalculator {
 
   // MARK: - Conversions
 
-  public static func frequency(wavelength wavelength: Double) throws -> Double {
+  public static func frequency(_ wavelength: Double) throws -> Double {
     guard isValidWavelength(wavelength) else {
-      throw Error.InvalidWavelength
+      throw PitchError.invalidWavelength
     }
 
     return AcousticWave.speed / wavelength
@@ -47,7 +47,7 @@ public struct WaveCalculator {
 
   public static func wavelength(frequency frequency: Double) throws -> Double {
     guard PitchCalculator.isValidFrequency(frequency) else {
-      throw Error.InvalidFrequency
+      throw PitchError.invalidFrequency
     }
 
     return AcousticWave.speed / frequency
@@ -55,15 +55,15 @@ public struct WaveCalculator {
 
   public static func wavelength(period period: Double) throws -> Double {
     guard isValidPeriod(period) else {
-      throw Error.InvalidPeriod
+      throw PitchError.invalidPeriod
     }
 
     return period * AcousticWave.speed
   }
 
-  public static func period(wavelength wavelength: Double) throws -> Double {
+  public static func period(_ wavelength: Double) throws -> Double {
     guard isValidWavelength(wavelength) else {
-      throw Error.InvalidWavelength
+      throw PitchError.invalidWavelength
     }
 
     return wavelength / AcousticWave.speed
