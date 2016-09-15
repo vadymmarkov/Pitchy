@@ -45,7 +45,7 @@ public struct WaveCalculator {
     return AcousticWave.speed / wavelength
   }
 
-  public static func wavelength(frequency frequency: Double) throws -> Double {
+  public static func wavelength(frequency: Double) throws -> Double {
     guard PitchCalculator.isValidFrequency(frequency) else {
       throw PitchError.invalidFrequency
     }
@@ -53,7 +53,7 @@ public struct WaveCalculator {
     return AcousticWave.speed / frequency
   }
 
-  public static func wavelength(period period: Double) throws -> Double {
+  public static func wavelength(period: Double) throws -> Double {
     guard isValidPeriod(period) else {
       throw PitchError.invalidPeriod
     }
