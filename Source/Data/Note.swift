@@ -1,5 +1,4 @@
 public struct Note {
-
   public enum Letter: String {
     case C = "C"
     case CSharp = "C#"

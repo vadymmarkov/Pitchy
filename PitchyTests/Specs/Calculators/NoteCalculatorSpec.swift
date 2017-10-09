@@ -26,8 +26,8 @@ class NoteCalculatorSpec: QuickSpec {
 
       describe(".indexBounds") {
         it("has bounds based on min and max frequencies from the config") {
-          let minimum = try! NoteCalculator.index(frequency: Config.minimumFrequency)
-          let maximum = try! NoteCalculator.index(frequency: Config.maximumFrequency)
+          let minimum = try! NoteCalculator.index(frequency: FrequencyValidator.minimumFrequency)
+          let maximum = try! NoteCalculator.index(frequency: FrequencyValidator.maximumFrequency)
           let expected = (minimum: minimum, maximum: maximum)
           let result = NoteCalculator.indexBounds
 

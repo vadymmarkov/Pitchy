@@ -1,10 +1,7 @@
 public struct WaveCalculator {
-
-  // MARK: - Bounds
-
   public static var wavelengthBounds: (minimum: Double, maximum: Double) {
-    let minimum = try! wavelength(frequency: Config.maximumFrequency)
-    let maximum = try! wavelength(frequency: Config.minimumFrequency)
+    let minimum = try! wavelength(frequency: FrequencyValidator.maximumFrequency)
+    let maximum = try! wavelength(frequency: FrequencyValidator.minimumFrequency)
 
     return (minimum: minimum, maximum: maximum)
   }
@@ -46,10 +43,7 @@ public struct WaveCalculator {
   }
 
   public static func wavelength(frequency: Double) throws -> Double {
-    guard PitchCalculator.isValidFrequency(frequency) else {
-      throw PitchError.invalidFrequency
-    }
-
+    try FrequencyValidator.validate(frequency: frequency)
     return AcousticWave.speed / frequency
   }
 

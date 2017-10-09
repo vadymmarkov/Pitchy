@@ -19,8 +19,8 @@ class WaveCalculatorSpec: QuickSpec {
     describe("WaveCalculator") {
       describe(".wavelengthBounds") {
         it("has bounds based on min and max frequencies from the config") {
-          let minimum = try! WaveCalculator.wavelength(frequency: Config.maximumFrequency)
-          let maximum = try! WaveCalculator.wavelength(frequency: Config.minimumFrequency)
+          let minimum = try! WaveCalculator.wavelength(frequency: FrequencyValidator.maximumFrequency)
+          let maximum = try! WaveCalculator.wavelength(frequency: FrequencyValidator.minimumFrequency)
           let expected = (minimum: minimum, maximum: maximum)
           let result = WaveCalculator.wavelengthBounds
 

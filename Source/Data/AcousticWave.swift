@@ -1,5 +1,4 @@
 public struct AcousticWave {
-
   public static let speed: Double = 343
 
   public let frequency: Double
@@ -21,10 +20,7 @@ public struct AcousticWave {
   // MARK: - Initialization
 
   public init(frequency: Double) throws {
-    guard PitchCalculator.isValidFrequency(frequency) else {
-      throw PitchError.invalidFrequency
-    }
-
+    try FrequencyValidator.validate(frequency: frequency)
     self.frequency = frequency
     wavelength = try WaveCalculator.wavelength(frequency: frequency)
     period = try WaveCalculator.period(wavelength: wavelength)

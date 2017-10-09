@@ -1,9 +1,6 @@
 import Foundation
 
 public struct NoteCalculator {
-
-  // MARK: - Constants
-
   public struct Standard {
     public static let frequency = 440.0
     public static let octave = 4
@@ -17,8 +14,8 @@ public struct NoteCalculator {
   // MARK: - Bounds
 
   public static var indexBounds: (minimum: Int, maximum: Int) {
-    let minimum = try! index(frequency: Config.minimumFrequency)
-    let maximum = try! index(frequency: Config.maximumFrequency)
+    let minimum = try! index(frequency: FrequencyValidator.minimumFrequency)
+    let maximum = try! index(frequency: FrequencyValidator.maximumFrequency)
 
     return (minimum: minimum, maximum: maximum)
   }
@@ -99,12 +96,8 @@ public struct NoteCalculator {
   // MARK: - Pitch Index
 
   public static func index(frequency: Double) throws -> Int {
-    guard PitchCalculator.isValidFrequency(frequency) else {
-      throw PitchError.invalidFrequency
-    }
-
+    try FrequencyValidator.validate(frequency: frequency)
     let count = Double(letters.count)
-
     return Int(round(count * log2(frequency / Standard.frequency)))
   }
 
