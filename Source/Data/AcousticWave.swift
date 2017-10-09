@@ -27,7 +27,7 @@ public struct AcousticWave {
 
     self.frequency = frequency
     wavelength = try WaveCalculator.wavelength(frequency: frequency)
-    period = try WaveCalculator.period(wavelength)
+    period = try WaveCalculator.period(wavelength: wavelength)
   }
 
   public init(wavelength: Double) throws {
@@ -36,8 +36,8 @@ public struct AcousticWave {
     }
 
     self.wavelength = wavelength
-    frequency = try WaveCalculator.frequency(wavelength)
-    period = try WaveCalculator.period(wavelength)
+    frequency = try WaveCalculator.frequency(wavelength: wavelength)
+    period = try WaveCalculator.period(wavelength: wavelength)
   }
 
   public init(period: Double) throws {
@@ -47,6 +47,6 @@ public struct AcousticWave {
 
     self.period = period
     wavelength = try WaveCalculator.wavelength(period: period)
-    frequency = try WaveCalculator.frequency(wavelength)
+    frequency = try WaveCalculator.frequency(wavelength: wavelength)
   }
 }

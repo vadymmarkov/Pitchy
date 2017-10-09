@@ -31,7 +31,7 @@ class AcousticWaveSpec: QuickSpec {
               expect(wave.wavelength) ≈ ($0.wavelength, 0.01)
               expect(wave.period) ≈ ($0.period, 0.01)
 
-              for (index, value) in wave.harmonics.enumerate() {
+              for (index, value) in wave.harmonics.enumerated() {
                 expect(value.frequency) ≈ (Double(index + 1) * $0.frequency, 0.01)
               }
             }
@@ -47,7 +47,7 @@ class AcousticWaveSpec: QuickSpec {
               expect(wave.wavelength) ≈ ($0.wavelength, 0.01)
               expect(wave.period) ≈ ($0.period, 0.01)
 
-              for (index, value) in wave.harmonics.enumerate() {
+              for (index, value) in wave.harmonics.enumerated() {
                 expect(value.frequency) ≈ (Double(index + 1) * $0.frequency, 1)
               }
             }
@@ -63,7 +63,7 @@ class AcousticWaveSpec: QuickSpec {
               expect(wave.wavelength) ≈ ($0.wavelength, 0.01)
               expect(wave.period) ≈ ($0.period, 0.01)
 
-              for (index, value) in wave.harmonics.enumerate() {
+              for (index, value) in wave.harmonics.enumerated() {
                 expect(value.frequency) ≈ (Double(index + 1) * $0.frequency, 1)
               }
             }
