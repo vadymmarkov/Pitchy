@@ -62,22 +62,22 @@ do {
 
 do {
   // PitchCalculator
-  let pitchOffsets = try PitchCalculator.offsets(forFrequency: 445.0)
-  let cents = try PitchCalculator.cents(frequency1: 440.0,
+  _ = try PitchCalculator.offsets(forFrequency: 445.0)
+  _ = try PitchCalculator.cents(frequency1: 440.0,
     frequency2: 440.0) // 19.56
 
   // NoteCalculator
-  let frequency1 = try NoteCalculator.frequency(forIndex: 0)       // 440.0 Hz
-  let letter = try NoteCalculator.letter(forIndex: 0)              // .A
-  let octave = try NoteCalculator.octave(forIndex: 0)              // 4
-  let index1 = try NoteCalculator.index(forFrequency: 440.0)       // 0
-  let index2 = try NoteCalculator.index(forLetter: .A, octave: 4)  // 0
+  _ = try NoteCalculator.frequency(forIndex: 0)       // 440.0 Hz
+  _ = try NoteCalculator.letter(forIndex: 0)              // .A
+  _ = try NoteCalculator.octave(forIndex: 0)              // 4
+  _ = try NoteCalculator.index(forFrequency: 440.0)       // 0
+  _ = try NoteCalculator.index(forLetter: .A, octave: 4)  // 0
 
   // WaveCalculator
-  let f = try WaveCalculator.frequency(forWavelength: 0.7795)      // 440.0 Hz
-  let wl1 = try WaveCalculator.wavelength(forFrequency: 440.0)     // 0.7795 meters
-  let wl2 = try WaveCalculator.wavelength(forPeriod: 0.00227259)   // 0.7795 meters
-  let period = try WaveCalculator.period(forWavelength: 0.7795)    // 0.00227259 s
+  _ = try WaveCalculator.frequency(forWavelength: 0.7795)      // 440.0 Hz
+  _ = try WaveCalculator.wavelength(forFrequency: 440.0)     // 0.7795 meters
+  _ = try WaveCalculator.wavelength(forPeriod: 0.00227259)   // 0.7795 meters
+  _ = try WaveCalculator.period(forWavelength: 0.7795)    // 0.00227259 s
 } catch {
   // Handle errors
 }
