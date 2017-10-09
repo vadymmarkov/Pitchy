@@ -26,7 +26,7 @@ class PitchCalculatorSpec: QuickSpec {
       describe(".offsets") {
         it("returns a correct offsets for the specified frequency") {
           offsets.forEach {
-            let result = try! PitchCalculator.offsets($0.frequency)
+            let result = try! PitchCalculator.offsets(forFrequency: $0.frequency)
 
             expect(result.lower.frequency) ≈ ($0.lower.frequency, 0.01)
             expect(result.lower.percentage) ≈ ($0.lower.percentage, 0.1)

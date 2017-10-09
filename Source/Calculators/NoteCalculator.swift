@@ -7,49 +7,68 @@ public struct NoteCalculator {
   }
 
   public static var letters: [Note.Letter] = [
-    .A, .ASharp, .B, .C, .CSharp, .D,
-    .DSharp, .E, .F, .FSharp, .G, .GSharp
+    .A,
+    .ASharp,
+    .B,
+    .C,
+    .CSharp,
+    .D,
+    .DSharp,
+    .E,
+    .F,
+    .FSharp,
+    .G,
+    .GSharp
   ]
 
   // MARK: - Bounds
 
   public static var indexBounds: (minimum: Int, maximum: Int) {
-    let minimum = try! index(frequency: FrequencyValidator.minimumFrequency)
-    let maximum = try! index(frequency: FrequencyValidator.maximumFrequency)
+    let minimum = try! index(forFrequency: FrequencyValidator.minimumFrequency)
+    let maximum = try! index(forFrequency: FrequencyValidator.maximumFrequency)
 
     return (minimum: minimum, maximum: maximum)
   }
 
   public static var octaveBounds: (minimum: Int, maximum: Int) {
     let bounds = indexBounds
-    let minimum = try! octave(index: bounds.minimum)
-    let maximum = try! octave(index: bounds.maximum)
+    let minimum = try! octave(forIndex: bounds.minimum)
+    let maximum = try! octave(forIndex: bounds.maximum)
 
     return (minimum: minimum, maximum: maximum)
   }
 
   // MARK: - Validators
 
-  public static func isValidIndex(_ index: Int) -> Bool {
+  public static func isValid(index: Int) -> Bool {
     let bounds = indexBounds
-
     return index >= bounds.minimum
       && index <= bounds.maximum
   }
 
-  public static func isValidOctave(_ octave: Int) -> Bool {
+  public static func validate(index: Int) throws {
+    if !isValid(index: index) {
+      throw PitchError.invalidPitchIndex
+    }
+  }
+
+  public static func isValid(octave: Int) -> Bool {
     let bounds = octaveBounds
 
     return octave >= bounds.minimum
       && octave <= bounds.maximum
   }
 
+  public static func validate(octave: Int) throws {
+    if !isValid(octave: octave) {
+      throw PitchError.invalidOctave
+    }
+  }
+
   // MARK: - Pitch Notations
 
-  public static func frequency(index: Int) throws -> Double {
-    guard isValidIndex(index) else {
-      throw PitchError.invalidPitchIndex
-    }
+  public static func frequency(forIndex index: Int) throws -> Double {
+    try validate(index: index)
 
     let count = letters.count
     let power = Double(index) / Double(count)
@@ -57,10 +76,8 @@ public struct NoteCalculator {
     return pow(2, power) * Standard.frequency
   }
 
-  public static func letter(index: Int) throws -> Note.Letter {
-    guard isValidIndex(index) else {
-      throw PitchError.invalidPitchIndex
-    }
+  public static func letter(forIndex index: Int) throws -> Note.Letter {
+    try validate(index: index)
 
     let count = letters.count
     var lettersIndex = index < 0
@@ -78,13 +95,10 @@ public struct NoteCalculator {
     return letters[lettersIndex]
   }
 
-  public static func octave(index: Int) throws -> Int {
-    guard isValidIndex(index) else {
-      throw PitchError.invalidPitchIndex
-    }
+  public static func octave(forIndex index: Int) throws -> Int {
+    try validate(index: index)
 
     let count = letters.count
-
     let resNegativeIndex = Standard.octave - (abs(index) + 2) / count
     let resPositiveIndex = Standard.octave + (index + 9) / count
 
@@ -95,16 +109,15 @@ public struct NoteCalculator {
 
   // MARK: - Pitch Index
 
-  public static func index(frequency: Double) throws -> Int {
+  public static func index(forFrequency frequency: Double) throws -> Int {
     try FrequencyValidator.validate(frequency: frequency)
     let count = Double(letters.count)
+
     return Int(round(count * log2(frequency / Standard.frequency)))
   }
 
-  public static func index(letter: Note.Letter, octave: Int) throws -> Int {
-    guard isValidOctave(octave) else {
-      throw PitchError.invalidOctave
-    }
+  public static func index(forLetter letter: Note.Letter, octave: Int) throws -> Int {
+    try validate(octave: octave)
 
     let count = letters.count
     let letterIndex = letters.index(of: letter) ?? 0

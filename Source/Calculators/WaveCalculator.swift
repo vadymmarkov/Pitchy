@@ -1,22 +1,22 @@
 public struct WaveCalculator {
   public static var wavelengthBounds: (minimum: Double, maximum: Double) {
-    let minimum = try! wavelength(frequency: FrequencyValidator.maximumFrequency)
-    let maximum = try! wavelength(frequency: FrequencyValidator.minimumFrequency)
+    let minimum = try! wavelength(forFrequency: FrequencyValidator.maximumFrequency)
+    let maximum = try! wavelength(forFrequency: FrequencyValidator.minimumFrequency)
 
     return (minimum: minimum, maximum: maximum)
   }
 
   public static var periodBounds: (minimum: Double, maximum: Double) {
     let bounds = wavelengthBounds
-    let minimum = try! period(wavelength: bounds.minimum)
-    let maximum = try! period(wavelength: bounds.maximum)
+    let minimum = try! period(forWavelength: bounds.minimum)
+    let maximum = try! period(forWavelength: bounds.maximum)
 
     return (minimum: minimum, maximum: maximum)
   }
 
   // MARK: - Validators
 
-  public static func isValidWavelength(_ wavelength: Double) -> Bool {
+  public static func isValid(wavelength: Double) -> Bool {
     let bounds = wavelengthBounds
 
     return wavelength > 0.0
@@ -24,7 +24,13 @@ public struct WaveCalculator {
       && wavelength <= bounds.maximum
   }
 
-  public static func isValidPeriod(_ period: Double) -> Bool {
+  public static func validate(wavelength: Double) throws {
+    if !isValid(wavelength: wavelength) {
+      throw PitchError.invalidWavelength
+    }
+  }
+
+  public static func isValid(period: Double) -> Bool {
     let bounds = periodBounds
 
     return period > 0.0
@@ -32,34 +38,31 @@ public struct WaveCalculator {
       && period <= bounds.maximum
   }
 
+  public static func validate(period: Double) throws {
+    if !isValid(period: period) {
+      throw PitchError.invalidPeriod
+    }
+  }
+
   // MARK: - Conversions
 
-  public static func frequency(wavelength: Double) throws -> Double {
-    guard isValidWavelength(wavelength) else {
-      throw PitchError.invalidWavelength
-    }
-
+  public static func frequency(forWavelength wavelength: Double) throws -> Double {
+    try WaveCalculator.validate(wavelength: wavelength)
     return AcousticWave.speed / wavelength
   }
 
-  public static func wavelength(frequency: Double) throws -> Double {
+  public static func wavelength(forFrequency frequency: Double) throws -> Double {
     try FrequencyValidator.validate(frequency: frequency)
     return AcousticWave.speed / frequency
   }
 
-  public static func wavelength(period: Double) throws -> Double {
-    guard isValidPeriod(period) else {
-      throw PitchError.invalidPeriod
-    }
-
+  public static func wavelength(forPeriod period: Double) throws -> Double {
+    try WaveCalculator.validate(period: period)
     return period * AcousticWave.speed
   }
 
-  public static func period(wavelength: Double) throws -> Double {
-    guard isValidWavelength(wavelength) else {
-      throw PitchError.invalidWavelength
-    }
-
+  public static func period(forWavelength wavelength: Double) throws -> Double {
+    try WaveCalculator.validate(wavelength: wavelength)
     return wavelength / AcousticWave.speed
   }
 }

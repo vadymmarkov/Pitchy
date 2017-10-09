@@ -42,6 +42,6 @@ public struct Pitch {
     try FrequencyValidator.validate(frequency: frequency)
     self.frequency = frequency
     wave = try AcousticWave(frequency: frequency)
-    offsets = try PitchCalculator.offsets(frequency)
+    offsets = try PitchCalculator.offsets(forFrequency: frequency)
   }
 }

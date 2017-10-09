@@ -1,7 +1,7 @@
 import Foundation
 
 public struct PitchCalculator {
-  public static func offsets(_ frequency: Double) throws -> Pitch.Offsets {
+  public static func offsets(forFrequency frequency: Double) throws -> Pitch.Offsets {
     let note = try Note(frequency: frequency)
     let higherNote = try note.higher()
     let lowerNote = try note.lower()
