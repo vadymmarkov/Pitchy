@@ -1,12 +1,16 @@
-language: objective-c
-cache: cocoapods
-before_install: gem install cocoapods obcd slather -N
+osx_image: xcode9
+language: swift
 
-# Use when you don't have third party dependencies
-script: xctool -project Pod/Pod.xcodeproj -scheme Tests -sdk iphonesimulator build test GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES clean test
+before_install:
+- brew update
+- if brew outdated | grep -qx carthage; then brew upgrade carthage; fi
+- travis_wait 35 carthage bootstrap --platform iOS,Mac
 
-# Use when you have third party dependencies (CocoaPods generates a workspace)
-# podfile: Pod/Podfile
-# script: xctool -workspace Pod/Pod.xcworkspace -scheme Tests -sdk iphonesimulator build test GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES clean test
+script:
+- xcodebuild clean build -project Pitchy.xcodeproj -scheme "Pitchy-Mac" -sdk macosx | xcpretty
+- xcodebuild test -project Pitchy.xcodeproj -scheme "Pitchy-Mac" -sdk macosx | xcpretty
+- xcodebuild clean build -project Pitchy.xcodeproj -scheme "Pitchy-iOS" -sdk iphonesimulator | xcpretty
+- xcodebuild test -project Pitchy.xcodeproj -scheme "Pitchy-iOS" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0' | xcpretty
 
-after_success: slather
+notifications:
+  email: false

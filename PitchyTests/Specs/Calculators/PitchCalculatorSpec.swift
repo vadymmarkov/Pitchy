@@ -23,32 +23,10 @@ class PitchCalculatorSpec: QuickSpec {
     ]
 
     describe("PitchCalculator") {
-      describe(".isValidFrequency") {
-        it("is invalid if frequency is higher than maximum") {
-          let frequency = 5000.0
-          expect(PitchCalculator.isValidFrequency(frequency)).to(beFalse())
-        }
-
-        it("is invalid if frequency is lower than minimum") {
-          let frequency = 10.0
-          expect(PitchCalculator.isValidFrequency(frequency)).to(beFalse())
-        }
-
-        it("is invalid if frequency is zero") {
-          let frequency = 0.0
-          expect(PitchCalculator.isValidFrequency(frequency)).to(beFalse())
-        }
-
-        it("is valid if frequency is within valid bounds") {
-          let frequency = 440.0
-          expect(PitchCalculator.isValidFrequency(frequency)).to(beTrue())
-        }
-      }
-
       describe(".offsets") {
         it("returns a correct offsets for the specified frequency") {
           offsets.forEach {
-            let result = try! PitchCalculator.offsets($0.frequency)
+            let result = try! PitchCalculator.offsets(forFrequency: $0.frequency)
 
             expect(result.lower.frequency) ≈ ($0.lower.frequency, 0.01)
             expect(result.lower.percentage) ≈ ($0.lower.percentage, 0.1)

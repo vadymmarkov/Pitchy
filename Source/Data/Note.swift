@@ -1,5 +1,4 @@
 public struct Note {
-
   public enum Letter: String {
     case C = "C"
     case CSharp = "C#"
@@ -15,8 +14,18 @@ public struct Note {
     case B = "B"
 
     public static var values = [
-      C, CSharp, D, DSharp, E, F,
-      FSharp, G, GSharp, A, ASharp, B,
+      C,
+      CSharp,
+      D,
+      DSharp,
+      E,
+      F,
+      FSharp,
+      G,
+      GSharp,
+      A,
+      ASharp,
+      B
     ]
   }
 
@@ -34,25 +43,25 @@ public struct Note {
 
   public init(index: Int) throws {
     self.index = index
-    letter = try NoteCalculator.letter(index)
-    octave = try NoteCalculator.octave(index)
-    frequency = try NoteCalculator.frequency(index)
+    letter = try NoteCalculator.letter(forIndex: index)
+    octave = try NoteCalculator.octave(forIndex: index)
+    frequency = try NoteCalculator.frequency(forIndex: index)
     wave = try AcousticWave(frequency: frequency)
   }
 
   public init(frequency: Double) throws {
-    index = try NoteCalculator.index(frequency)
-    letter = try NoteCalculator.letter(index)
-    octave = try NoteCalculator.octave(index)
-    self.frequency = try NoteCalculator.frequency(index)
+    index = try NoteCalculator.index(forFrequency: frequency)
+    letter = try NoteCalculator.letter(forIndex: index)
+    octave = try NoteCalculator.octave(forIndex: index)
+    self.frequency = try NoteCalculator.frequency(forIndex: index)
     wave = try AcousticWave(frequency: frequency)
   }
 
   public init(letter: Letter, octave: Int) throws {
     self.letter = letter
     self.octave = octave
-    index = try NoteCalculator.index(letter, octave: octave)
-    frequency = try NoteCalculator.frequency(index)
+    index = try NoteCalculator.index(forLetter: letter, octave: octave)
+    frequency = try NoteCalculator.frequency(forIndex: index)
     wave = try AcousticWave(frequency: frequency)
   }
 

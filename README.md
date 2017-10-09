@@ -26,7 +26,7 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Pitch_(music)):
   * [Acoustic wave](#acoustic-wave)
   * [Note](#note)
   * [Calculators](#calculators)
-  * [Config](#config)
+  * [FrequencyValidator](#config)
   * [Error handling](#error-handling)
 * [Installation](#installation)
 * [Author](#author)
@@ -123,34 +123,36 @@ and `Note`, but also are included in the public API.
 do {
   // PitchCalculator
   let pitchOffsets = try PitchCalculator.offsets(445.0)
-  let cents = try PitchCalculator.cents(frequency1: 440.0,
-    frequency2: 440.0) // 19.56
+  let cents = try PitchCalculator.cents(
+    frequency1: 440.0,
+    frequency2: 440.0
+  ) // 19.56
 
   // NoteCalculator
-  let frequency1 = try NoteCalculator.frequency(index: 0)       // 440.0 Hz
-  let letter = try NoteCalculator.letter(index: 0)              // .A
-  let octave = try NoteCalculator.octave(index: 0)              // 4
-  let index1 = try NoteCalculator.index(frequency: 440.0)       // 0
-  let index2 = try NoteCalculator.index(letter: .A, octave: 4)  // 0
+  let frequency1 = try NoteCalculator.frequency(forIndex: 0)       // 440.0 Hz
+  let letter = try NoteCalculator.letter(forIndex: 0)              // .A
+  let octave = try NoteCalculator.octave(forIndex: 0)              // 4
+  let index1 = try NoteCalculator.index(forFrequency: 440.0)       // 0
+  let index2 = try NoteCalculator.index(forLetter: .A, octave: 4)  // 0
 
   // WaveCalculator
-  let f = try WaveCalculator.frequency(wavelength: 0.7795)      // 440.0 Hz
-  let wl1 = try WaveCalculator.wavelength(frequency: 440.0)     // 0.7795 meters
-  let wl2 = try WaveCalculator.wavelength(period: 0.00227259)   // 0.7795 meters
-  let period = try WaveCalculator.period(wavelength: 0.7795)    // 0.00227259 s
+  let f = try WaveCalculator.frequency(forWavelength: 0.7795)      // 440.0 Hz
+  let wl1 = try WaveCalculator.wavelength(forFrequency: 440.0)     // 0.7795 meters
+  let wl2 = try WaveCalculator.wavelength(forPeriod: 0.00227259)   // 0.7795 meters
+  let period = try WaveCalculator.period(forWavelength: 0.7795)    // 0.00227259 s
 } catch {
   // Handle errors
 }
 ```
 
-### Config
+### FrequencyValidator
 
-With a help of `Config` it's possible to adjust minimum and maximum frequencies
-that are used for validations in all calculations:
+With a help of `FrequencyValidator` it's possible to adjust minimum and
+maximum frequencies that are used for validations in all calculations:
 
 ```swift
-Config.minimumFrequency = 20.0
-Config.maximumFrequency = 4190.0
+FrequencyValidator.minimumFrequency = 20.0
+FrequencyValidator.maximumFrequency = 4190.0
 ```
 
 ### Error handling

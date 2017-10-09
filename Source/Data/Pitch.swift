@@ -1,7 +1,4 @@
 public struct Pitch {
-
-  // MARK: - Offsets
-
   public typealias Offset = (
     note: Note,
     frequency: Double,
@@ -22,7 +19,6 @@ public struct Pitch {
 
     public init(_ first: Offset, _ second: Offset) {
       let lowerFirst = first.note.frequency < second.note.frequency
-
       self.lower = lowerFirst ? first : second
       self.higher = lowerFirst ? second : first
     }
@@ -43,12 +39,9 @@ public struct Pitch {
   // MARK: - Initialization
 
   public init(frequency: Double) throws {
-    guard PitchCalculator.isValidFrequency(frequency) else {
-      throw PitchError.invalidFrequency
-    }
-
+    try FrequencyValidator.validate(frequency: frequency)
     self.frequency = frequency
     wave = try AcousticWave(frequency: frequency)
-    offsets = try PitchCalculator.offsets(frequency)
+    offsets = try PitchCalculator.offsets(forFrequency: frequency)
   }
 }

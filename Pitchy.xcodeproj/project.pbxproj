@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D512C1211C319917002DD504 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1201C319917002DD504 /* Config.swift */; };
-		D512C1221C319917002DD504 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1201C319917002DD504 /* Config.swift */; };
+		D512C1211C319917002DD504 /* FrequencyValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1201C319917002DD504 /* FrequencyValidator.swift */; };
+		D512C1221C319917002DD504 /* FrequencyValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1201C319917002DD504 /* FrequencyValidator.swift */; };
 		D512C1241C319A40002DD504 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1231C319A40002DD504 /* Error.swift */; };
 		D512C1251C319A40002DD504 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1231C319A40002DD504 /* Error.swift */; };
 		D512C12A1C319BC1002DD504 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1271C319BC1002DD504 /* Pitch.swift */; };
@@ -23,6 +23,8 @@
 		D512C1401C319E36002DD504 /* AcousticWaveSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1311C319C82002DD504 /* AcousticWaveSpec.swift */; };
 		D512C1411C319E36002DD504 /* NoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1321C319C82002DD504 /* NoteSpec.swift */; };
 		D512C1421C319E36002DD504 /* PitchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1331C319C82002DD504 /* PitchSpec.swift */; };
+		D53425091F8C0FBA00BE4F4B /* FrequencyValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53425071F8C0F8A00BE4F4B /* FrequencyValidatorSpec.swift */; };
+		D534250A1F8C0FBB00BE4F4B /* FrequencyValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53425071F8C0F8A00BE4F4B /* FrequencyValidatorSpec.swift */; };
 		D5DF49E71C2EE85900343F13 /* NoteCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */; };
 		D5DF49E81C2EE85900343F13 /* PitchCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */; };
 		D5DF49E91C2EE85900343F13 /* WaveCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF49B71C2EE67800343F13 /* WaveCalculator.swift */; };
@@ -61,7 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D512C1201C319917002DD504 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		D512C1201C319917002DD504 /* FrequencyValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyValidator.swift; sourceTree = "<group>"; };
 		D512C1231C319A40002DD504 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		D512C1271C319BC1002DD504 /* Pitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
 		D512C1281C319BC1002DD504 /* AcousticWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWave.swift; sourceTree = "<group>"; };
@@ -69,7 +71,8 @@
 		D512C1311C319C82002DD504 /* AcousticWaveSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcousticWaveSpec.swift; sourceTree = "<group>"; };
 		D512C1321C319C82002DD504 /* NoteSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteSpec.swift; sourceTree = "<group>"; };
 		D512C1331C319C82002DD504 /* PitchSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchSpec.swift; sourceTree = "<group>"; };
-		D51575A01C330432006F8E75 /* PitchyPlayground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "PitchyPlayground-iOS.playground"; sourceTree = "<group>"; };
+		D51575A01C330432006F8E75 /* PitchyPlayground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "PitchyPlayground-iOS.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D53425071F8C0F8A00BE4F4B /* FrequencyValidatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencyValidatorSpec.swift; sourceTree = "<group>"; };
 		D5DF49B51C2EE67800343F13 /* NoteCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCalculator.swift; sourceTree = "<group>"; };
 		D5DF49B61C2EE67800343F13 /* PitchCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchCalculator.swift; sourceTree = "<group>"; };
 		D5DF49B71C2EE67800343F13 /* WaveCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveCalculator.swift; sourceTree = "<group>"; };
@@ -198,7 +201,7 @@
 			children = (
 				D512C1261C319B9D002DD504 /* Data */,
 				D5DF49B41C2EE67800343F13 /* Calculators */,
-				D512C1201C319917002DD504 /* Config.swift */,
+				D512C1201C319917002DD504 /* FrequencyValidator.swift */,
 				D512C1231C319A40002DD504 /* Error.swift */,
 			);
 			path = Source;
@@ -235,6 +238,7 @@
 			children = (
 				D512C1301C319C48002DD504 /* Data */,
 				D5DF49FB1C2EE8AC00343F13 /* Calculators */,
+				D53425071F8C0F8A00BE4F4B /* FrequencyValidatorSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -366,22 +370,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Vadym Markov";
 				TargetAttributes = {
 					D5DF49D11C2EE72E00343F13 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					D5DF49DE1C2EE77A00343F13 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0900;
 					};
 					D5DF4A0A1C2EE95600343F13 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					D5DF4A191C2EE96D00343F13 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -481,7 +487,7 @@
 				D512C1241C319A40002DD504 /* Error.swift in Sources */,
 				D512C12E1C319BC1002DD504 /* Note.swift in Sources */,
 				D5DF49E81C2EE85900343F13 /* PitchCalculator.swift in Sources */,
-				D512C1211C319917002DD504 /* Config.swift in Sources */,
+				D512C1211C319917002DD504 /* FrequencyValidator.swift in Sources */,
 				D5DF49E71C2EE85900343F13 /* NoteCalculator.swift in Sources */,
 				D5DF49E91C2EE85900343F13 /* WaveCalculator.swift in Sources */,
 			);
@@ -496,7 +502,7 @@
 				D512C1251C319A40002DD504 /* Error.swift in Sources */,
 				D512C12F1C319BC1002DD504 /* Note.swift in Sources */,
 				D5DF49EE1C2EE85A00343F13 /* PitchCalculator.swift in Sources */,
-				D512C1221C319917002DD504 /* Config.swift in Sources */,
+				D512C1221C319917002DD504 /* FrequencyValidator.swift in Sources */,
 				D5DF49ED1C2EE85A00343F13 /* NoteCalculator.swift in Sources */,
 				D5DF49EF1C2EE85A00343F13 /* WaveCalculator.swift in Sources */,
 			);
@@ -506,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53425091F8C0FBA00BE4F4B /* FrequencyValidatorSpec.swift in Sources */,
 				D512C13E1C319E36002DD504 /* NoteSpec.swift in Sources */,
 				D5DF4A351C2EEB5200343F13 /* WaveCalculatorSpec.swift in Sources */,
 				D5DF4A331C2EEB5200343F13 /* NoteCalculatorSpec.swift in Sources */,
@@ -519,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D534250A1F8C0FBB00BE4F4B /* FrequencyValidatorSpec.swift in Sources */,
 				D512C1411C319E36002DD504 /* NoteSpec.swift in Sources */,
 				D5DF4A3B1C2EEB5300343F13 /* WaveCalculatorSpec.swift in Sources */,
 				D5DF4A391C2EEB5300343F13 /* NoteCalculatorSpec.swift in Sources */,
@@ -552,14 +560,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -602,14 +616,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -640,6 +660,7 @@
 		D5DF49D81C2EE72F00343F13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -651,13 +672,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vadymmarkov.Pitchy-iOS";
 				PRODUCT_NAME = Pitchy;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		D5DF49D91C2EE72F00343F13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -670,7 +693,8 @@
 				PRODUCT_NAME = Pitchy;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -692,7 +716,8 @@
 				PRODUCT_NAME = Pitchy;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -715,7 +740,8 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -730,7 +756,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vadymmarkov.Pitchy-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -746,7 +773,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vadymmarkov.Pitchy-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -765,6 +793,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vadymmarkov.Pitchy-Mac-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -784,6 +814,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

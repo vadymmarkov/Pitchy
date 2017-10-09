@@ -26,8 +26,8 @@ class NoteCalculatorSpec: QuickSpec {
 
       describe(".indexBounds") {
         it("has bounds based on min and max frequencies from the config") {
-          let minimum = try! NoteCalculator.index(frequency: Config.minimumFrequency)
-          let maximum = try! NoteCalculator.index(frequency: Config.maximumFrequency)
+          let minimum = try! NoteCalculator.index(forFrequency: FrequencyValidator.minimumFrequency)
+          let maximum = try! NoteCalculator.index(forFrequency: FrequencyValidator.maximumFrequency)
           let expected = (minimum: minimum, maximum: maximum)
           let result = NoteCalculator.indexBounds
 
@@ -39,8 +39,8 @@ class NoteCalculatorSpec: QuickSpec {
       describe(".octaveBounds") {
         it("has bounds based on min and max frequencies from the config") {
           let bounds = NoteCalculator.indexBounds
-          let minimum = try! NoteCalculator.octave(index: bounds.minimum)
-          let maximum = try! NoteCalculator.octave(index: bounds.maximum)
+          let minimum = try! NoteCalculator.octave(forIndex: bounds.minimum)
+          let maximum = try! NoteCalculator.octave(forIndex: bounds.maximum)
           let expected = (minimum: minimum, maximum: maximum)
           let result = NoteCalculator.octaveBounds
 
@@ -49,37 +49,37 @@ class NoteCalculatorSpec: QuickSpec {
         }
       }
 
-      describe(".isValidIndex") {
+      describe(".isValid:index") {
         it("is invalid if value is higher than maximum") {
           let value = 1000
-          expect(NoteCalculator.isValidIndex(value)).to(beFalse())
+          expect(NoteCalculator.isValid(index: value)).to(beFalse())
         }
 
         it("is invalid if value is lower than minimum") {
           let value = -100
-          expect(NoteCalculator.isValidIndex(value)).to(beFalse())
+          expect(NoteCalculator.isValid(index: value)).to(beFalse())
         }
 
         it("is valid if value is within valid bounds") {
           let value = 6
-          expect(NoteCalculator.isValidIndex(value)).to(beTrue())
+          expect(NoteCalculator.isValid(index: value)).to(beTrue())
         }
       }
 
-      describe(".isValidOctave") {
+      describe(".isValid:octave") {
         it("is invalid if value is higher than maximum") {
           let value = 10
-          expect(NoteCalculator.isValidOctave(value)).to(beFalse())
+          expect(NoteCalculator.isValid(octave: value)).to(beFalse())
         }
 
         it("is invalid if value is lower than minimum") {
           let value = -1
-          expect(NoteCalculator.isValidOctave(value)).to(beFalse())
+          expect(NoteCalculator.isValid(octave: value)).to(beFalse())
         }
 
         it("is valid if value is within valid bounds") {
           let value = 2
-          expect(NoteCalculator.isValidOctave(value)).to(beTrue())
+          expect(NoteCalculator.isValid(octave: value)).to(beTrue())
         }
       }
 
@@ -91,7 +91,7 @@ class NoteCalculatorSpec: QuickSpec {
 
         it("returns an array of note letters in the correct order") {
           let letters = NoteCalculator.letters
-          
+
           expect(letters[0]).to(equal(Note.Letter.A))
           expect(letters[1]).to(equal(Note.Letter.ASharp))
           expect(letters[2]).to(equal(Note.Letter.B))
@@ -107,42 +107,42 @@ class NoteCalculatorSpec: QuickSpec {
         }
       }
 
-      describe(".frequency:index") {
+      describe(".frequency:forIndex") {
         it("returns a correct frequency by pitch index") {
           notes.forEach {
-            expect(try! NoteCalculator.frequency(index: $0.index)) ≈ ($0.frequency, 0.01)
+            expect(try! NoteCalculator.frequency(forIndex: $0.index)) ≈ ($0.frequency, 0.01)
           }
         }
       }
 
-      describe(".note:index") {
+      describe(".note:forIndex") {
         it("returns a correct note letter by pitch index") {
           notes.forEach {
-            expect(try! NoteCalculator.letter(index: $0.index)).to(equal($0.note))
+            expect(try! NoteCalculator.letter(forIndex: $0.index)).to(equal($0.note))
           }
         }
       }
 
-      describe(".octave:index") {
+      describe(".octave:forIndex") {
         it("returns a correct octave by pitch index") {
           notes.forEach {
-            expect(try! NoteCalculator.octave(index: $0.index)).to(equal($0.octave))
+            expect(try! NoteCalculator.octave(forIndex: $0.index)).to(equal($0.octave))
           }
         }
       }
 
-      describe(".index:frequency") {
+      describe(".index:forFrequency") {
         it("returns a correct pitch index by frequency") {
           notes.forEach {
-            expect(try! NoteCalculator.index(frequency: $0.frequency)).to(equal($0.index))
+            expect(try! NoteCalculator.index(forFrequency: $0.frequency)).to(equal($0.index))
           }
         }
       }
 
-      describe(".index:note:octave") {
+      describe(".index:forLetter:octave") {
         it("returns a correct pitch index by note letter and octave") {
           notes.forEach {
-            expect(try! NoteCalculator.index(letter: $0.note, octave: $0.octave)).to(equal($0.index))
+            expect(try! NoteCalculator.index(forLetter: $0.note, octave: $0.octave)).to(equal($0.index))
           }
         }
       }
