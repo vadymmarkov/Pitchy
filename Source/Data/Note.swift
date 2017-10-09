@@ -14,8 +14,18 @@ public struct Note {
     case B = "B"
 
     public static var values = [
-      C, CSharp, D, DSharp, E, F,
-      FSharp, G, GSharp, A, ASharp, B,
+      C,
+      CSharp,
+      D,
+      DSharp,
+      E,
+      F,
+      FSharp,
+      G,
+      GSharp,
+      A,
+      ASharp,
+      B
     ]
   }
 

@@ -27,7 +27,7 @@ class PitchSpec: QuickSpec {
         it("rearrange offsets based on frequency") {
           let sample = offsets[0]
           let offsets = Pitch.Offsets(sample.higher, sample.lower)
-          
+
           expect(offsets.lower.note.index).to(equal(sample.lower.note.index))
           expect(offsets.higher.note.index).to(equal(sample.higher.note.index))
         }
