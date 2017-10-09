@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "Pitchy"
   s.summary          = "A simple way to get a music pitch from a frequency"
-  s.version          = "2.0.1"
+  s.version          = "3.0.0"
   s.homepage         = "https://github.com/vadymmarkov/Pitchy"
   s.license          = 'MIT'
   s.author           = { "Vadym Markov" => "markov.vadym@gmail.com" }
