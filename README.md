@@ -199,12 +199,6 @@ let package = Package(
 )
 ```
 
-Then import **Pitchy** wherever you’d like to use it:
-
-```swift
-import Pitchy
-```
-
 For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://github.com/apple/swift-package-manager/tree/master/Documentation).
 
 ## Author
