@@ -187,6 +187,26 @@ To install just write into your Cartfile:
 github "vadymmarkov/Pitchy"
 ```
 
+**Pitchy** is also distributed using the [Swift Package Manager](https://swift.org/package-manager). To install it into a project, simply add it as a dependency within your `Package.swift` manifest:
+
+```swift
+let package = Package(
+    ...
+    dependencies: [
+        .package(url: "https://github.com/vadymmarkov/Pitchy.git", from: "0.1.0")
+    ],
+    ...
+)
+```
+
+Then import **Pitchy** wherever you’d like to use it:
+
+```swift
+import Pitchy
+```
+
+For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://github.com/apple/swift-package-manager/tree/master/Documentation).
+
 ## Author
 
 Vadym Markov, markov.vadym@gmail.com
